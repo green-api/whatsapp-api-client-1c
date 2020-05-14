@@ -1,1 +1,1 @@
-# whatsAppClientExample1c
+# Пример работы с WhatsApp из 1С
