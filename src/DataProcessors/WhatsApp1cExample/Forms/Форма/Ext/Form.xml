@@ -251,6 +251,67 @@
 						</Button>
 					</ChildItems>
 				</Page>
+				<Page name="ПолучениеСообщений" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение сообщений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение сообщений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПолучениеСообщенийРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПояснение" id="60">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При нажатии на кнопку &lt;b&gt;Получить сообщение &lt;/&gt;выполняется следующее:
+1. Делается запрос к серверу, который считывает одно отправленное сообщение (см вкладку &lt;b&gt;Отправка сообщений)&lt;/&gt;
+2. Если сообщений нет, то запрос еще ждет сообщение в течение 20 секунд (обработка висит) и потом завершается, если ни одного сообщения не поступило
+3. Если сообщение есть - то данное сообщение возвращается в теле запроса при &lt;b&gt;каждом&lt;/&gt; вызове сервера
+4. Чтобы получить следующее сообщение, необходимо подтвердить текущее считанное сообщение с помощью кнопки &lt;b&gt;Подтвердить полученное сообщение&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ДекорацияПояснениеРасширеннаяПодсказка" id="62"/>
+						</LabelDecoration>
+						<Button name="ПолучитьСообщениеЧерезВебхук" id="53">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПолучитьСообщениеЧерезВебхук</CommandName>
+							<ExtendedTooltip name="ПолучитьСообщениеЧерезВебхукРасширеннаяПодсказка" id="54"/>
+						</Button>
+						<Button name="ПодтвердитьПолученноеСообщениеЧерезВебхук" id="55">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПодтвердитьПолученноеСообщениеЧерезВебхук</CommandName>
+							<ExtendedTooltip name="ПодтвердитьПолученноеСообщениеЧерезВебхукРасширеннаяПодсказка" id="56"/>
+						</Button>
+						<InputField name="deliveryTagТекущий" id="63">
+							<DataPath>deliveryTagТекущий</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="deliveryTagТекущийКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="deliveryTagТекущийРасширеннаяПодсказка" id="65"/>
+						</InputField>
+						<InputField name="ТекстПолученноеСообщение" id="57">
+							<DataPath>ТекстПолученноеСообщение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текст сообщения</v8:content>
+								</v8:item>
+							</Title>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ТекстПолученноеСообщениеКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ТекстПолученноеСообщениеРасширеннаяПодсказка" id="59"/>
+						</InputField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -352,6 +413,36 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Хост</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстПолученноеСообщение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст полученное сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="deliveryTagТекущий" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тег сообщения</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -464,6 +555,36 @@
 			</ToolTip>
 			<Action>ОтправитьСообщение</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьСообщениеЧерезВебхук" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить сообщение через вебхук</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьСообщениеЧерезВебхук</Action>
+		</Command>
+		<Command name="ПодтвердитьПолученноеСообщениеЧерезВебхук" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить полученное сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить полученное сообщение через вебхук</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодтвердитьПолученноеСообщениеЧерезВебхук</Action>
 		</Command>
 	</Commands>
 </Form>
