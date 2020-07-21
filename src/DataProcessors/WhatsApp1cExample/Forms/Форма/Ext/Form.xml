@@ -424,7 +424,7 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="deliveryTagТекущий" id="9">
+		<Attribute name="receiptIdТекущий" id="9">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
