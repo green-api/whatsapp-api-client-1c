@@ -251,6 +251,53 @@
 						</Button>
 					</ChildItems>
 				</Page>
+				<Page name="ПолучениеСообщений" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение сообщений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получение сообщений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПолучениеСообщенийРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПояснение" id="60">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При нажатии на кнопку “Получить сообщение“ обработка ожидает  получения сообщения в течение 20 сек. Если сообщение получено, то вызов прекращается, сообщение выводится пользователю. Если в течение 20 сек. новых сообщений не поступает, вызов завершается.
+Рекомендуется выполнять получение сообщений в фоновом задании с небольшим интервалом, например 10 сек.
+Подробнее в документации (&lt;link https://green-api.com/docs/&gt;https://green-api.com/docs/&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ДекорацияПояснениеРасширеннаяПодсказка" id="62"/>
+						</LabelDecoration>
+						<Button name="ПолучитьСообщениеЧерезВебхук" id="53">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПолучитьСообщениеЧерезВебхук</CommandName>
+							<ExtendedTooltip name="ПолучитьСообщениеЧерезВебхукРасширеннаяПодсказка" id="54"/>
+						</Button>
+						<InputField name="ТекстПолученноеСообщение" id="57">
+							<DataPath>ТекстПолученноеСообщение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текст сообщения</v8:content>
+								</v8:item>
+							</Title>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ТекстПолученноеСообщениеКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ТекстПолученноеСообщениеРасширеннаяПодсказка" id="59"/>
+						</InputField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -352,6 +399,36 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Хост</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстПолученноеСообщение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст полученное сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="receiptIdТекущий" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тег сообщения</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -464,6 +541,21 @@
 			</ToolTip>
 			<Action>ОтправитьСообщение</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьСообщениеЧерезВебхук" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить сообщение через вебхук</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьСообщениеЧерезВебхук</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.9">
 	<ConfigVersions>
-		<Metadata name="Configuration.Конфигурация" id="a7dc518d-fa86-4892-a7af-ba2aca88ad30" configVersion="2cb354064a88df41939646aa3cdd1c4b00000000"/>
-		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="53c341e0-4783-470a-8069-53c443833285.8" configVersion="2fee9b4db099734d9944d877e71770e400000000"/>
-		<Metadata name="DataProcessor.WhatsApp1cExample" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561" configVersion="6ead289dffb0e74088beddc8b817db9900000000"/>
-		<Metadata name="DataProcessor.WhatsApp1cExample.Form.Форма" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098" configVersion="a72eb87ce821b547bb0406ab26e5dfb100000000"/>
-		<Metadata name="DataProcessor.WhatsApp1cExample.Form.Форма.Form" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098.0" configVersion="26bc44510d02954ba978e6c9fe2c2a3c00000000"/>
-		<Metadata name="Language.Русский" id="4c15b64d-a55e-47ed-b29e-0a8e70ab6712" configVersion="97e2ff7f1b14564a8e217d68d9d476a900000000"/>
+		<Metadata name="Configuration.Конфигурация" id="a7dc518d-fa86-4892-a7af-ba2aca88ad30" configVersion="8454e1278cfba04b8f2b5a2dfff8eb4800000000"/>
+		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="53c341e0-4783-470a-8069-53c443833285.8" configVersion="1cf2004a2e511a4db8a62d9a930bb71100000000"/>
+		<Metadata name="DataProcessor.WhatsApp1cExample" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561" configVersion="76274088872a6b48bdd888e926553ea100000000"/>
+		<Metadata name="DataProcessor.WhatsApp1cExample.Form.Форма" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098" configVersion="970eb77c38484349aebe02c7d9607a5300000000"/>
+		<Metadata name="DataProcessor.WhatsApp1cExample.Form.Форма.Form" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098.0" configVersion="ae8286cb74f2474d88d2bc343f9a49e800000000"/>
+		<Metadata name="Language.Русский" id="4c15b64d-a55e-47ed-b29e-0a8e70ab6712" configVersion="825eb43883410c46b931b1c20009238800000000"/>
 	</ConfigVersions>
 </ConfigDumpInfo>
