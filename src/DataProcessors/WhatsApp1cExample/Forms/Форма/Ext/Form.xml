@@ -150,12 +150,31 @@
 										<Event name="Click">СсылкаQRНажатие</Event>
 									</Events>
 								</LabelDecoration>
-								<Button name="ПроверитьПодключение" id="28">
-									<Type>UsualButton</Type>
-									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-									<CommandName>Form.Command.ПроверитьПодключение</CommandName>
-									<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="29"/>
-								</Button>
+								<UsualGroup name="ГруппаДействия" id="65">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа действия</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа действия</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДействияРасширеннаяПодсказка" id="66"/>
+									<ChildItems>
+										<Button name="СканироватьQRКод" id="63">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.СканироватьQRКодКоманда</CommandName>
+											<ExtendedTooltip name="СканироватьQRКодРасширеннаяПодсказка" id="64"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 								<LabelDecoration name="Информация" id="30">
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<Title formatted="false">
@@ -167,6 +186,18 @@
 									<ContextMenu name="ИнформацияКонтекстноеМеню" id="31"/>
 									<ExtendedTooltip name="ИнформацияРасширеннаяПодсказка" id="32"/>
 								</LabelDecoration>
+								<HTMLDocumentField name="QRКод" id="67">
+									<DataPath>QRКод</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="QRКодКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="QRКодРасширеннаяПодсказка" id="69"/>
+								</HTMLDocumentField>
+								<LabelField name="СтатусQRКода" id="70">
+									<DataPath>СтатусQRКода</DataPath>
+									<TextColor>style:AccentColor</TextColor>
+									<ContextMenu name="СтатусQRКодаКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="СтатусQRКодаРасширеннаяПодсказка" id="72"/>
+								</LabelField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -439,6 +470,45 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Реквизит1" id="10">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="QRКод" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сканируйте QR код, используя мобильный WhatsApp (Chats -&gt; WhatsApp Web)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусQRКода" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус QRКода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -510,22 +580,6 @@
 			<Representation>Picture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ПроверитьПодключение" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Проверить подключение</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Проверить подключение</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ПроверитьПодключение</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="ОтправитьСообщение" id="3">
 			<Title>
 				<v8:item>
@@ -556,6 +610,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСообщениеЧерезВебхук</Action>
+		</Command>
+		<Command name="СканироватьQRКодКоманда" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение / Сканировать QR Код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сканировать QRКод команда</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СканироватьQRКодКоманда</Action>
 		</Command>
 	</Commands>
 </Form>
