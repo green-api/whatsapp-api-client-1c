@@ -295,11 +295,44 @@
 							<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="61"/>
 							<ExtendedTooltip name="ДекорацияПояснениеРасширеннаяПодсказка" id="62"/>
 						</LabelDecoration>
-						<Button name="ПолучитьСообщениеЧерезВебхук" id="53">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.ПолучитьСообщениеЧерезВебхук</CommandName>
-							<ExtendedTooltip name="ПолучитьСообщениеЧерезВебхукРасширеннаяПодсказка" id="54"/>
-						</Button>
+						<UsualGroup name="ГруппаПолучитьСообщение" id="79">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа получить сообщение</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа получить сообщение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПолучитьСообщениеРасширеннаяПодсказка" id="80"/>
+							<ChildItems>
+								<Button name="ПолучитьСообщениеЧерезВебхук" id="53">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПолучитьСообщениеЧерезВебхук</CommandName>
+									<BorderColor>style:ButtonBorderColor</BorderColor>
+									<ExtendedTooltip name="ПолучитьСообщениеЧерезВебхукРасширеннаяПодсказка" id="54"/>
+								</Button>
+								<LabelDecoration name="СтатусПолучениеСообщения" id="76">
+									<Visible>false</Visible>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ожидание сообщения в течение 20 сек...</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СтатусПолучениеСообщенияКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="СтатусПолучениеСообщенияРасширеннаяПодсказка" id="78"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="ТекстПолученноеСообщение" id="57">
 							<DataPath>ТекстПолученноеСообщение</DataPath>
 							<ReadOnly>true</ReadOnly>
