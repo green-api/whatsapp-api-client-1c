@@ -158,6 +158,7 @@
 									<ExtendedTooltip name="СтатусQRКодаРасширеннаяПодсказка" id="72"/>
 								</LabelField>
 								<LabelDecoration name="Декорация1" id="73">
+									<TextColor>style:FieldSelectionBackColor</TextColor>
 									<Title formatted="true">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -169,6 +170,7 @@
 								</LabelDecoration>
 								<LabelDecoration name="Информация" id="30">
 									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -325,6 +327,7 @@
 							</ChildItems>
 						</UsualGroup>
 						<LabelDecoration name="ДекорацияПояснение" id="60">
+							<TextColor>style:FieldSelectionBackColor</TextColor>
 							<Title formatted="true">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -423,6 +426,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ПолучатьВходящиеУведомленияКонтекстноеМеню" id="84"/>
 							<ExtendedTooltip name="ПолучатьВходящиеУведомленияРасширеннаяПодсказка" id="85">
+								<TextColor>style:FieldSelectionBackColor</TextColor>
 								<Title formatted="true">
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -565,6 +569,68 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ПрочиеНастройки" id="123">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПрочиеНастройкиРасширеннаяПодсказка" id="124"/>
+					<ChildItems>
+						<CheckBoxField name="ОтмечатьВходящиеСообщенияПрочитанными" id="125">
+							<DataPath>ОтмечатьВходящиеСообщенияПрочитанными</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОтмечатьВходящиеСообщенияПрочитаннымиКонтекстноеМеню" id="126"/>
+							<ExtendedTooltip name="ОтмечатьВходящиеСообщенияПрочитаннымиРасширеннаяПодсказка" id="127">
+								<TextColor>style:FieldSelectionBackColor</TextColor>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Каждое входящее сообщение на ваш номер будет помечено как прочитанное сразу при получении. Отключите эту настройку, если требуется отслеживать входящие сообщения с телефона</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ОтмечатьВходящиеСообщенияПрочитаннымиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ИнтервалОтправкиСообщений" id="128">
+							<DataPath>ИнтервалОтправкиСообщений</DataPath>
+							<ContextMenu name="ИнтервалОтправкиСообщенийКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="ИнтервалОтправкиСообщенийРасширеннаяПодсказка" id="130">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сообщения будут отправляться из очереди с задержкой на заданный интервал. Подробнее в &lt;link https://green-api.com/docs/api/send-messages-delay/&gt;документации&lt;/&gt; </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИнтервалОтправкиСообщенийПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ПояснениеИнтервалОтправки" id="131">
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сообщения будут отправляться из очереди с задержкой на заданный интервал. Подробнее в &lt;link https://green-api.com/docs/api/send-messages-delay/&gt;документации&lt;/&gt; </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеИнтервалОтправкиКонтекстноеМеню" id="132"/>
+							<ExtendedTooltip name="ПояснениеИнтервалОтправкиРасширеннаяПодсказка" id="133"/>
+						</LabelDecoration>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -806,6 +872,33 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтмечатьВходящиеСообщенияПрочитанными" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмечать входящие сообщения прочитанными</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнтервалОтправкиСообщений" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал отправки сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
