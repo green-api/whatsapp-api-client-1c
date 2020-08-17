@@ -298,6 +298,7 @@
 									<v8:content>Группа пояснение</v8:content>
 								</v8:item>
 							</ToolTip>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
 							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -321,6 +322,7 @@
 </v8:content>
 										</v8:item>
 									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
 									<ContextMenu name="Декорация5КонтекстноеМеню" id="121"/>
 									<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="122"/>
 								</LabelDecoration>
@@ -333,7 +335,7 @@
 									<v8:lang>ru</v8:lang>
 									<v8:content>При нажатии на кнопку “Получить сообщение“ обработка ожидает  получения сообщения в течение 20 сек. Если сообщение получено, то вызов прекращается, сообщение выводится пользователю. Если в течение 20 сек. новых сообщений не поступает, вызов завершается.
 Рекомендуется выполнять получение сообщений в фоновом задании с небольшим интервалом, например 10 сек.
-Подробнее в &lt;link https://green-api.com/docs/&gt;документации&lt;/&gt; </v8:content>
+Подробнее в &lt;link https://green-api.com/docs/api/receiving/technology-http-api/&gt;документации&lt;/&gt; </v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="61"/>
@@ -377,6 +379,15 @@
 								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="ТипУведомления" id="134">
+							<DataPath>ТипУведомления</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>29</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ТипУведомленияКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="ТипУведомленияРасширеннаяПодсказка" id="136"/>
+						</InputField>
 						<InputField name="ТекстПолученноеСообщение" id="57">
 							<DataPath>ТекстПолученноеСообщение</DataPath>
 							<ReadOnly>true</ReadOnly>
@@ -426,6 +437,9 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ПолучатьВходящиеУведомленияКонтекстноеМеню" id="84"/>
 							<ExtendedTooltip name="ПолучатьВходящиеУведомленияРасширеннаяПодсказка" id="85">
+								<Width>41</Width>
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
 								<TextColor>style:FieldSelectionBackColor</TextColor>
 								<Title formatted="true">
 									<v8:item>
@@ -486,6 +500,8 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="112"/>
 										</PictureDecoration>
 										<LabelDecoration name="Декорация2" id="105">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -899,6 +915,21 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипУведомления" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип уведомления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
