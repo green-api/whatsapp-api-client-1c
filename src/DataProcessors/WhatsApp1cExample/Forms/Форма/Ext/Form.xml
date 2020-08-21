@@ -317,10 +317,7 @@
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Установлены нестандартные настройки получения входящих
-уведомлений. Получение уведомлений в текущей обработке
-недоступно.
-</v8:content>
+											<v8:content>Получение сообщений не настроено. Выполните настройку получения сообщений на закладке "Настройки"</v8:content>
 										</v8:item>
 									</Title>
 									<GroupVerticalAlign>Center</GroupVerticalAlign>
@@ -329,72 +326,92 @@
 								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
-						<LabelDecoration name="ДекорацияПояснение" id="60">
-							<TextColor>style:FieldSelectionBackColor</TextColor>
-							<Title formatted="true">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>При нажатии на кнопку “Получить сообщение“ обработка ожидает  получения сообщения в течение 20 сек. Если сообщение получено, то вызов прекращается, сообщение выводится пользователю. Если в течение 20 сек. новых сообщений не поступает, вызов завершается.
-Рекомендуется выполнять получение сообщений в фоновом задании с небольшим интервалом, например 10 сек.
-Подробнее в &lt;link https://green-api.com/docs/api/receiving/technology-http-api/&gt;документации&lt;/&gt; </v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="61"/>
-							<ExtendedTooltip name="ДекорацияПояснениеРасширеннаяПодсказка" id="62"/>
-						</LabelDecoration>
-						<UsualGroup name="ГруппаПолучитьСообщение" id="79">
+						<UsualGroup name="ГруппаПолучениеСообщений" id="134">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа получить сообщение</v8:content>
+									<v8:content>Группа получение сообщений</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа получить сообщение</v8:content>
+									<v8:content>Группа получение сообщений</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>Horizontal</Group>
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПолучитьСообщениеРасширеннаяПодсказка" id="80"/>
+							<ExtendedTooltip name="ГруппаПолучениеСообщенийРасширеннаяПодсказка" id="135"/>
 							<ChildItems>
-								<Button name="ПолучитьСообщениеЧерезВебхук" id="53">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ПолучитьСообщениеЧерезВебхук</CommandName>
-									<BorderColor>style:ButtonBorderColor</BorderColor>
-									<ExtendedTooltip name="ПолучитьСообщениеЧерезВебхукРасширеннаяПодсказка" id="54"/>
-								</Button>
-								<LabelDecoration name="СтатусПолучениеСообщения" id="76">
-									<Visible>false</Visible>
+								<LabelDecoration name="ДекорацияПояснение" id="60">
 									<TextColor>style:FieldSelectionBackColor</TextColor>
-									<Title formatted="false">
+									<Title formatted="true">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Ожидание сообщения в течение 20 сек...</v8:content>
+											<v8:content>При нажатии на кнопку “Получить сообщение“ обработка ожидает  получения сообщения в течение 20 сек. Если сообщение получено, то вызов прекращается, сообщение выводится пользователю. Если в течение 20 сек. новых сообщений не поступает, вызов завершается.
+Рекомендуется выполнять получение сообщений в фоновом задании с небольшим интервалом, например 10 сек.
+Подробнее в &lt;link https://green-api.com/docs/api/receiving/technology-http-api/&gt;документации&lt;/&gt; </v8:content>
 										</v8:item>
 									</Title>
-									<ContextMenu name="СтатусПолучениеСообщенияКонтекстноеМеню" id="77"/>
-									<ExtendedTooltip name="СтатусПолучениеСообщенияРасширеннаяПодсказка" id="78"/>
+									<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ДекорацияПояснениеРасширеннаяПодсказка" id="62"/>
 								</LabelDecoration>
+								<UsualGroup name="ГруппаПолучитьСообщение" id="79">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа получить сообщение</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа получить сообщение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПолучитьСообщениеРасширеннаяПодсказка" id="80"/>
+									<ChildItems>
+										<Button name="ПолучитьСообщениеЧерезВебхук" id="53">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПолучитьСообщениеЧерезВебхук</CommandName>
+											<BorderColor>style:ButtonBorderColor</BorderColor>
+											<ExtendedTooltip name="ПолучитьСообщениеЧерезВебхукРасширеннаяПодсказка" id="54"/>
+										</Button>
+										<LabelDecoration name="СтатусПолучениеСообщения" id="76">
+											<Visible>false</Visible>
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ожидание сообщения в течение 20 сек...</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СтатусПолучениеСообщенияКонтекстноеМеню" id="77"/>
+											<ExtendedTooltip name="СтатусПолучениеСообщенияРасширеннаяПодсказка" id="78"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ТекстПолученноеСообщение" id="57">
+									<DataPath>ТекстПолученноеСообщение</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текст сообщения</v8:content>
+										</v8:item>
+									</Title>
+									<Height>5</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ТекстПолученноеСообщениеКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ТекстПолученноеСообщениеРасширеннаяПодсказка" id="59"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="ТекстПолученноеСообщение" id="57">
-							<DataPath>ТекстПолученноеСообщение</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Текст сообщения</v8:content>
-								</v8:item>
-							</Title>
-							<Height>5</Height>
-							<VerticalStretch>false</VerticalStretch>
-							<MultiLine>true</MultiLine>
-							<ContextMenu name="ТекстПолученноеСообщениеКонтекстноеМеню" id="58"/>
-							<ExtendedTooltip name="ТекстПолученноеСообщениеРасширеннаяПодсказка" id="59"/>
-						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="НастройкиВходящихУведомлений" id="81">
