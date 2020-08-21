@@ -139,7 +139,7 @@
 											<v8:content>Группа действия</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаДействияРасширеннаяПодсказка" id="66"/>
@@ -299,7 +299,7 @@
 								</v8:item>
 							</ToolTip>
 							<GroupVerticalAlign>Center</GroupVerticalAlign>
-							<Group>AlwaysHorizontal</Group>
+							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПояснение1РасширеннаяПодсказка" id="116"/>
@@ -309,6 +309,7 @@
 										<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
 									<ContextMenu name="Декорация4КонтекстноеМеню" id="118"/>
 									<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="119"/>
 								</PictureDecoration>
@@ -354,7 +355,7 @@
 									<v8:content>Группа получить сообщение</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>AlwaysHorizontal</Group>
+							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПолучитьСообщениеРасширеннаяПодсказка" id="80"/>
@@ -379,15 +380,6 @@
 								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="ТипУведомления" id="134">
-							<DataPath>ТипУведомления</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<Width>29</Width>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ContextMenu name="ТипУведомленияКонтекстноеМеню" id="135"/>
-							<ExtendedTooltip name="ТипУведомленияРасширеннаяПодсказка" id="136"/>
-						</InputField>
 						<InputField name="ТекстПолученноеСообщение" id="57">
 							<DataPath>ТекстПолученноеСообщение</DataPath>
 							<ReadOnly>true</ReadOnly>
@@ -486,7 +478,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<v8:content>Группа пояснение</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаПояснениеРасширеннаяПодсказка" id="114"/>
@@ -496,6 +488,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
 											<ContextMenu name="Декорация3КонтекстноеМеню" id="111"/>
 											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="112"/>
 										</PictureDecoration>
@@ -1033,6 +1026,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСообщениеЧерезВебхук</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СканироватьQRКодКоманда" id="5">
 			<Title>
@@ -1048,6 +1042,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СканироватьQRКодКоманда</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьСтандартныеНастройки" id="2">
 			<Title>
@@ -1063,6 +1058,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьСтандартныеНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
