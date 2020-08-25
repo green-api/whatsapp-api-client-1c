@@ -3,11 +3,11 @@
 	<ConfigVersions>
 		<Metadata name="Configuration.Конфигурация" id="a7dc518d-fa86-4892-a7af-ba2aca88ad30" configVersion="06214e63fc5a8e418ab736d47a99e3dd00000000"/>
 		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="53c341e0-4783-470a-8069-53c443833285.8" configVersion="56e96f4ca37cab40acc47546d4a41dcb00000000"/>
-		<Metadata name="DataProcessor.WhatsApp1cExample" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561" configVersion="3ca8a76492727043852d87b5a61641ad00000000"/>
-		<Metadata name="DataProcessor.WhatsApp1cExample.Form.Форма" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098" configVersion="ff194f67675533458b58531813a4889c00000000"/>
-		<Metadata name="DataProcessor.WhatsApp1cExample.Form.Форма.Form" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098.0" configVersion="5b42e262957386488ea2df8494b4359500000000"/>
-		<Metadata name="DataProcessor.WhatsApp1cExample.Template.QRМакет" id="48c29a2f-a511-4612-86ed-2ccc82cc294b" configVersion="0af2cb40520a4a40837280c22e63fadd00000000"/>
-		<Metadata name="DataProcessor.WhatsApp1cExample.Template.QRМакет.Template" id="48c29a2f-a511-4612-86ed-2ccc82cc294b.0" configVersion="059962f621f31a468d632e9f54c8915200000000"/>
+		<Metadata name="DataProcessor.GreenAPI" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561" configVersion="7e735029e083994bae856a4251b572e600000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.Форма" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098" configVersion="75d22abbf10cbb4482aaae565b65c73600000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.Форма.Form" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098.0" configVersion="2471d48b4d6ea94bb48ce0d778641f6d00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет" id="48c29a2f-a511-4612-86ed-2ccc82cc294b" configVersion="0af2cb40520a4a40837280c22e63fadd00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет.Template" id="48c29a2f-a511-4612-86ed-2ccc82cc294b.0" configVersion="059962f621f31a468d632e9f54c8915200000000"/>
 		<Metadata name="Language.Русский" id="4c15b64d-a55e-47ed-b29e-0a8e70ab6712" configVersion="ab278947aa07bb408692eb094fc5c63900000000"/>
 	</ConfigVersions>
 </ConfigDumpInfo>

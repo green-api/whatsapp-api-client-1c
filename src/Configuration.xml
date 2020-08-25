@@ -179,7 +179,7 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<DataProcessor>WhatsApp1cExample</DataProcessor>
+			<DataProcessor>GreenAPI</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

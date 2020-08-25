@@ -67,7 +67,6 @@
 											<v8:content>БЛ='Отключен (требуется сканировать QR-код)'; БИ=Подключен</v8:content>
 										</v8:item>
 									</Format>
-									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
 									<ContextMenu name="СтатусКонтекстноеМеню" id="10"/>
 									<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="11"/>
 								</LabelField>
@@ -151,23 +150,12 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
-								<LabelField name="СтатусQRКода" id="70">
-									<DataPath>СтатусQRКода</DataPath>
-									<TextColor>style:AccentColor</TextColor>
-									<ContextMenu name="СтатусQRКодаКонтекстноеМеню" id="71"/>
-									<ExtendedTooltip name="СтатусQRКодаРасширеннаяПодсказка" id="72"/>
-								</LabelField>
-								<LabelDecoration name="Декорация1" id="73">
-									<TextColor>style:FieldSelectionBackColor</TextColor>
-									<Title formatted="true">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Получить QR-код можно также в личном кабинете &lt;link https://cabinet.green-api.com/&gt;https://cabinet.green-api.com/&lt;/&gt;</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="Декорация1КонтекстноеМеню" id="74"/>
-									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="75"/>
-								</LabelDecoration>
+								<Button name="РазлогинитьАккаунт" id="136">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.РазлогинитьАккаунт</CommandName>
+									<ExtendedTooltip name="РазлогинитьАккаунтРасширеннаяПодсказка" id="137"/>
+								</Button>
 								<LabelDecoration name="Информация" id="30">
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<TextColor>style:FieldSelectionBackColor</TextColor>
@@ -186,6 +174,17 @@
 									<ContextMenu name="QRКодКонтекстноеМеню" id="68"/>
 									<ExtendedTooltip name="QRКодРасширеннаяПодсказка" id="69"/>
 								</HTMLDocumentField>
+								<LabelDecoration name="Декорация1" id="73">
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получить QR-код можно также в личном кабинете &lt;link https://cabinet.green-api.com/&gt;https://cabinet.green-api.com/&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="75"/>
+								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -665,7 +664,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
-				<v8:Type>cfg:DataProcessorObject.WhatsApp1cExample</v8:Type>
+				<v8:Type>cfg:DataProcessorObject.GreenAPI</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
@@ -1076,6 +1075,21 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			</ToolTip>
 			<Action>УстановитьСтандартныеНастройки</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РазлогинитьАккаунт" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разлогинить аккаунт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разлогинить аккаунт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РазлогинитьАккаунтКоманда</Action>
 		</Command>
 	</Commands>
 </Form>
