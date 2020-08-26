@@ -228,6 +228,19 @@
 				
 				Если Ответ.body.messageData.typeMessage = "textMessage" Тогда
 					Возврат Ответ.body.messageData.textMessageData.textMessage;
+				ИначеЕсли Ответ.body.messageData.typeMessage = "extendedTextMessage" Тогда
+					Возврат Ответ.body.messageData.extendedTextMessageData.text;
+				ИначеЕсли Ответ.body.messageData.typeMessage = "imageMessage"
+					Или Ответ.body.messageData.typeMessage = "videoMessage"
+					Или Ответ.body.messageData.typeMessage = "documentMessage"
+					Или Ответ.body.messageData.typeMessage = "audioMessage" Тогда
+					
+					Возврат Ответ.body.messageData.fileMessageData.downloadUrl;
+				ИначеЕсли Ответ.body.messageData.typeMessage = "locationMessage" Тогда
+					Возврат "latitude=" + Ответ.body.messageData.locationMessageData.latitude 
+						+ "longitude=" + Ответ.body.messageData.locationMessageData.longitude
+				ИначеЕсли Ответ.body.messageData.typeMessage = "contactMessage" Тогда
+					Возврат Ответ.body.messageData.contactMessageData.vcard;
 				Иначе
 					Возврат Ответ.body.messageData;
 				КонецЕсли;
@@ -242,7 +255,7 @@
 				
 			ИначеЕсли Ответ.body.typeWebhook = ТипыУведомлений.СостояниеТелефона Тогда
 				
-				Возврат Ответ.body.deviceData;
+				Возврат Ответ.body.deviceData.deviceModel;
 				
 			Иначе
 				УдалитьСообщение(Инстанс, Токен, receiptIdТекущий); // Другие вебхуки пропускаем
@@ -420,7 +433,7 @@
 	Если Ответ.type = "AlreadyLogged" Тогда
 		ОтключитьОбработчикОжидания("Подключаемый_СканироватьQRКод");
 	ИначеЕсли Ответ.type = "qrCode" Тогда
-		QRКод = ПолучитьТекстИзМакета("Test");
+		QRКод = ПолучитьТекстИзМакета("QRМакет");
 		QRКод = СтрЗаменить(QRКод, "%QR_DATA%", Ответ.message);
 		Элементы.QRКод.Видимость = Истина;
 	КонецЕсли;
@@ -487,7 +500,6 @@
 	Если РезультатВопроса = "Установить стандартные настройки" Тогда
 		НастройкиСохранены = УстановитьНастройкуСервиса(Хост, IdInstance, ApiToken, "webhookUrl", ХостВебхуковПоУмолчанию());
 		ОбновитьСтатусСервиса();
-		Сообщить("Настрйоки сохранены: " + НастройкиСохранены);
 	КонецЕсли;
 	
 КонецПроцедуры
@@ -513,7 +525,7 @@
 &НаСервере
 Функция ПолучитьТекстИзМакета(ИмяМакета)
 	Об = РеквизитФормыВЗначение("Объект");
-	ОбластьМакета = Об.ПолучитьМакет("QRМакет");
+	ОбластьМакета = Об.ПолучитьМакет(ИмяМакета);
 	Возврат ОбластьМакета.ТекущаяОбласть.Текст;
 КонецФункции
 
