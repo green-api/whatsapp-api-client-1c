@@ -104,6 +104,7 @@
 										</v8:item>
 									</Title>
 									<HorizontalStretch>true</HorizontalStretch>
+									<EditTextUpdate>OnValueChange</EditTextUpdate>
 									<ContextMenu name="IdInstanceКонтекстноеМеню" id="20"/>
 									<ExtendedTooltip name="IdInstanceРасширеннаяПодсказка" id="21"/>
 									<Events>
@@ -119,6 +120,7 @@
 										</v8:item>
 									</Title>
 									<HorizontalStretch>true</HorizontalStretch>
+									<EditTextUpdate>OnValueChange</EditTextUpdate>
 									<ContextMenu name="ApiTokenКонтекстноеМеню" id="17"/>
 									<ExtendedTooltip name="ApiTokenРасширеннаяПодсказка" id="18"/>
 									<Events>
@@ -250,6 +252,7 @@
 									<v8:content>ЧДЦ=; ЧГ=</v8:content>
 								</v8:item>
 							</EditFormat>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
 							<ContextMenu name="НомерТелефонаКонтекстноеМеню" id="41"/>
 							<ExtendedTooltip name="НомерТелефонаРасширеннаяПодсказка" id="42"/>
 						</InputField>
@@ -258,6 +261,7 @@
 							<Height>4</Height>
 							<VerticalStretch>false</VerticalStretch>
 							<MultiLine>true</MultiLine>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
 							<ContextMenu name="ТекстСообщенияКонтекстноеМеню" id="44"/>
 							<ExtendedTooltip name="ТекстСообщенияРасширеннаяПодсказка" id="45"/>
 						</InputField>
@@ -632,6 +636,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 						</CheckBoxField>
 						<InputField name="ИнтервалОтправкиСообщений" id="128">
 							<DataPath>ИнтервалОтправкиСообщений</DataPath>
+							<EditTextUpdate>OnValueChange</EditTextUpdate>
 							<ContextMenu name="ИнтервалОтправкиСообщенийКонтекстноеМеню" id="129"/>
 							<ExtendedTooltip name="ИнтервалОтправкиСообщенийРасширеннаяПодсказка" id="130">
 								<Title formatted="true">
