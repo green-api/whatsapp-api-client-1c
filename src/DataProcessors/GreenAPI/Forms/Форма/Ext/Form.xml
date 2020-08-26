@@ -634,22 +634,40 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 								<Event name="OnChange">ОтмечатьВходящиеСообщенияПрочитаннымиПриИзменении</Event>
 							</Events>
 						</CheckBoxField>
-						<InputField name="ИнтервалОтправкиСообщений" id="128">
-							<DataPath>ИнтервалОтправкиСообщений</DataPath>
-							<EditTextUpdate>OnValueChange</EditTextUpdate>
-							<ContextMenu name="ИнтервалОтправкиСообщенийКонтекстноеМеню" id="129"/>
-							<ExtendedTooltip name="ИнтервалОтправкиСообщенийРасширеннаяПодсказка" id="130">
-								<Title formatted="true">
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Сообщения будут отправляться из очереди с задержкой на заданный интервал. Подробнее в &lt;link https://green-api.com/docs/api/send-messages-delay/&gt;документации&lt;/&gt; </v8:content>
-									</v8:item>
-								</Title>
-							</ExtendedTooltip>
-							<Events>
-								<Event name="OnChange">ИнтервалОтправкиСообщенийПриИзменении</Event>
-							</Events>
-						</InputField>
+						<UsualGroup name="Группа1" id="141">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="142"/>
+							<ChildItems>
+								<InputField name="ИнтервалОтправкиСообщений" id="128">
+									<DataPath>ИнтервалОтправкиСообщений</DataPath>
+									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<ContextMenu name="ИнтервалОтправкиСообщенийКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="ИнтервалОтправкиСообщенийРасширеннаяПодсказка" id="130">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сообщения будут отправляться из очереди с задержкой на заданный интервал. Подробнее в &lt;link https://green-api.com/docs/api/send-messages-delay/&gt;документации&lt;/&gt; </v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИнтервалОтправкиСообщенийПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ДекорацияМсек" id="138">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>мсек</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияМсекКонтекстноеМеню" id="139"/>
+									<ExtendedTooltip name="ДекорацияМсекРасширеннаяПодсказка" id="140"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 						<LabelDecoration name="ПояснениеИнтервалОтправки" id="131">
 							<TextColor>style:FieldSelectionBackColor</TextColor>
 							<Title formatted="true">
@@ -665,6 +683,54 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</Page>
 			</ChildItems>
 		</Pages>
+		<UsualGroup name="ГруппаВебКлиент" id="143">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа веб клиент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа веб клиент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаВебКлиентРасширеннаяПодсказка" id="144"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="151">
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="152"/>
+					<ChildItems>
+						<PictureDecoration name="Декорация6" id="148">
+							<Picture>
+								<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="Декорация6КонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="150"/>
+						</PictureDecoration>
+						<LabelDecoration name="ДекорацияНеПоддерживается" id="145">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Веб-клиент не поддерживается. Запустите 1с в режиме тонкого или толстого клиента</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНеПоддерживаетсяКонтекстноеМеню" id="146"/>
+							<ExtendedTooltip name="ДекорацияНеПоддерживаетсяРасширеннаяПодсказка" id="147"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
