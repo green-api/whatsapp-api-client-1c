@@ -2,6 +2,7 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -22,7 +23,7 @@
 					<v8:content>Разделы</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Width>63</Width>
+			<Width>76</Width>
 			<HorizontalStretch>false</HorizontalStretch>
 			<ExtendedTooltip name="РазделыРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
@@ -125,172 +126,6 @@
 						</LabelField>
 					</ChildItems>
 				</Page>
-				<Page name="НастройкиВстроенные" id="3">
-					<Visible>false</Visible>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Настройки встроенные</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Настройки встроенные</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="НастройкиВстроенныеРасширеннаяПодсказка" id="4"/>
-					<ChildItems>
-						<UsualGroup name="СтатусОбновить" id="7">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Статус обновить</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Статус обновить</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="СтатусОбновитьРасширеннаяПодсказка" id="8"/>
-							<ChildItems>
-								<LabelField name="Статус" id="9">
-									<DataPath>СтатусСервиса</DataPath>
-									<HorizontalStretch>true</HorizontalStretch>
-									<Format>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>БЛ='Отключен (требуется сканировать QR-код)'; БИ=Подключен</v8:content>
-										</v8:item>
-									</Format>
-									<ContextMenu name="СтатусКонтекстноеМеню" id="10"/>
-									<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="11"/>
-								</LabelField>
-								<Button name="ОбновитьСтатус" id="12">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ОбновитьСтатус</CommandName>
-									<ExtendedTooltip name="ОбновитьСтатусРасширеннаяПодсказка" id="13"/>
-								</Button>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ДанныеАвторизации" id="14">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Данные авторизации</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Данные авторизации</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ДанныеАвторизацииРасширеннаяПодсказка" id="15"/>
-							<ChildItems>
-								<InputField name="ApiToken1" id="166">
-									<DataPath>ApiToken</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>API Token</v8:content>
-										</v8:item>
-									</Title>
-									<HorizontalStretch>true</HorizontalStretch>
-									<EditTextUpdate>OnValueChange</EditTextUpdate>
-									<ContextMenu name="ApiToken1КонтекстноеМеню" id="167"/>
-									<ExtendedTooltip name="ApiToken1РасширеннаяПодсказка" id="168"/>
-									<Events>
-										<Event name="OnChange">ApiTokenПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="IdInstance1" id="163">
-									<DataPath>IdInstance</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ID Instance</v8:content>
-										</v8:item>
-									</Title>
-									<HorizontalStretch>true</HorizontalStretch>
-									<EditTextUpdate>OnValueChange</EditTextUpdate>
-									<ContextMenu name="IdInstance1КонтекстноеМеню" id="164"/>
-									<ExtendedTooltip name="IdInstance1РасширеннаяПодсказка" id="165"/>
-									<Events>
-										<Event name="OnChange">IdInstanceПриИзменении</Event>
-									</Events>
-								</InputField>
-								<UsualGroup name="ГруппаДействия" id="65">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа действия</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа действия</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаДействияРасширеннаяПодсказка" id="66"/>
-									<ChildItems>
-										<Button name="СканироватьQRКод" id="63">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.СканироватьQRКодКоманда</CommandName>
-											<ExtendedTooltip name="СканироватьQRКодРасширеннаяПодсказка" id="64"/>
-										</Button>
-									</ChildItems>
-								</UsualGroup>
-								<Button name="РазлогинитьАккаунт" id="136">
-									<Type>UsualButton</Type>
-									<Visible>false</Visible>
-									<CommandName>Form.Command.РазлогинитьАккаунт</CommandName>
-									<ExtendedTooltip name="РазлогинитьАккаунтРасширеннаяПодсказка" id="137"/>
-								</Button>
-								<LabelDecoration name="Информация" id="30">
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<TextColor>style:FieldSelectionBackColor</TextColor>
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Отправка сообщений выполняется с вашего телефона. Поэтому телефон должен быть всегда заряжен и подключен к сети.</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ИнформацияКонтекстноеМеню" id="31"/>
-									<ExtendedTooltip name="ИнформацияРасширеннаяПодсказка" id="32"/>
-								</LabelDecoration>
-								<HTMLDocumentField name="QRКод" id="67">
-									<DataPath>QRКод</DataPath>
-									<Visible>false</Visible>
-									<ContextMenu name="QRКодКонтекстноеМеню" id="68"/>
-									<ExtendedTooltip name="QRКодРасширеннаяПодсказка" id="69"/>
-								</HTMLDocumentField>
-								<LabelDecoration name="Декорация1" id="73">
-									<TextColor>style:FieldSelectionBackColor</TextColor>
-									<Title formatted="true">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Получить QR-код можно также в личном кабинете &lt;link https://cabinet.green-api.com/&gt;https://cabinet.green-api.com/&lt;/&gt;</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="Декорация1КонтекстноеМеню" id="74"/>
-									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="75"/>
-								</LabelDecoration>
-							</ChildItems>
-						</UsualGroup>
-					</ChildItems>
-				</Page>
 				<Page name="ОтправкаСообщений" id="5">
 					<Title>
 						<v8:item>
@@ -325,7 +160,9 @@
 							<ChildItems>
 								<LabelField name="Статус1" id="48">
 									<DataPath>СтатусСервиса</DataPath>
-									<HorizontalStretch>true</HorizontalStretch>
+									<Width>26</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
 									<Format>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -345,7 +182,8 @@
 						</UsualGroup>
 						<InputField name="НомерТелефона" id="40">
 							<DataPath>НомерТелефона</DataPath>
-							<HorizontalStretch>true</HorizontalStretch>
+							<Width>29</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<EditFormat>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -420,7 +258,7 @@
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Получение сообщений не настроено. Выполните настройку получения сообщений на закладке "Настройки"</v8:content>
+											<v8:content>Получение сообщений не настроено. Выполните настройку получения сообщений на закладке "Настройки входящих уведомлений"</v8:content>
 										</v8:item>
 									</Title>
 									<GroupVerticalAlign>Center</GroupVerticalAlign>
@@ -499,7 +337,7 @@
 									</ChildItems>
 								</UsualGroup>
 								<InputField name="ТекстПолученноеСообщение" id="57">
-									<DataPath>ТекстПолученноеСообщение</DataPath>
+									<DataPath>Объект.ТекстПолученноеСообщение</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -925,66 +763,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<Field>ТекстСообщения</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="Хост" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Хост</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ТекстПолученноеСообщение" id="8">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Текст полученное сообщение</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="QRКод" id="11">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сканируйте QR код, используя мобильный WhatsApp (Chats -&gt; WhatsApp Web)</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="СтатусQRКода" id="12">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Статус QR Кода</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
 		<Attribute name="ПолучатьВходящиеУведомления" id="10">
 			<Title>
 				<v8:item>
@@ -1200,22 +978,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<Action>ПолучитьСообщениеЧерезВебхук</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="СканироватьQRКодКоманда" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Получить QR-код</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сканировать QRКод команда</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>СканироватьQRКодКоманда</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="УстановитьСтандартныеНастройки" id="2">
 			<Title>
 				<v8:item>
@@ -1231,21 +993,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			</ToolTip>
 			<Action>УстановитьСтандартныеНастройки</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="РазлогинитьАккаунт" id="6">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Разлогинить аккаунт</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Разлогинить аккаунт</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>РазлогинитьАккаунтКоманда</Action>
 		</Command>
 		<Command name="ПроверитьПодключение" id="7">
 			<Title>
