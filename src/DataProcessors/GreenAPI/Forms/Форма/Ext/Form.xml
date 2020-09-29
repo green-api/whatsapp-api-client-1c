@@ -61,7 +61,7 @@
 							<ExtendedTooltip name="ОписаниеНачалоРасширеннаяПодсказка" id="157"/>
 						</LabelDecoration>
 						<InputField name="IdInstance" id="19">
-							<DataPath>IdInstance</DataPath>
+							<DataPath>Объект.IdInstance</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -69,6 +69,7 @@
 								</v8:item>
 							</Title>
 							<HorizontalStretch>true</HorizontalStretch>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
 							<EditTextUpdate>OnValueChange</EditTextUpdate>
 							<ContextMenu name="IdInstanceКонтекстноеМеню" id="20"/>
 							<ExtendedTooltip name="IdInstanceРасширеннаяПодсказка" id="21"/>
@@ -77,7 +78,7 @@
 							</Events>
 						</InputField>
 						<InputField name="ApiToken" id="16">
-							<DataPath>ApiToken</DataPath>
+							<DataPath>Объект.ApiToken</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -268,6 +269,7 @@
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаПолучениеСообщений" id="134">
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -372,6 +374,7 @@
 					<ChildItems>
 						<CheckBoxField name="ПолучатьВходящиеУведомления" id="83">
 							<DataPath>ПолучатьВходящиеУведомления</DataPath>
+							<Visible>false</Visible>
 							<TitleLocation>Right</TitleLocation>
 							<ToolTip>
 								<v8:item>
@@ -477,6 +480,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ДеталиНастройкиУведомлений" id="89">
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -676,6 +680,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:Type>cfg:DataProcessorObject.GreenAPI</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>Объект.ApiToken</Field>
+				<Field>Объект.IdInstance</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="СтатусСервиса" id="2">
 			<Title>
@@ -687,44 +696,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-		</Attribute>
-		<Attribute name="ApiToken" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>API Token</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-			<FillCheck>ShowError</FillCheck>
-			<Save>
-				<Field>ApiToken</Field>
-			</Save>
-		</Attribute>
-		<Attribute name="IdInstance" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ID Instance</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-			<FillCheck>ShowError</FillCheck>
-			<Save>
-				<Field>IdInstance</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="НомерТелефона" id="5">
 			<Title>
