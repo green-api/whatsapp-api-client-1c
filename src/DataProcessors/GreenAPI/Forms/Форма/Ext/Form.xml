@@ -7,6 +7,7 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -83,15 +84,39 @@
 											<v8:lang>ru</v8:lang>
 											<v8:content>&lt;fontsize 12&gt;1. Регистрация и подключение телефона&lt;/&gt;
 
-Зарегистрируйтесь в личном кабинете &lt;link https://cabinet.green-api.com&gt;GREEN-API&lt;/&gt;
+Зарегистрируйтесь в личном кабинете GREEN-API
 Выберите бесплатный тариф "Разработчик"
-Подключите телефон к сервису. Для этого сканируйте QR-код в личном кабинете.
-
-&lt;fontsize 12&gt;2. Укажите параметры "ID Instance" и "API Token"&lt;/&gt;</v8:content>
+Подключите телефон к сервису. Для этого сканируйте QR-код в личном кабинете.</v8:content>
 										</v8:item>
 									</Title>
 									<ContextMenu name="ОписаниеНачалоКонтекстноеМеню" id="156"/>
 									<ExtendedTooltip name="ОписаниеНачалоРасширеннаяПодсказка" id="157"/>
+								</LabelDecoration>
+								<Button name="КнопкаПомощник" id="234">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КнопкаПомощник</CommandName>
+									<TextColor>web:White</TextColor>
+									<BackColor>#49B349</BackColor>
+									<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Помощник подключения...</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаПомощникРасширеннаяПодсказка" id="235"/>
+								</Button>
+								<LabelDecoration name="ОписаниеПродолжение" id="231">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;fontsize 12&gt;2. Укажите параметры "ID Instance" и "API Token"&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОписаниеПродолжениеКонтекстноеМеню" id="232"/>
+									<ExtendedTooltip name="ОписаниеПродолжениеРасширеннаяПодсказка" id="233"/>
 								</LabelDecoration>
 								<InputField name="IdInstance" id="19">
 									<DataPath>Объект.IdInstance</DataPath>
@@ -1269,6 +1294,21 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьФайлПоСсылке</Action>
+		</Command>
+		<Command name="КнопкаПомощник" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка помощник</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка помощник</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаПомощник</Action>
 		</Command>
 	</Commands>
 </Form>
