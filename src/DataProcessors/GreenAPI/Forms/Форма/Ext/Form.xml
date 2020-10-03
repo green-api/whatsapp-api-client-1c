@@ -104,6 +104,12 @@
 									<HorizontalStretch>true</HorizontalStretch>
 									<AutoMarkIncomplete>true</AutoMarkIncomplete>
 									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>9999</v8:content>
+										</v8:item>
+									</InputHint>
 									<ContextMenu name="IdInstanceКонтекстноеМеню" id="20"/>
 									<ExtendedTooltip name="IdInstanceРасширеннаяПодсказка" id="21"/>
 									<Events>
@@ -120,6 +126,12 @@
 									</Title>
 									<HorizontalStretch>true</HorizontalStretch>
 									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>123fdws3214t3456g214234171855e0ff3f597f1</v8:content>
+										</v8:item>
+									</InputHint>
 									<ContextMenu name="ApiTokenКонтекстноеМеню" id="17"/>
 									<ExtendedTooltip name="ApiTokenРасширеннаяПодсказка" id="18"/>
 									<Events>

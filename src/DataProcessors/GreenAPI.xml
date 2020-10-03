@@ -21,7 +21,7 @@
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm>DataProcessor.GreenAPI.Form.Форма</DefaultForm>
+			<DefaultForm>DataProcessor.GreenAPI.Form.ПомощникПодключения</DefaultForm>
 			<AuxiliaryForm/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
@@ -72,7 +72,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Id instance</v8:content>
+							<v8:content>ID Instance</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -110,7 +110,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Api token</v8:content>
+							<v8:content>API Token</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -181,8 +181,13 @@
 				</Properties>
 			</Attribute>
 			<Form>Форма</Form>
+			<Form>ПомощникПодключения</Form>
 			<Template>QRМакет</Template>
-			<Template>TestMSg</Template>
+			<Template>ИконкаWhatsApp</Template>
+			<Template>ВыборАккаунта</Template>
+			<Template>СканQR</Template>
+			<Template>ДанныеАккаунта</Template>
+			<Template>ИконкаФиниш</Template>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>
