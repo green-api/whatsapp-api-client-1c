@@ -504,7 +504,7 @@
 																	<v8:content>Тело  сообщения</v8:content>
 																</v8:item>
 															</Title>
-															<Height>5</Height>
+															<Height>7</Height>
 															<VerticalStretch>false</VerticalStretch>
 															<MultiLine>true</MultiLine>
 															<ContextMenu name="ТекстПолученноеСообщениеКонтекстноеМеню" id="58"/>
