@@ -919,54 +919,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 						</Page>
 					</ChildItems>
 				</Pages>
-				<UsualGroup name="ГруппаВебКлиент" id="143">
-					<Visible>false</Visible>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа веб клиент</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа веб клиент</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<ExtendedTooltip name="ГруппаВебКлиентРасширеннаяПодсказка" id="144"/>
-					<ChildItems>
-						<UsualGroup name="Группа2" id="151">
-							<GroupVerticalAlign>Center</GroupVerticalAlign>
-							<VerticalAlign>Center</VerticalAlign>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="152"/>
-							<ChildItems>
-								<PictureDecoration name="Декорация6" id="148">
-									<Picture>
-										<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
-										<xr:LoadTransparent>false</xr:LoadTransparent>
-									</Picture>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="Декорация6КонтекстноеМеню" id="149"/>
-									<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="150"/>
-								</PictureDecoration>
-								<LabelDecoration name="ДекорацияНеПоддерживается" id="145">
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Веб-клиент не поддерживается. Запустите 1с в режиме тонкого или толстого клиента</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ДекорацияНеПоддерживаетсяКонтекстноеМеню" id="146"/>
-									<ExtendedTooltip name="ДекорацияНеПоддерживаетсяРасширеннаяПодсказка" id="147"/>
-								</LabelDecoration>
-							</ChildItems>
-						</UsualGroup>
-					</ChildItems>
-				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
