@@ -251,29 +251,21 @@
 													<ContextMenu name="ДекорацияТриКонтекстноеМеню" id="39"/>
 													<ExtendedTooltip name="ДекорацияТриExtendedTooltip" id="109"/>
 												</LabelDecoration>
-												<LabelDecoration name="ЗарегистрироватьсяВGreenAPI" id="203">
-													<Width>36</Width>
+												<Button name="ЗарегистрироватьсяВGreenAPI" id="367">
+													<Type>UsualButton</Type>
 													<Height>2</Height>
-													<SkipOnInput>true</SkipOnInput>
+													<CommandName>Form.Command.ЗарегистрироватьсяВGreenAPI</CommandName>
 													<TextColor>web:White</TextColor>
-													<Title formatted="false">
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:LargeTextFont" kind="StyleItem"/>
+													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Зарегистрироваться в GREEN API</v8:content>
 														</v8:item>
 													</Title>
-													<GroupVerticalAlign>Center</GroupVerticalAlign>
-													<Hyperlink>true</Hyperlink>
-													<HorizontalAlign>Center</HorizontalAlign>
-													<VerticalAlign>Center</VerticalAlign>
-													<BackColor>#49B349</BackColor>
-													<BorderColor>web:Seagreen</BorderColor>
-													<Border width="1">
-														<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-													</Border>
-													<ContextMenu name="ЗарегистрироватьсяВGreenAPIКонтекстноеМеню" id="204"/>
-													<ExtendedTooltip name="ЗарегистрироватьсяВGreenAPIРасширеннаяПодсказка" id="205"/>
-												</LabelDecoration>
+													<ExtendedTooltip name="ЗарегистрироватьсяВGreenAPIРасширеннаяПодсказка" id="368"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -1362,6 +1354,21 @@
 			</Title>
 			<Action>КомандаГотово</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗарегистрироватьсяВGreenAPI" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрируйтесь в личном кабинете Green API</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрироваться в green API</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗарегистрироватьсяВGreenAPI</Action>
 		</Command>
 	</Commands>
 </Form>

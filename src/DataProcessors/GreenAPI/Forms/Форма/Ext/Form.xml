@@ -624,7 +624,6 @@
 															<ExtendedTooltip name="ПолученФайлРасширеннаяПодсказка" id="210"/>
 															<Events>
 																<Event name="Opening">ПолученФайлОткрытие</Event>
-																<Event name="ChoiceProcessing">ПолученФайлОбработкаВыбора</Event>
 															</Events>
 														</InputField>
 														<LabelDecoration name="ДекорацияДокументацияПолучение" id="216">

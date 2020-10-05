@@ -69,8 +69,8 @@
 КонецПроцедуры
 
 // Обработчик, срабатывающий при получении текстового сообщения 
-// https://green-api.com/docs/api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived/
-// Параметры:
+// https,//green-api.com/docs/api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived/
+// Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
 //    для повторного получения
 //  Данные - Структура - Структура полей сообщения в формате JSON. См подробнее в документации
@@ -96,8 +96,8 @@
 КонецПроцедуры
 
 // Обработчик, срабатывающий при получении файлового сообщения
-// https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ImageMessage/
-// Параметры:
+// https,//green-api.com/docs/api/receiving/notifications-format/incoming-message/ImageMessage/
+// Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
 //    для повторного получения
 //  Файл - Строка - Полное имя к файлу во временном каталоге ОС
@@ -106,9 +106,9 @@
 	ЭтотОбъект.ПолученФайл = Файл;
 КонецПроцедуры
 
-// Обработчик, срабатывающий при получении статуса ранее отправленного сообщения: отправлено, доставлено, прочитано и др.
-// https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/
-// Параметры:
+// Обработчик, срабатывающий при получении статуса ранее отправленного сообщения, отправлено, доставлено, прочитано и др.
+// https,//green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/
+// Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
 //    для повторного получения
 //  Данные - Структура - Структура полей сообщения в формате JSON. См подробнее в документации
@@ -121,9 +121,9 @@
 КонецПроцедуры
 
 // Обработчик, срабатывающий при получении данных о состоянии авторизации аккаунта.
-// https://green-api.com/docs/api/receiving/notifications-format/StateInstanceChanged/
+// https,//green-api.com/docs/api/receiving/notifications-format/StateInstanceChanged/
 //
-// Параметры:
+// Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
 //    для повторного получения
 //  Данные - Структура - Структура полей сообщения в формате JSON. См подробнее в документации
@@ -131,14 +131,14 @@
 //
 Процедура ПриПолученииСтатусаАвторизацииАккаунта(Отказ, Данные)
 	
-	ЭтотОбъект.ТекстПолученноеСообщение = ЗначениеВСтрокуВнутр(Данные.body);
+ 	ЭтотОбъект.ТекстПолученноеСообщение = ЗначениеВСтрокуВнутр(Данные.body);
 	
 КонецПроцедуры
 
 // Обработчик, срабатывающий при получении данных данных об устройстве и уровне заряда батареи, на котором запущено приложение WhatsApp Business
-// https://green-api.com/docs/api/receiving/notifications-format/DeviceInfo/
+// https,//green-api.com/docs/api/receiving/notifications-format/DeviceInfo/
 //
-// Параметры:
+// Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
 //    для повторного получения
 //  Данные - Структура - Структура полей сообщения в формате JSON. См подробнее в документации
@@ -172,7 +172,7 @@
 		Ответ = ОтправитьGETЗапрос(ХостПоУмолчанию(), URLМетодаСервиса(Инстанс, Токен, "getStateInstance"), Истина);
 		Авторизован = НРег(Ответ.stateInstance) = "authorized";
 		Если Не Авторизован Тогда
-			ТекстОшибки = "Сервер вернул статус: " + Ответ.stateInstance;
+			ТекстОшибки = "Сервер вернул статус, " + Ответ.stateInstance;
 		КонецЕсли;
 		Возврат Авторизован;
 	Исключение
@@ -244,23 +244,23 @@
 	
 	// параметр "chatId"
 	ЗаписьТекста.ЗаписатьСтроку("---"+boundary);
-	ЗаписьТекста.ЗаписатьСтроку("Content-Disposition: form-data; name=""chatId""");
+	ЗаписьТекста.ЗаписатьСтроку("Content-Disposition, form-data; name=""chatId""");
 	ЗаписьТекста.ЗаписатьСтроку("");
 	// параметр "phoneNumber"
 	ЗаписьТекста.ЗаписатьСтроку("--"+boundary);
-	ЗаписьТекста.ЗаписатьСтроку("Content-Disposition: form-data; name=""phoneNumber""");
+	ЗаписьТекста.ЗаписатьСтроку("Content-Disposition, form-data; name=""phoneNumber""");
 	ЗаписьТекста.ЗаписатьСтроку("");
 	ЗаписьТекста.ЗаписатьСтроку(ПараметрИдЧата(Телефон));
 	// параметр "caption"
 	ЗаписьТекста.ЗаписатьСтроку("--"+boundary);
-	ЗаписьТекста.ЗаписатьСтроку("Content-Disposition: form-data; name=""caption""");
+	ЗаписьТекста.ЗаписатьСтроку("Content-Disposition, form-data; name=""caption""");
 	ЗаписьТекста.ЗаписатьСтроку("");
 	ЗаписьТекста.ЗаписатьСтроку(Сообщение);
 	
 	// начало параметра "file"
 	ЗаписьТекста.ЗаписатьСтроку("--"+boundary);
-	ЗаписьТекста.ЗаписатьСтроку("Content-Disposition: form-data; name=""file""; filename=""" + Файл + """");
-	ЗаписьТекста.ЗаписатьСтроку("Content-Type: image/jpeg");
+	ЗаписьТекста.ЗаписатьСтроку("Content-Disposition, form-data; name=""file""; filename=""" + Файл + """");
+	ЗаписьТекста.ЗаписатьСтроку("Content-Type, application/octet-stream");
 	ЗаписьТекста.ЗаписатьСтроку("");
 	ЗаписьТекста.Закрыть(); 
 	// заканчиваем работу с файлом 1
@@ -295,7 +295,7 @@
 	
 	// передадим данные на сервер 
 	Заголовки = Новый Соответствие();
-	Заголовки.Вставить("Content-Type", "multipart/form-data; boundary="+boundary);
+	Заголовки.Вставить("Content-Type", "multipart/form-data; boundary=" + boundary);
 	Заголовки.Вставить("Content-Lenght", РазмерФайлаОтправки);
 	
 	Ответ = ОтправитьФайлPOSTЗапрос(Хост, URLМетодаСервиса(Инстанс, Токен, "sendFileByUpload"), Заголовки, ФайлОтправки);
@@ -436,8 +436,13 @@
 	ВебЗапрос = Новый HTTPЗапрос(Адрес);
 	Ответ = Соединение.Получить(ВебЗапрос);
 	Если Ответ.КодСостояния = 200 Тогда
+		РасширениеФайла = ПолучитьРасширениеПоMimeType(Ответ.Заголовки["Content-Type"]);
+		Если РасширениеФайла = Неопределено Тогда
+			РасширениеФайла = ""
+		КонецЕсли;
+		
 		Бинари = Ответ.ПолучитьТелоКакДвоичныеДанные();
-		ИмяФайла = ПолучитьИмяВременногоФайла();
+		ИмяФайла = ПолучитьИмяВременногоФайла(РасширениеФайла);
 		Бинари.Записать(ИмяФайла);
 		Возврат ИмяФайла;
 	Иначе
@@ -516,17 +521,17 @@
 // Подставляет параметры в строку. Максимально возможное число параметров - 9.
 // Параметры в строке задаются как %<номер параметра>. Нумерация параметров начинается с единицы.
 //
-// Параметры:
+// Параметры,
 //  СтрокаПодстановки  - Строка - шаблон строки с параметрами (вхождениями вида "%ИмяПараметра");
 //  Параметр<n>        - Строка - подставляемый параметр.
 //
-// Возвращаемое значение:
+// Возвращаемое значение,
 //  Строка   - текстовая строка с подставленными параметрами.
 //
-// Пример:
-//  ПодставитьПараметрыВСтроку(НСтр("ru='%1 пошел в %2'"), "Вася", "Зоопарк") = "Вася пошел в Зоопарк".
+// Пример,
+//  ПодставитьПараметрыВСтроку(НСтр("ru="%1 пошел в %2""), "Вася", "Зоопарк") = "Вася пошел в Зоопарк".
 //
-// Примечание:
+// Примечание,
 //  В случаях, когда число используемых параметров в строке совпадает с числом переданных для подстановки параметров,
 //  рекомендуется использовать функцию платформы СтрШаблон.
 Функция ПодставитьПараметрыВСтроку(Знач СтрокаПодстановки,
@@ -553,7 +558,7 @@
 КонецФункции
 
 Функция ХостВебхуковПоУмолчанию() Экспорт
-	Возврат "https://webhook.green-api.com";
+	Возврат "https,//webhook.green-api.com";
 КонецФункции
 
 Функция URLМетодаСервиса(Инстанс, Токен, Метод)
@@ -578,5 +583,161 @@
 Функция ВерсияОбработки() Экспорт
 	Возврат "Green API v0.0.16";
 КонецФункции
+
+Функция СоответствиеMimeTypes() 
+
+	Типы = Новый Соответствие;
+
+	Типы.Вставить(".js"     , "application/javascript");
+	Типы.Вставить(".mjs"    , "application/javascript");
+	Типы.Вставить(".json"   , "application/json");
+	Типы.Вставить(".webmanifest", "application/manifest+json");
+	Типы.Вставить(".doc"    , "application/msword");
+	Типы.Вставить(".dot"    , "application/msword");
+	Типы.Вставить(".wiz"    , "application/msword");
+	Типы.Вставить(".bin"    , "application/octet-stream");
+	Типы.Вставить(".a"      , "application/octet-stream");
+	Типы.Вставить(".dll"    , "application/octet-stream");
+	Типы.Вставить(".exe"    , "application/octet-stream");
+	Типы.Вставить(".o"      , "application/octet-stream");
+	Типы.Вставить(".obj"    , "application/octet-stream");
+	Типы.Вставить(".so"     , "application/octet-stream");
+	Типы.Вставить(".oda"    , "application/oda");
+	Типы.Вставить(".pdf"    , "application/pdf");
+	Типы.Вставить(".p7c"    , "application/pkcs7-mime");
+	Типы.Вставить(".ps"     , "application/postscript");
+	Типы.Вставить(".ai"     , "application/postscript");
+	Типы.Вставить(".eps"    , "application/postscript");
+	Типы.Вставить(".m3u"    , "application/vnd.apple.mpegurl");
+	Типы.Вставить(".m3u8"   , "application/vnd.apple.mpegurl");
+	Типы.Вставить(".xls"    , "application/vnd.ms-excel");
+	Типы.Вставить(".xlb"    , "application/vnd.ms-excel");
+	Типы.Вставить(".ppt"    , "application/vnd.ms-powerpoint");
+	Типы.Вставить(".pot"    , "application/vnd.ms-powerpoint");
+	Типы.Вставить(".ppa"    , "application/vnd.ms-powerpoint");
+	Типы.Вставить(".pps"    , "application/vnd.ms-powerpoint");
+	Типы.Вставить(".pwz"    , "application/vnd.ms-powerpoint");
+	Типы.Вставить(".wasm"   , "application/wasm");
+	Типы.Вставить(".bcpio"  , "application/x-bcpio");
+	Типы.Вставить(".cpio"   , "application/x-cpio");
+	Типы.Вставить(".csh"    , "application/x-csh");
+	Типы.Вставить(".dvi"    , "application/x-dvi");
+	Типы.Вставить(".gtar"   , "application/x-gtar");
+	Типы.Вставить(".hdf"    , "application/x-hdf");
+	Типы.Вставить(".h5"     , "application/x-hdf5");
+	Типы.Вставить(".latex"  , "application/x-latex");
+	Типы.Вставить(".mif"    , "application/x-mif");
+	Типы.Вставить(".cdf"    , "application/x-netcdf");
+	Типы.Вставить(".nc"     , "application/x-netcdf");
+	Типы.Вставить(".p12"    , "application/x-pkcs12");
+	Типы.Вставить(".pfx"    , "application/x-pkcs12");
+	Типы.Вставить(".ram"    , "application/x-pn-realaudio");
+	Типы.Вставить(".pyc"    , "application/x-python-code");
+	Типы.Вставить(".pyo"    , "application/x-python-code");
+	Типы.Вставить(".sh"     , "application/x-sh");
+	Типы.Вставить(".shar"   , "application/x-shar");
+	Типы.Вставить(".swf"    , "application/x-shockwave-flash");
+	Типы.Вставить(".sv4cpio", "application/x-sv4cpio");
+	Типы.Вставить(".sv4crc" , "application/x-sv4crc");
+	Типы.Вставить(".tar"    , "application/x-tar");
+	Типы.Вставить(".tcl"    , "application/x-tcl");
+	Типы.Вставить(".tex"    , "application/x-tex");
+	Типы.Вставить(".texi"   , "application/x-texinfo");
+	Типы.Вставить(".texinfo", "application/x-texinfo");
+	Типы.Вставить(".roff"   , "application/x-troff");
+	Типы.Вставить(".t"      , "application/x-troff");
+	Типы.Вставить(".tr"     , "application/x-troff");
+	Типы.Вставить(".man"    , "application/x-troff-man");
+	Типы.Вставить(".me"     , "application/x-troff-me");
+	Типы.Вставить(".ms"     , "application/x-troff-ms");
+	Типы.Вставить(".ustar"  , "application/x-ustar");
+	Типы.Вставить(".src"    , "application/x-wais-source");
+	Типы.Вставить(".xsl"    , "application/xml");
+	Типы.Вставить(".rdf"    , "application/xml");
+	Типы.Вставить(".wsdl"   , "application/xml");
+	Типы.Вставить(".xpdl"   , "application/xml");
+	Типы.Вставить(".zip"    , "application/zip");
+	Типы.Вставить(".au"     , "audio/basic");
+	Типы.Вставить(".snd"    , "audio/basic");
+	Типы.Вставить(".mp3"    , "audio/mpeg");
+	Типы.Вставить(".mp2"    , "audio/mpeg");
+	Типы.Вставить(".aif"    , "audio/x-aiff");
+	Типы.Вставить(".aifc"   , "audio/x-aiff");
+	Типы.Вставить(".aiff"   , "audio/x-aiff");
+	Типы.Вставить(".ra"     , "audio/x-pn-realaudio");
+	Типы.Вставить(".wav"    , "audio/x-wav");
+	Типы.Вставить(".bmp"    , "image/bmp");
+	Типы.Вставить(".gif"    , "image/gif");
+	Типы.Вставить(".ief"    , "image/ief");
+	Типы.Вставить(".jpg"    , "image/jpeg");
+	Типы.Вставить(".jpe"    , "image/jpeg");
+	Типы.Вставить(".jpeg"   , "image/jpeg");
+	Типы.Вставить(".png"    , "image/png");
+	Типы.Вставить(".svg"    , "image/svg+xml");
+	Типы.Вставить(".tiff"   , "image/tiff");
+	Типы.Вставить(".tif"    , "image/tiff");
+	Типы.Вставить(".ico"    , "image/vnd.microsoft.icon");
+	Типы.Вставить(".ras"    , "image/x-cmu-raster");
+	Типы.Вставить(".bmp"    , "image/x-ms-bmp");
+	Типы.Вставить(".pnm"    , "image/x-portable-anymap");
+	Типы.Вставить(".pbm"    , "image/x-portable-bitmap");
+	Типы.Вставить(".pgm"    , "image/x-portable-graymap");
+	Типы.Вставить(".ppm"    , "image/x-portable-pixmap");
+	Типы.Вставить(".rgb"    , "image/x-rgb");
+	Типы.Вставить(".xbm"    , "image/x-xbitmap");
+	Типы.Вставить(".xpm"    , "image/x-xpixmap");
+	Типы.Вставить(".xwd"    , "image/x-xwindowdump");
+	Типы.Вставить(".eml"    , "message/rfc822");
+	Типы.Вставить(".mht"    , "message/rfc822");
+	Типы.Вставить(".mhtml"  , "message/rfc822");
+	Типы.Вставить(".nws"    , "message/rfc822");
+	Типы.Вставить(".css"    , "text/css");
+	Типы.Вставить(".csv"    , "text/csv");
+	Типы.Вставить(".html"   , "text/html");
+	Типы.Вставить(".htm"    , "text/html");
+	Типы.Вставить(".txt"    , "text/plain");
+	Типы.Вставить(".bat"    , "text/plain");
+	Типы.Вставить(".c"      , "text/plain");
+	Типы.Вставить(".h"      , "text/plain");
+	Типы.Вставить(".ksh"    , "text/plain");
+	Типы.Вставить(".pl"     , "text/plain");
+	Типы.Вставить(".rtx"    , "text/richtext");
+	Типы.Вставить(".tsv"    , "text/tab-separated-values");
+	Типы.Вставить(".py"     , "text/x-python");
+	Типы.Вставить(".etx"    , "text/x-setext");
+	Типы.Вставить(".sgm"    , "text/x-sgml");
+	Типы.Вставить(".sgml"   , "text/x-sgml");
+	Типы.Вставить(".vcf"    , "text/x-vcard");
+	Типы.Вставить(".xml"    , "text/xml");
+	Типы.Вставить(".mp4"    , "video/mp4");
+	Типы.Вставить(".mpeg"   , "video/mpeg");
+	Типы.Вставить(".m1v"    , "video/mpeg");
+	Типы.Вставить(".mpa"    , "video/mpeg");
+	Типы.Вставить(".mpe"    , "video/mpeg");
+	Типы.Вставить(".mpg"    , "video/mpeg");
+	Типы.Вставить(".mov"    , "video/quicktime");
+	Типы.Вставить(".qt"     , "video/quicktime");
+	Типы.Вставить(".webm"   , "video/webm");
+	Типы.Вставить(".avi"    , "video/x-msvideo");
+	Типы.Вставить(".movie"  , "video/x-sgi-movie");
+	
+	Возврат Типы;
+	
+КонецФункции
+
+Функция ПолучитьРасширениеПоMimeType(ИскомыйТип)
+	
+	Типы = СоответствиеMimeTypes();
+	
+	Для каждого КлючЗначение Из Типы Цикл
+		Если НРег(КлючЗначение.Значение) = НРег(ИскомыйТип) Тогда
+			Возврат КлючЗначение.Ключ;
+		КонецЕсли;
+	КонецЦикла;
+	
+	Возврат Неопределено;
+	
+КонецФункции
+
 
 #КонецОбласти
