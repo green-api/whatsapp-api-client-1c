@@ -303,9 +303,8 @@
 												<PictureField name="КартинкаВыборАккаунта" id="227">
 													<DataPath>КартинкаВыборАккаунта</DataPath>
 													<TitleLocation>None</TitleLocation>
-													<Height>17</Height>
+													<Height>13</Height>
 													<VerticalStretch>false</VerticalStretch>
-													<PictureSize>Proportionally</PictureSize>
 													<Border width="1">
 														<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 													</Border>
@@ -362,7 +361,7 @@
 												<PictureField name="КартинкаСканКода" id="240">
 													<DataPath>КартинкаСканКода</DataPath>
 													<TitleLocation>None</TitleLocation>
-													<Height>17</Height>
+													<Height>13</Height>
 													<VerticalStretch>false</VerticalStretch>
 													<PictureSize>Proportionally</PictureSize>
 													<Border width="1">
@@ -468,7 +467,7 @@
 										<PictureField name="КартинкаДанныеАккаунта" id="267">
 											<DataPath>КартинкаДанныеАккаунта</DataPath>
 											<TitleLocation>None</TitleLocation>
-											<Height>17</Height>
+											<Height>13</Height>
 											<VerticalStretch>false</VerticalStretch>
 											<PictureSize>Proportionally</PictureSize>
 											<Border width="1">
@@ -952,14 +951,6 @@
 									<ChildItems>
 										<CommandBar name="КоманднаяПанельСлева3" id="160">
 											<ExtendedTooltip name="КоманднаяПанельСлева3РасширеннаяПодсказка" id="161"/>
-											<ChildItems>
-												<Button name="КомандаНазад2" id="81">
-													<Type>CommandBarButton</Type>
-													<Enabled>false</Enabled>
-													<CommandName>Form.Command.КомандаНазад</CommandName>
-													<ExtendedTooltip name="КомандаНазад2ExtendedTooltip" id="137"/>
-												</Button>
-											</ChildItems>
 										</CommandBar>
 										<CommandBar name="КоманднаяПанельСправа3" id="80">
 											<EnableContentChange>true</EnableContentChange>
@@ -988,41 +979,12 @@
 									<Group>HorizontalIfPossible</Group>
 									<ExtendedTooltip name="СтраницаНавигацииОжиданиеExtendedTooltip" id="141"/>
 									<ChildItems>
-										<CommandBar name="КоманднаяПанельСлева4" id="165">
-											<ExtendedTooltip name="КоманднаяПанельСлева4РасширеннаяПодсказка" id="166"/>
-											<ChildItems>
-												<Button name="КомандаНазад3" id="86">
-													<Type>CommandBarButton</Type>
-													<Enabled>false</Enabled>
-													<CommandName>Form.Command.КомандаНазад</CommandName>
-													<Font ref="style:LargeTextFont" kind="StyleItem"/>
-													<ExtendedTooltip name="КомандаНазад3ExtendedTooltip" id="143"/>
-												</Button>
-											</ChildItems>
-										</CommandBar>
-										<CommandBar name="КоманднаяПанельСправа4" id="85">
-											<EnableContentChange>true</EnableContentChange>
-											<HorizontalLocation>Right</HorizontalLocation>
-											<ExtendedTooltip name="КоманднаяПанельСправа4РасширеннаяПодсказка" id="142"/>
-											<ChildItems>
-												<Button name="КомандаДалее3" id="87">
-													<Type>CommandBarButton</Type>
-													<Enabled>false</Enabled>
-													<DefaultItem>true</DefaultItem>
-													<CommandName>Form.Command.КомандаНазад</CommandName>
-													<TextColor>web:White</TextColor>
-													<BackColor>#49B349</BackColor>
-													<Font ref="style:LargeTextFont" kind="StyleItem"/>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Далее &gt;</v8:content>
-														</v8:item>
-													</Title>
-													<ExtendedTooltip name="КомандаДалее3ExtendedTooltip" id="144"/>
-												</Button>
-											</ChildItems>
-										</CommandBar>
+										<LabelDecoration name="Декорация4" id="369">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="Декорация4КонтекстноеМеню" id="370"/>
+											<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="371"/>
+										</LabelDecoration>
 									</ChildItems>
 								</Page>
 							</ChildItems>
@@ -1038,10 +1000,6 @@
 				<v8:Type>cfg:DataProcessorObject.GreenAPI</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<Save>
-				<Field>Объект.ApiToken</Field>
-				<Field>Объект.IdInstance</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ПорядковыйНомерПерехода" id="2">
 			<Type>

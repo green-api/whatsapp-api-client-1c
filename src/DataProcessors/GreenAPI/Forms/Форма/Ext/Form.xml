@@ -528,10 +528,30 @@
 															<v8:content>Группа результаты сообщения</v8:content>
 														</v8:item>
 													</ToolTip>
+													<Group>Vertical</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаРезультатыСообщенияРасширеннаяПодсказка" id="205"/>
 													<ChildItems>
+														<InputField name="ПолученФайл" id="208">
+															<DataPath>Объект.ПолученФайл</DataPath>
+															<Visible>false</Visible>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Получен файл</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Top</TitleLocation>
+															<ChoiceButton>true</ChoiceButton>
+															<OpenButton>true</OpenButton>
+															<ContextMenu name="ПолученФайлКонтекстноеМеню" id="209"/>
+															<ExtendedTooltip name="ПолученФайлРасширеннаяПодсказка" id="210"/>
+															<Events>
+																<Event name="StartChoice">ПолученФайлНачалоВыбора</Event>
+																<Event name="Opening">ПолученФайлОткрытие</Event>
+															</Events>
+														</InputField>
 														<InputField name="ТекстПолученноеСообщение" id="57">
 															<DataPath>Объект.ТекстПолученноеСообщение</DataPath>
 															<ReadOnly>true</ReadOnly>
@@ -609,23 +629,6 @@
 																</LabelDecoration>
 															</ChildItems>
 														</UsualGroup>
-														<InputField name="ПолученФайл" id="208">
-															<DataPath>Объект.ПолученФайл</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Получен файл</v8:content>
-																</v8:item>
-															</Title>
-															<TitleLocation>Top</TitleLocation>
-															<OpenButton>true</OpenButton>
-															<ContextMenu name="ПолученФайлКонтекстноеМеню" id="209"/>
-															<ExtendedTooltip name="ПолученФайлРасширеннаяПодсказка" id="210"/>
-															<Events>
-																<Event name="Opening">ПолученФайлОткрытие</Event>
-															</Events>
-														</InputField>
 														<LabelDecoration name="ДекорацияДокументацияПолучение" id="216">
 															<Font ref="style:LargeTextFont" kind="StyleItem"/>
 															<Title formatted="false">
@@ -810,7 +813,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ДеталиНастройкиУведомлений" id="89">
-									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -915,6 +917,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 										<InputField name="ИнтервалОтправкиСообщений" id="128">
 											<DataPath>ИнтервалОтправкиСообщений</DataPath>
 											<EditTextUpdate>OnValueChange</EditTextUpdate>
+											<MinValue xsi:type="xs:decimal">500</MinValue>
 											<ContextMenu name="ИнтервалОтправкиСообщенийКонтекстноеМеню" id="129"/>
 											<ExtendedTooltip name="ИнтервалОтправкиСообщенийРасширеннаяПодсказка" id="130">
 												<Title formatted="true">
@@ -1134,10 +1137,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>Статус</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>Статус1</dcsset:field>
+						<dcsset:field>СтатусПроверки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -1157,10 +1157,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>Статус</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>Статус1</dcsset:field>
+						<dcsset:field>СтатусПроверки</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>

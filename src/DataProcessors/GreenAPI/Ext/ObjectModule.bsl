@@ -29,13 +29,13 @@
 				ЧастиАдреса = РазбитьURL(Ответ.body.messageData.fileMessageData.downloadUrl);
 				ПолноеИмяФайла = СкачатьФайл(ЧастиАдреса.Хост, ЧастиАдреса.ОтносительныйАдрес, Истина);
 				Попытка
-					ПриПолученииФайла(Отказ, ПолноеИмяФайла);
+					ПриПолученииСообщенияФайл(Отказ, Ответ, ПолноеИмяФайла);
 				Исключение
 					Отказ = Истина;
 				КонецПопытки;
 			Иначе
 				Попытка
-					ПриПолученииСообщения(Отказ, Ответ);
+					ПриПолученииСообщенияТекст(Отказ, Ответ);
 				Исключение
 					Отказ = Истина;
 				КонецПопытки;
@@ -69,45 +69,31 @@
 КонецПроцедуры
 
 // Обработчик, срабатывающий при получении текстового сообщения 
-// https,//green-api.com/docs/api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived/
+// https://green-api.com/docs/api/receiving/notifications-format/incoming-message/Webhook-IncomingMessageReceived/
 // Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
 //    для повторного получения
 //  Данные - Структура - Структура полей сообщения в формате JSON. См подробнее в документации
 //    
 //
-Процедура ПриПолученииСообщения(Отказ, Данные)
-	
-	ЭтотОбъект.ТекстПолученноеСообщение = Данные.body;
-	
-	//Если Данные.body.messageData.typeMessage = "textMessage" Тогда
-	//	ЭтотОбъект.ТекстПолученноеСообщение = Данные.body.messageData.textMessageData.textMessage;
-	//ИначеЕсли Данные.body.messageData.typeMessage = "extendedTextMessage" Тогда
-	//	ЭтотОбъект.ТекстПолученноеСообщение = Данные.body.messageData.extendedTextMessageData.text;
-	//ИначеЕсли Данные.body.messageData.typeMessage = "locationMessage" Тогда
-	//	ЭтотОбъект.ТекстПолученноеСообщение = "latitude=" + Данные.body.messageData.locationMessageData.latitude 
-	//	+ "longitude=" + Данные.body.messageData.locationMessageData.longitude
-	//ИначеЕсли Данные.body.messageData.typeMessage = "contactMessage" Тогда
-	//	ЭтотОбъект.ТекстПолученноеСообщение = Данные.body.messageData.contactMessageData.vcard;
-	//Иначе
-	//	ЭтотОбъект.ТекстПолученноеСообщение = Данные.body.messageData;
-	//КонецЕсли;
-	
+Процедура ПриПолученииСообщенияТекст(Отказ, Данные)
+	ЭтотОбъект.ТекстПолученноеСообщение = ЗначениеВСтрокуВнутр(Данные.body);
 КонецПроцедуры
 
 // Обработчик, срабатывающий при получении файлового сообщения
-// https,//green-api.com/docs/api/receiving/notifications-format/incoming-message/ImageMessage/
+// https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ImageMessage/
 // Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
 //    для повторного получения
+//  Данные - Структура - Структура полей сообщения в формате JSON. См подробнее в документации
 //  Файл - Строка - Полное имя к файлу во временном каталоге ОС
 //
-Процедура ПриПолученииФайла(Отказ, Файл)
-	ЭтотОбъект.ПолученФайл = Файл;
+Процедура ПриПолученииСообщенияФайл(Отказ, Данные, Файл)
+	ЭтотОбъект.ТекстПолученноеСообщение = ЗначениеВСтрокуВнутр(Данные.body);
 КонецПроцедуры
 
 // Обработчик, срабатывающий при получении статуса ранее отправленного сообщения, отправлено, доставлено, прочитано и др.
-// https,//green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/
+// https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessageStatus/
 // Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
 //    для повторного получения
@@ -121,7 +107,7 @@
 КонецПроцедуры
 
 // Обработчик, срабатывающий при получении данных о состоянии авторизации аккаунта.
-// https,//green-api.com/docs/api/receiving/notifications-format/StateInstanceChanged/
+// https://green-api.com/docs/api/receiving/notifications-format/StateInstanceChanged/
 //
 // Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
@@ -136,7 +122,7 @@
 КонецПроцедуры
 
 // Обработчик, срабатывающий при получении данных данных об устройстве и уровне заряда батареи, на котором запущено приложение WhatsApp Business
-// https,//green-api.com/docs/api/receiving/notifications-format/DeviceInfo/
+// https//green-api.com/docs/api/receiving/notifications-format/DeviceInfo/
 //
 // Параметры,
 //  Отказ - Булево -  Если Истина, то сообщение не будет подтверждено и вернется на сервер 
@@ -341,6 +327,22 @@
 	Возврат Ответ.saveSettings;
 	
 КонецФункции
+
+Функция УстановитьНастройкиСервиса(СтруктураНастроек) Экспорт
+	
+	Инстанс = IdInstance;
+	Токен = ApiToken;
+	
+	Запись = Новый ЗаписьJSON();
+	Запись.УстановитьСтроку();
+	ЗаписатьJSON(Запись, СтруктураНастроек);
+	Тело = Запись.Закрыть();
+	
+	Ответ = ОтправитьPOSTЗапрос(ХостПоУмолчанию(), URLМетодаСервиса(Инстанс, Токен, "setSettings"), Тело);
+	Возврат Ответ.saveSettings;
+	
+КонецФункции
+
 
 Функция РазлогинитьАккаунт() Экспорт
 	
@@ -558,7 +560,7 @@
 КонецФункции
 
 Функция ХостВебхуковПоУмолчанию() Экспорт
-	Возврат "https,//webhook.green-api.com";
+	Возврат "https://webhook.green-api.com";
 КонецФункции
 
 Функция URLМетодаСервиса(Инстанс, Токен, Метод)
@@ -581,7 +583,7 @@
 КонецФункции
 
 Функция ВерсияОбработки() Экспорт
-	Возврат "Green API v0.0.16";
+	Возврат "Green API v0.0.17";
 КонецФункции
 
 Функция СоответствиеMimeTypes() 
