@@ -557,28 +557,61 @@
 															<v8:content>Группа успешное подключение</v8:content>
 														</v8:item>
 													</ToolTip>
+													<Group>Vertical</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаУспешноеПодключениеРасширеннаяПодсказка" id="307"/>
 													<ChildItems>
-														<PictureDecoration name="Декорация6" id="308">
-															<Picture>
-																<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
-																<xr:LoadTransparent>true</xr:LoadTransparent>
-															</Picture>
-															<ContextMenu name="Декорация6КонтекстноеМеню" id="309"/>
-															<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="310"/>
-														</PictureDecoration>
-														<LabelDecoration name="ПроверкаПодключения1" id="311">
-															<Title formatted="false">
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Подключение выполнено успешно</v8:content>
-																</v8:item>
-															</Title>
-															<ContextMenu name="ПроверкаПодключения1КонтекстноеМеню" id="312"/>
-															<ExtendedTooltip name="ПроверкаПодключения1РасширеннаяПодсказка" id="313"/>
-														</LabelDecoration>
+														<UsualGroup name="Группа18" id="405">
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа18РасширеннаяПодсказка" id="406"/>
+															<ChildItems>
+																<PictureDecoration name="Декорация6" id="308">
+																	<Picture>
+																		<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<ContextMenu name="Декорация6КонтекстноеМеню" id="309"/>
+																	<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="310"/>
+																</PictureDecoration>
+																<LabelDecoration name="ПроверкаПодключения1" id="311">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Подключение выполнено успешно</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="ПроверкаПодключения1КонтекстноеМеню" id="312"/>
+																	<ExtendedTooltip name="ПроверкаПодключения1РасширеннаяПодсказка" id="313"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа19" id="407">
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа19РасширеннаяПодсказка" id="408"/>
+															<ChildItems>
+																<PictureDecoration name="Декорация8" id="409">
+																	<Picture>
+																		<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<ContextMenu name="Декорация8КонтекстноеМеню" id="410"/>
+																	<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="411"/>
+																</PictureDecoration>
+																<LabelDecoration name="ПроверкаПодключения3" id="412">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Установлены настройки получения данных</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="ПроверкаПодключения3КонтекстноеМеню" id="413"/>
+																	<ExtendedTooltip name="ПроверкаПодключения3РасширеннаяПодсказка" id="414"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаОшибкаПодключения" id="314">
@@ -667,10 +700,16 @@
 													<DataPath>ИспользуйтеДляЧатБотов</DataPath>
 													<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 													<TitleLocation>Right</TitleLocation>
+													<TitleHeight>1</TitleHeight>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ИспользуйтеДляЧатБотовКонтекстноеМеню" id="338"/>
 													<ExtendedTooltip name="ИспользуйтеДляЧатБотовРасширеннаяПодсказка" id="339"/>
 												</CheckBoxField>
+												<LabelDecoration name="ДекорацияОтступ1" id="372">
+													<Font ref="style:SmallTextFont" kind="StyleItem"/>
+													<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="373"/>
+													<ExtendedTooltip name="ДекорацияОтступ1РасширеннаяПодсказка" id="374"/>
+												</LabelDecoration>
 												<CheckBoxField name="ИспользуйтеДляКлиентов" id="340">
 													<DataPath>ИспользуйтеДляКлиентов</DataPath>
 													<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
@@ -679,6 +718,11 @@
 													<ContextMenu name="ИспользуйтеДляКлиентовКонтекстноеМеню" id="341"/>
 													<ExtendedTooltip name="ИспользуйтеДляКлиентовРасширеннаяПодсказка" id="342"/>
 												</CheckBoxField>
+												<LabelDecoration name="ДекорацияОтступ2" id="375">
+													<Font ref="style:SmallTextFont" kind="StyleItem"/>
+													<ContextMenu name="ДекорацияОтступ2КонтекстноеМеню" id="376"/>
+													<ExtendedTooltip name="ДекорацияОтступ2РасширеннаяПодсказка" id="377"/>
+												</LabelDecoration>
 												<CheckBoxField name="ИспользуйтеДляСвоихКлиентоа" id="343">
 													<DataPath>ИспользуйтеДляСвоихКлиентоа</DataPath>
 													<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
@@ -687,15 +731,42 @@
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ИспользуйтеДляСвоихКлиентоаКонтекстноеМеню" id="344"/>
 													<ExtendedTooltip name="ИспользуйтеДляСвоихКлиентоаРасширеннаяПодсказка" id="345">
+														<Width>10</Width>
 														<TextColor>style:FieldSelectionBackColor</TextColor>
-														<Title formatted="false">
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Если клиент не ожидает сообщений от Вас, то скорее всего он нажмет "Заблокировать". Достаточно 10 нажатий, чтобы словить бан. </v8:content>
-															</v8:item>
-														</Title>
+														<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<UsualGroup name="Группа15" id="384">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="385"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияОтступ5" id="386">
+															<Width>1</Width>
+															<Font ref="style:NormalTextFont" kind="StyleItem"/>
+															<ContextMenu name="ДекорацияОтступ5КонтекстноеМеню" id="387"/>
+															<ExtendedTooltip name="ДекорацияОтступ5РасширеннаяПодсказка" id="388"/>
+														</LabelDecoration>
+														<LabelDecoration name="ДекорацияОтступ3" id="378">
+															<Width>49</Width>
+															<TextColor>style:FieldSelectionBackColor</TextColor>
+															<Font ref="style:NormalTextFont" kind="StyleItem"/>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Если клиент не ожидает сообщений от Вас, то скорее всего он нажмет "Заблокировать". Достаточно 10 нажатий, чтобы словить бан. </v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияОтступ3КонтекстноеМеню" id="379"/>
+															<ExtendedTooltip name="ДекорацияОтступ3РасширеннаяПодсказка" id="380"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<LabelDecoration name="ДекорацияОтступ4" id="381">
+													<Font ref="style:SmallTextFont" kind="StyleItem"/>
+													<ContextMenu name="ДекорацияОтступ4КонтекстноеМеню" id="382"/>
+													<ExtendedTooltip name="ДекорацияОтступ4РасширеннаяПодсказка" id="383"/>
+												</LabelDecoration>
 												<CheckBoxField name="СтарайтесьЧтобыОтвечали" id="346">
 													<DataPath>СтарайтесьЧтобыОтвечали</DataPath>
 													<Title>
@@ -711,14 +782,35 @@
 													<ContextMenu name="СтарайтесьЧтобыОтвечалиКонтекстноеМеню" id="347"/>
 													<ExtendedTooltip name="СтарайтесьЧтобыОтвечалиРасширеннаяПодсказка" id="348">
 														<TextColor>style:FieldSelectionBackColor</TextColor>
-														<Title formatted="false">
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Например: "Вы записаны на завтра 12:00. Чтобы подтвердить запись, напишите в ответ "ок" </v8:content>
-															</v8:item>
-														</Title>
+														<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<UsualGroup name="Группа16" id="389">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа16РасширеннаяПодсказка" id="390"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияОтступ6" id="391">
+															<Width>1</Width>
+															<Font ref="style:NormalTextFont" kind="StyleItem"/>
+															<ContextMenu name="ДекорацияОтступ6КонтекстноеМеню" id="392"/>
+															<ExtendedTooltip name="ДекорацияОтступ6РасширеннаяПодсказка" id="393"/>
+														</LabelDecoration>
+														<LabelDecoration name="ДекорацияОтступ7" id="394">
+															<Width>49</Width>
+															<TextColor>style:FieldSelectionBackColor</TextColor>
+															<Font ref="style:NormalTextFont" kind="StyleItem"/>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Например: "Вы записаны на завтра 12:00. Чтобы подтвердить запись, напишите в ответ *ок*</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияОтступ7КонтекстноеМеню" id="395"/>
+															<ExtendedTooltip name="ДекорацияОтступ7РасширеннаяПодсказка" id="396"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
 												<CheckBoxField name="ПредоставьтеОтписку" id="349">
 													<DataPath>ПредоставьтеОтписку</DataPath>
 													<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
@@ -728,14 +820,34 @@
 													<ContextMenu name="ПредоставьтеОтпискуКонтекстноеМеню" id="350"/>
 													<ExtendedTooltip name="ПредоставьтеОтпискуРасширеннаяПодсказка" id="351">
 														<TextColor>style:FieldSelectionBackColor</TextColor>
-														<Title formatted="false">
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Например: Напишите "stop" и мы больше не будем Вас беспокоить</v8:content>
-															</v8:item>
-														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<UsualGroup name="Группа17" id="397">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа17РасширеннаяПодсказка" id="398"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияОтступ8" id="399">
+															<Width>1</Width>
+															<Font ref="style:NormalTextFont" kind="StyleItem"/>
+															<ContextMenu name="ДекорацияОтступ8КонтекстноеМеню" id="400"/>
+															<ExtendedTooltip name="ДекорацияОтступ8РасширеннаяПодсказка" id="401"/>
+														</LabelDecoration>
+														<LabelDecoration name="ДекорацияОтступ9" id="402">
+															<Width>49</Width>
+															<TextColor>style:FieldSelectionBackColor</TextColor>
+															<Font ref="style:NormalTextFont" kind="StyleItem"/>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Например: Напишите *stop* и мы больше не будем Вас беспокоить</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияОтступ9КонтекстноеМеню" id="403"/>
+															<ExtendedTooltip name="ДекорацияОтступ9РасширеннаяПодсказка" id="404"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>

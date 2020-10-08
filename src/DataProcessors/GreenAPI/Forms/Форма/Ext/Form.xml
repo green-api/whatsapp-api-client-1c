@@ -424,7 +424,7 @@
 							</ToolTip>
 							<ExtendedTooltip name="ПолучениеСообщенийРасширеннаяПодсказка" id="52"/>
 							<ChildItems>
-								<UsualGroup name="ГруппаПояснение1" id="115">
+								<UsualGroup name="ГруппаНестандартныеНастройки" id="115">
 									<Visible>false</Visible>
 									<Title>
 										<v8:item>
@@ -442,7 +442,7 @@
 									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаПояснение1РасширеннаяПодсказка" id="116"/>
+									<ExtendedTooltip name="ГруппаНестандартныеНастройкиРасширеннаяПодсказка" id="116"/>
 									<ChildItems>
 										<PictureDecoration name="Декорация4" id="117">
 											<Picture>
@@ -604,7 +604,7 @@
 																	<v8:content>Группа получить сообщение кн</v8:content>
 																</v8:item>
 															</ToolTip>
-															<Group>AlwaysHorizontal</Group>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаПолучитьСообщениеКнРасширеннаяПодсказка" id="215"/>
@@ -616,14 +616,7 @@
 																	<ExtendedTooltip name="ПолучитьСообщениеЧерезВебхукРасширеннаяПодсказка" id="54"/>
 																</Button>
 																<LabelDecoration name="СтатусПолучениеСообщения" id="76">
-																	<Visible>false</Visible>
 																	<TextColor>style:FieldSelectionBackColor</TextColor>
-																	<Title formatted="false">
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Ожидание сообщения в течение 20 сек...</v8:content>
-																		</v8:item>
-																	</Title>
 																	<ContextMenu name="СтатусПолучениеСообщенияКонтекстноеМеню" id="77"/>
 																	<ExtendedTooltip name="СтатусПолучениеСообщенияРасширеннаяПодсказка" id="78"/>
 																</LabelDecoration>
@@ -872,6 +865,16 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
+								<LabelDecoration name="ДекорацияНастройкиНедоступны" id="236">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки доступны только после подключения к Green API</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНастройкиНедоступныКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="ДекорацияНастройкиНедоступныРасширеннаяПодсказка" id="238"/>
+								</LabelDecoration>
 							</ChildItems>
 						</Page>
 						<Page name="ПрочиеНастройки" id="123">

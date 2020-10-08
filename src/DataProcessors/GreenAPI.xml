@@ -182,6 +182,7 @@
 			</Attribute>
 			<Form>Форма</Form>
 			<Form>ПомощникПодключения</Form>
+			<Form>ВыборСсылкиНаФайл</Form>
 			<Template>QRМакет</Template>
 			<Template>ИконкаWhatsApp</Template>
 			<Template>ВыборАккаунта</Template>
