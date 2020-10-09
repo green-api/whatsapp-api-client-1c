@@ -14,8 +14,8 @@
 		<Metadata name="DataProcessor.GreenAPI.Form.ПомощникПодключения" id="21af060b-36d6-4144-aca7-290e47c884b1" configVersion="14b7836ddb3ac844a17f3a62ad1d9c5b00000000"/>
 		<Metadata name="DataProcessor.GreenAPI.Form.ПомощникПодключения.Form" id="21af060b-36d6-4144-aca7-290e47c884b1.0" configVersion="35d9c6964c76224eb3e0670464d90d6200000000"/>
 		<Metadata name="DataProcessor.GreenAPI.Form.ПомощникПодключения.Help" id="21af060b-36d6-4144-aca7-290e47c884b1.1" configVersion="c27ea0de7bea2846ad91e2d12ea0e0bc00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.Форма" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098" configVersion="143f8758f00f6343b04b0e18d7f859fd00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.Форма.Form" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098.0" configVersion="b225a16ff0d4b644b4c869d37845cbec00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.Форма" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098" configVersion="038b0e2bc786fb47b66e3c91f4aa122000000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.Форма.Form" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098.0" configVersion="96655500efc7514cbc554988705509ae00000000"/>
 		<Metadata name="DataProcessor.GreenAPI.ObjectModule" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561.0" configVersion="147520bb48087d4e8ea64f540c4171bb00000000"/>
 		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет" id="48c29a2f-a511-4612-86ed-2ccc82cc294b" configVersion="d2c48bff423d7f4bae3fe2af7b1dedee00000000"/>
 		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет.Template" id="48c29a2f-a511-4612-86ed-2ccc82cc294b.0" configVersion="68cecdfce5bd1042a5af0edd311e7f3000000000"/>
