@@ -615,11 +615,13 @@
 																	<BorderColor>style:ButtonBorderColor</BorderColor>
 																	<ExtendedTooltip name="ПолучитьСообщениеЧерезВебхукРасширеннаяПодсказка" id="54"/>
 																</Button>
-																<LabelDecoration name="СтатусПолучениеСообщения" id="76">
+																<LabelField name="СтатусПолучениеСообщения" id="239">
+																	<DataPath>СтатусПолучениеСообщения</DataPath>
+																	<TitleLocation>None</TitleLocation>
 																	<TextColor>style:FieldSelectionBackColor</TextColor>
-																	<ContextMenu name="СтатусПолучениеСообщенияКонтекстноеМеню" id="77"/>
-																	<ExtendedTooltip name="СтатусПолучениеСообщенияРасширеннаяПодсказка" id="78"/>
-																</LabelDecoration>
+																	<ContextMenu name="СтатусПолучениеСообщенияКонтекстноеМеню" id="240"/>
+																	<ExtendedTooltip name="СтатусПолучениеСообщенияРасширеннаяПодсказка" id="241"/>
+																</LabelField>
 															</ChildItems>
 														</UsualGroup>
 														<LabelDecoration name="ДекорацияДокументацияПолучение" id="216">
@@ -1126,6 +1128,21 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Тип уведомления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусПолучениеСообщения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус получение сообщения</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

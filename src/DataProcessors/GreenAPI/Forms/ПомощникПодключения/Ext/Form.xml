@@ -797,7 +797,7 @@
 															<ExtendedTooltip name="ДекорацияОтступ6РасширеннаяПодсказка" id="393"/>
 														</LabelDecoration>
 														<LabelDecoration name="ДекорацияОтступ7" id="394">
-															<Width>49</Width>
+															<Width>57</Width>
 															<TextColor>style:FieldSelectionBackColor</TextColor>
 															<Font ref="style:NormalTextFont" kind="StyleItem"/>
 															<Title formatted="false">
@@ -811,6 +811,11 @@
 														</LabelDecoration>
 													</ChildItems>
 												</UsualGroup>
+												<LabelDecoration name="ДекорацияОтступ10" id="415">
+													<Font ref="style:SmallTextFont" kind="StyleItem"/>
+													<ContextMenu name="ДекорацияОтступ10КонтекстноеМеню" id="416"/>
+													<ExtendedTooltip name="ДекорацияОтступ10РасширеннаяПодсказка" id="417"/>
+												</LabelDecoration>
 												<CheckBoxField name="ПредоставьтеОтписку" id="349">
 													<DataPath>ПредоставьтеОтписку</DataPath>
 													<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
