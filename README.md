@@ -7,7 +7,7 @@
 ## Сценарии работы
 
 ## Подключение к сервису green-api
-1. [Скачать обработку](https://github.com/green-api/whatsapp-1c-example/releases/download/1.0/WhatsApp1cExample.epf) в формате epf
+1. [Скачать обработку](https://github.com/green-api/whatsapp-1c-example/releases/download/1.0/GreenAPI.epf) в формате epf
 2. Подключиться к сервису через встроенный в обработку помощник или  самостоятельно через сайт [green-api.com](https://green-api.com/). Получить ``API Token`` и ``ID Instance``
 3. Запустить в браузере или тонком клиенте и указать параметры подключения (``API Token`` и ``ID Instance``)
 4. Сканировать QR код с мобильного телефона WhatsApp (Меню чаты -> Иконка всех функций -> WhatsApp Web)
