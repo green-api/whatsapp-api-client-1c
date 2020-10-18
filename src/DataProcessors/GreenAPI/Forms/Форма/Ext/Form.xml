@@ -20,7 +20,7 @@
 			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="189"/>
 			<ChildItems>
 				<UsualGroup name="Группа3" id="183">
-					<Width>76</Width>
+					<Width>130</Width>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>#4FAD4F</BackColor>
@@ -57,7 +57,7 @@
 							<v8:content>Разделы</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Width>76</Width>
+					<Width>130</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ExtendedTooltip name="РазделыРасширеннаяПодсказка" id="2"/>
 					<ChildItems>
@@ -961,6 +961,881 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 								</LabelDecoration>
 							</ChildItems>
 						</Page>
+						<Page name="Аккаунт" id="242">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аккаунт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аккаунт</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="АккаунтРасширеннаяПодсказка" id="243"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗапросы" id="251">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа запросы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа запросы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗапросыРасширеннаяПодсказка" id="252"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПолучитьНастройкиАккаунта" id="263">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа получить настройки аккаунта</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа получить настройки аккаунта</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучитьНастройкиАккаунтаРасширеннаяПодсказка" id="264"/>
+											<ChildItems>
+												<Button name="ПолучитьНастройкиАккаунта" id="249">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьНастройкиАккаунта</CommandName>
+													<ExtendedTooltip name="ПолучитьНастройкиАккаунтаРасширеннаяПодсказка" id="250"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаУстановитьНастройкуАккаунта" id="256">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить настройки аккаунта</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа установить настройку аккаунта</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаУстановитьНастройкуАккаунтаРасширеннаяПодсказка" id="257"/>
+											<ChildItems>
+												<Button name="УстановитьНастрйокиАккаунта" id="258">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.УстановитьНастройкиАккаунта</CommandName>
+													<ExtendedTooltip name="УстановитьНастрйокиАккаунтаРасширеннаяПодсказка" id="259"/>
+												</Button>
+												<InputField name="ПараметрУстановитьНастройкиАккаунта" id="260">
+													<DataPath>ПараметрУстановитьНастройкиАккаунта</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Тело</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<Width>35</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>8</Height>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<HorizontalStretch>false</HorizontalStretch>
+													<MultiLine>true</MultiLine>
+													<ContextMenu name="ПараметрУстановитьНастройкиАккаунтаКонтекстноеМеню" id="261"/>
+													<ExtendedTooltip name="ПараметрУстановитьНастройкиАккаунтаРасширеннаяПодсказка" id="262"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПолучитьСостояниеАккаунта" id="265">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить состояние аккаунта</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа получить состояние аккаунта</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучитьСостояниеАккаунтаРасширеннаяПодсказка" id="266"/>
+											<ChildItems>
+												<Button name="ПолучитьСостояниеАккаунта" id="267">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьСостояниеАккаунта</CommandName>
+													<ExtendedTooltip name="ПолучитьСостояниеАккаунтаРасширеннаяПодсказка" id="268"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПерезапуститьАккаунт" id="269">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перезапустить аккаунт</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа перезапустить аккаунт</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПерезапуститьАккаунтРасширеннаяПодсказка" id="270"/>
+											<ChildItems>
+												<Button name="ПерезапуститьАккаунт" id="271">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПерезапуститьАккаунт</CommandName>
+													<ExtendedTooltip name="ПерезапуститьАккаунтРасширеннаяПодсказка" id="272"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРазлогинитьАккаунт" id="273">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Разлогинить аккаунт</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа разлогинить аккаунт</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРазлогинитьАккаунтРасширеннаяПодсказка" id="274"/>
+											<ChildItems>
+												<Button name="РазлогинитьАккаунт" id="275">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.РазлогинитьАккаунт</CommandName>
+													<ExtendedTooltip name="РазлогинитьАккаунтРасширеннаяПодсказка" id="276"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПолучитьQRКод" id="277">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить QR Код</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа получить QRКод</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучитьQRКодРасширеннаяПодсказка" id="278"/>
+											<ChildItems>
+												<Button name="ПолучитьQRКод" id="279">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьQRКод</CommandName>
+													<ExtendedTooltip name="ПолучитьQRКодРасширеннаяПодсказка" id="280"/>
+												</Button>
+												<HTMLDocumentField name="QRКод" id="281">
+													<DataPath>QRКод</DataPath>
+													<Width>36</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>8</Height>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<ContextMenu name="QRКодКонтекстноеМеню" id="282"/>
+													<ExtendedTooltip name="QRКодРасширеннаяПодсказка" id="283"/>
+												</HTMLDocumentField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="КонсольАккаунт" id="290">
+									<DataPath>Консоль</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ответ</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="КонсольАккаунтКонтекстноеМеню" id="291"/>
+									<ExtendedTooltip name="КонсольАккаунтРасширеннаяПодсказка" id="292"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="Журналы" id="284">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журналы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журналы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ЖурналыРасширеннаяПодсказка" id="285"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗапросыЖурналы" id="288">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа запросы журналы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа запросы журналы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗапросыЖурналыРасширеннаяПодсказка" id="289"/>
+									<ChildItems>
+										<Button name="ПолучитьЖурналВходящихСообщений" id="286">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПолучитьЖурналВходящихСообщений</CommandName>
+											<ExtendedTooltip name="ПолучитьЖурналВходящихСообщенийРасширеннаяПодсказка" id="287"/>
+										</Button>
+										<Button name="ПолучитьЖурналОтправленныхСообщений" id="293">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПолучитьЖурналОтправленныхСообщений</CommandName>
+											<ExtendedTooltip name="ПолучитьЖурналОтправленныхСообщенийРасширеннаяПодсказка" id="294"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="КонсольЖурналы" id="244">
+									<DataPath>Консоль</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ответ</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="КонсольЖурналыКонтекстноеМеню" id="245"/>
+									<ExtendedTooltip name="КонсольЖурналыРасширеннаяПодсказка" id="246"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="Очереди" id="295">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очереди</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очереди</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ОчередиРасширеннаяПодсказка" id="296"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОчередиЗапросы" id="297">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа очереди запросы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа очереди запросы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОчередиЗапросыРасширеннаяПодсказка" id="298"/>
+									<ChildItems>
+										<Button name="ПолучитьОчередьСообщенийКОтправке" id="302">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПолучитьОчередьСообщенийКОтправке</CommandName>
+											<ExtendedTooltip name="ПолучитьОчередьСообщенийКОтправкеРасширеннаяПодсказка" id="303"/>
+										</Button>
+										<Button name="ОчиститьОчередьСообщенийКОтправке" id="304">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОчиститьОчередьСообщенийКОтправке</CommandName>
+											<ExtendedTooltip name="ОчиститьОчередьСообщенийКОтправкеРасширеннаяПодсказка" id="305"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="КонсольОчереди" id="299">
+									<DataPath>Консоль</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="КонсольОчередиКонтекстноеМеню" id="300"/>
+									<ExtendedTooltip name="КонсольОчередиРасширеннаяПодсказка" id="301"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="Группы" id="306">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ГруппыРасширеннаяПодсказка" id="307"/>
+							<ChildItems>
+								<UsualGroup name="ГруппыЗапросы" id="311">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группы запросы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группы запросы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппыЗапросыРасширеннаяПодсказка" id="312"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаСоздатьГруппу" id="315">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСоздатьГруппуРасширеннаяПодсказка" id="316"/>
+											<ChildItems>
+												<Button name="СоздатьГруппу" id="313">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.СоздатьГруппу</CommandName>
+													<ExtendedTooltip name="СоздатьГруппуРасширеннаяПодсказка" id="314"/>
+												</Button>
+												<InputField name="ПараметрНомерТелефона" id="320">
+													<DataPath>ПараметрНомерТелефона</DataPath>
+													<ContextMenu name="ПараметрНомерТелефонаКонтекстноеМеню" id="321"/>
+													<ExtendedTooltip name="ПараметрНомерТелефонаРасширеннаяПодсказка" id="322"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаИзменитьИмяГруппы" id="323">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИзменитьИмяГруппыРасширеннаяПодсказка" id="324"/>
+											<ChildItems>
+												<Button name="ИзменитьИмяГруппы" id="333">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ИзменитьИмяГруппы</CommandName>
+													<ExtendedTooltip name="ИзменитьИмяГруппыРасширеннаяПодсказка" id="334"/>
+												</Button>
+												<InputField name="ПараметрИдГруппы" id="335">
+													<DataPath>ПараметрИдГруппы</DataPath>
+													<ContextMenu name="ПараметрИдГруппыКонтекстноеМеню" id="336"/>
+													<ExtendedTooltip name="ПараметрИдГруппыРасширеннаяПодсказка" id="337"/>
+												</InputField>
+												<InputField name="ИмяГруппы" id="317">
+													<DataPath>ПараметрИмяГруппы</DataPath>
+													<ContextMenu name="ИмяГруппыКонтекстноеМеню" id="318"/>
+													<ExtendedTooltip name="ИмяГруппыРасширеннаяПодсказка" id="319"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПолучитьИнформациюоГруппе" id="338">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить информцию о группе</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучитьИнформациюоГруппеРасширеннаяПодсказка" id="339"/>
+											<ChildItems>
+												<Button name="ПолучитьИнформациюОГруппе" id="345">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьИнформациюОГруппе</CommandName>
+													<ExtendedTooltip name="ПолучитьИнформациюОГруппеРасширеннаяПодсказка" id="346"/>
+												</Button>
+												<InputField name="ПараметрИдГруппы1" id="347">
+													<DataPath>ПараметрИдГруппы</DataPath>
+													<ContextMenu name="ПараметрИдГруппы1КонтекстноеМеню" id="348"/>
+													<ExtendedTooltip name="ПараметрИдГруппы1РасширеннаяПодсказка" id="349"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаДобавитьУчастника" id="350">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДобавитьУчастникаРасширеннаяПодсказка" id="351"/>
+											<ChildItems>
+												<Button name="ДобавитьУчастникаВГруппу" id="357">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ДобавитьУчастникаВГруппу</CommandName>
+													<ExtendedTooltip name="ДобавитьУчастникаВГруппуРасширеннаяПодсказка" id="358"/>
+												</Button>
+												<InputField name="ПараметрИдГруппы2" id="362">
+													<DataPath>ПараметрИдГруппы</DataPath>
+													<ContextMenu name="ПараметрИдГруппы2КонтекстноеМеню" id="363"/>
+													<ExtendedTooltip name="ПараметрИдГруппы2РасширеннаяПодсказка" id="364"/>
+												</InputField>
+												<InputField name="ПараметрИдУчастника" id="359">
+													<DataPath>ПараметрИдУчастника</DataPath>
+													<ContextMenu name="ПараметрИдУчастникаКонтекстноеМеню" id="360"/>
+													<ExtendedTooltip name="ПараметрИдУчастникаРасширеннаяПодсказка" id="361"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаУдалитьУчастника" id="365">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа удалить участника</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаУдалитьУчастникаРасширеннаяПодсказка" id="366"/>
+											<ChildItems>
+												<Button name="УдалитьУчастникаИзГруппы" id="375">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.УдалитьУчастникаИзГруппы</CommandName>
+													<ExtendedTooltip name="УдалитьУчастникаИзГруппыРасширеннаяПодсказка" id="376"/>
+												</Button>
+												<InputField name="ПараметрИдГруппы3" id="369">
+													<DataPath>ПараметрИдГруппы</DataPath>
+													<ContextMenu name="ПараметрИдГруппы3КонтекстноеМеню" id="370"/>
+													<ExtendedTooltip name="ПараметрИдГруппы3РасширеннаяПодсказка" id="371"/>
+												</InputField>
+												<InputField name="ПараметрИдУчастника1" id="372">
+													<DataPath>ПараметрИдУчастника</DataPath>
+													<ContextMenu name="ПараметрИдУчастника1КонтекстноеМеню" id="373"/>
+													<ExtendedTooltip name="ПараметрИдУчастника1РасширеннаяПодсказка" id="374"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаНазначитьПраваАдминистратора" id="377">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаНазначитьПраваАдминистратораРасширеннаяПодсказка" id="378"/>
+											<ChildItems>
+												<Button name="НазначитьПраваАдминистратораГруппы" id="387">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.НазначитьПраваАдминистратораГруппы</CommandName>
+													<ExtendedTooltip name="НазначитьПраваАдминистратораГруппыРасширеннаяПодсказка" id="388"/>
+												</Button>
+												<InputField name="ПараметрИдГруппы4" id="381">
+													<DataPath>ПараметрИдГруппы</DataPath>
+													<ContextMenu name="ПараметрИдГруппы4КонтекстноеМеню" id="382"/>
+													<ExtendedTooltip name="ПараметрИдГруппы4РасширеннаяПодсказка" id="383"/>
+												</InputField>
+												<InputField name="ПараметрИдУчастника2" id="384">
+													<DataPath>ПараметрИдУчастника</DataPath>
+													<ContextMenu name="ПараметрИдУчастника2КонтекстноеМеню" id="385"/>
+													<ExtendedTooltip name="ПараметрИдУчастника2РасширеннаяПодсказка" id="386"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаОтозватьПрава" id="389">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа отозвать права</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОтозватьПраваРасширеннаяПодсказка" id="390"/>
+											<ChildItems>
+												<Button name="ОтозватьПраваАдминистратораГруппы" id="399">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОтозватьПраваАдминистратораГруппы</CommandName>
+													<ExtendedTooltip name="ОтозватьПраваАдминистратораГруппыРасширеннаяПодсказка" id="400"/>
+												</Button>
+												<InputField name="ПараметрИдГруппы5" id="393">
+													<DataPath>ПараметрИдГруппы</DataPath>
+													<ContextMenu name="ПараметрИдГруппы5КонтекстноеМеню" id="394"/>
+													<ExtendedTooltip name="ПараметрИдГруппы5РасширеннаяПодсказка" id="395"/>
+												</InputField>
+												<InputField name="ПараметрИдУчастника3" id="396">
+													<DataPath>ПараметрИдУчастника</DataPath>
+													<ContextMenu name="ПараметрИдУчастника3КонтекстноеМеню" id="397"/>
+													<ExtendedTooltip name="ПараметрИдУчастника3РасширеннаяПодсказка" id="398"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаВыйти" id="401">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа отозвать права</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаВыйтиРасширеннаяПодсказка" id="402"/>
+											<ChildItems>
+												<Button name="ВыйтиИзГруппы" id="411">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ВыйтиИзГруппы</CommandName>
+													<ExtendedTooltip name="ВыйтиИзГруппыРасширеннаяПодсказка" id="412"/>
+												</Button>
+												<InputField name="ПараметрИдГруппы6" id="405">
+													<DataPath>ПараметрИдГруппы</DataPath>
+													<ContextMenu name="ПараметрИдГруппы6КонтекстноеМеню" id="406"/>
+													<ExtendedTooltip name="ПараметрИдГруппы6РасширеннаяПодсказка" id="407"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="КонсольГруппы" id="308">
+									<DataPath>Консоль</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="КонсольГруппыКонтекстноеМеню" id="309"/>
+									<ExtendedTooltip name="КонсольГруппыРасширеннаяПодсказка" id="310"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="ОтметкаПрочтения" id="413">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отметка прочтения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очереди</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ОтметкаПрочтенияРасширеннаяПодсказка" id="414"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОтметкаПрочтенияЗапросы" id="415">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа очереди запросы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОтметкаПрочтенияЗапросыРасширеннаяПодсказка" id="416"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаОтметитьЧатПрочитанным" id="424">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОтметитьЧатПрочитаннымРасширеннаяПодсказка" id="425"/>
+											<ChildItems>
+												<Button name="ОтметитьЧатПрочитанным" id="431">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОтметитьЧатПрочитанным</CommandName>
+													<ExtendedTooltip name="ОтметитьЧатПрочитаннымРасширеннаяПодсказка" id="432"/>
+												</Button>
+												<InputField name="ПараметрИдЧата" id="433">
+													<DataPath>ПараметрИдЧата</DataPath>
+													<ContextMenu name="ПараметрИдЧатаКонтекстноеМеню" id="434"/>
+													<ExtendedTooltip name="ПараметрИдЧатаРасширеннаяПодсказка" id="435"/>
+												</InputField>
+												<InputField name="ПараметрИдСообщения" id="436">
+													<DataPath>ПараметрИдСообщения</DataPath>
+													<ContextMenu name="ПараметрИдСообщенияКонтекстноеМеню" id="437"/>
+													<ExtendedTooltip name="ПараметрИдСообщенияРасширеннаяПодсказка" id="438"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="КонсольОтметкиПрочтения" id="421">
+									<DataPath>Консоль</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="КонсольОтметкиПрочтенияКонтекстноеМеню" id="422"/>
+									<ExtendedTooltip name="КонсольОтметкиПрочтенияРасширеннаяПодсказка" id="423"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="Устройство" id="439">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Устройство</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очереди</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="УстройствоРасширеннаяПодсказка" id="440"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаУстройствоЗапросы" id="441">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа очереди запросы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаУстройствоЗапросыРасширеннаяПодсказка" id="442"/>
+									<ChildItems>
+										<Button name="ПолучитьИнформациюОбУстройстве" id="450">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПолучитьИнформациюОбУстройстве</CommandName>
+											<ExtendedTooltip name="ПолучитьИнформациюОбУстройствеРасширеннаяПодсказка" id="451"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="КонсольУстройства" id="447">
+									<DataPath>Консоль</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="КонсольУстройстваКонтекстноеМеню" id="448"/>
+									<ExtendedTooltip name="КонсольУстройстваРасширеннаяПодсказка" id="449"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="СервисныеМетоды" id="452">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сервисные методы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очереди</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="СервисныеМетодыРасширеннаяПодсказка" id="453"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСервисныеМетодыЗапросы" id="454">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сервисные методы запросы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа очереди запросы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСервисныеМетодыЗапросыРасширеннаяПодсказка" id="455"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПроверитьНаличиеВатсап" id="456">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПроверитьНаличиеВатсапРасширеннаяПодсказка" id="457"/>
+											<ChildItems>
+												<Button name="ПроверитьНаличиеWhatsApp" id="469">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПроверитьНаличиеWhatsApp</CommandName>
+													<ExtendedTooltip name="ПроверитьНаличиеWhatsAppРасширеннаяПодсказка" id="470"/>
+												</Button>
+												<InputField name="ПараметрНомерТелефона1" id="471">
+													<DataPath>ПараметрНомерТелефона</DataPath>
+													<ContextMenu name="ПараметрНомерТелефона1КонтекстноеМеню" id="472"/>
+													<ExtendedTooltip name="ПараметрНомерТелефона1РасширеннаяПодсказка" id="473"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПолучитьАватарКонтакта" id="474">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа получить аватар контакта</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучитьАватарКонтактаРасширеннаяПодсказка" id="475"/>
+											<ChildItems>
+												<Button name="ПолучитьАватарКонтакта" id="481">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьАватарКонтакта</CommandName>
+													<ExtendedTooltip name="ПолучитьАватарКонтактаРасширеннаяПодсказка" id="482"/>
+												</Button>
+												<InputField name="ПараметрИдЧата1" id="483">
+													<DataPath>ПараметрИдЧата</DataPath>
+													<ContextMenu name="ПараметрИдЧата1КонтекстноеМеню" id="484"/>
+													<ExtendedTooltip name="ПараметрИдЧата1РасширеннаяПодсказка" id="485"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПолучитьКонтакты" id="486">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа получить контакты</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа создать группу</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучитьКонтактыРасширеннаяПодсказка" id="487"/>
+											<ChildItems>
+												<Button name="ПолучитьКонтакты" id="488">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьКонтакты</CommandName>
+													<ExtendedTooltip name="ПолучитьКонтактыРасширеннаяПодсказка" id="489"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="КонсольОтметкиПрочтения1" id="466">
+									<DataPath>Консоль</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="КонсольОтметкиПрочтения1КонтекстноеМеню" id="467"/>
+									<ExtendedTooltip name="КонсольОтметкиПрочтения1РасширеннаяПодсказка" id="468"/>
+								</InputField>
+							</ChildItems>
+						</Page>
 					</ChildItems>
 				</Pages>
 			</ChildItems>
@@ -1153,6 +2028,135 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Консоль" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Консоль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрУстановитьНастройкиАккаунта" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр установить настройки аккаунта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="QRКод" id="8">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрИмяГруппы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя группы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрНомерТелефона" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер телефона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрИдГруппы" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID группы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрИдУчастника" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID участника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрИдЧата" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID чата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрИдСообщения" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -1325,6 +2329,351 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>КнопкаПомощник</Action>
+		</Command>
+		<Command name="ПолучитьНастройкиАккаунта" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить настройки аккаунта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить настройки аккаунта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьНастройкиАккаунта</Action>
+		</Command>
+		<Command name="УстановитьНастройкиАккаунта" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить настройки аккаунта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить настройки аккаунта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьНастройкиАккаунта</Action>
+		</Command>
+		<Command name="ПолучитьСостояниеАккаунта" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить состояние аккаунта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить состояние аккаунта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьСостояниеАккаунта</Action>
+		</Command>
+		<Command name="ПерезапуститьАккаунт" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезапустить аккаунт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезапустить аккаунт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерезапуститьАккаунт</Action>
+		</Command>
+		<Command name="РазлогинитьАккаунт" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разлогинить аккаунт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разлогинить аккаунт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РазлогинитьАккаунт</Action>
+		</Command>
+		<Command name="ПолучитьQRКод" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить QRКод</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить QRКод</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьQRКод</Action>
+		</Command>
+		<Command name="ПолучитьЖурналВходящихСообщений" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить журнал входящих сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить журнал входящих сообщений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьЖурналВходящихСообщений</Action>
+		</Command>
+		<Command name="ПолучитьЖурналОтправленныхСообщений" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить журнал отправленных сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить журнал отправленных сообщений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьЖурналОтправленныхСообщений</Action>
+		</Command>
+		<Command name="ПолучитьОчередьСообщенийКОтправке" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить очередь сообщений к отправке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить очередь сообщений к отправке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьОчередьСообщенийКОтправке</Action>
+		</Command>
+		<Command name="ОчиститьОчередьСообщенийКОтправке" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить очередь сообщений к отправке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить очередь сообщений к отправке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьОчередьСообщенийКОтправке</Action>
+		</Command>
+		<Command name="СоздатьГруппу" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать группу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьГруппу</Action>
+		</Command>
+		<Command name="ИзменитьИмяГруппы" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить имя группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить имя группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьИмяГруппы</Action>
+		</Command>
+		<Command name="ПолучитьИнформациюОГруппе" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию о группе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию о группе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьИнформациюОГруппе</Action>
+		</Command>
+		<Command name="ДобавитьУчастникаВГруппу" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить участника в группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить участника в группу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьУчастникаВГруппу</Action>
+		</Command>
+		<Command name="УдалитьУчастникаИзГруппы" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить участника из группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить участника из группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьУчастникаИзГруппы</Action>
+		</Command>
+		<Command name="НазначитьПраваАдминистратораГруппы" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначить права администратора группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначить права администратора группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НазначитьПраваАдминистратораГруппы</Action>
+		</Command>
+		<Command name="ОтозватьПраваАдминистратораГруппы" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отозвать права администратора группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отозвать права администратора группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтозватьПраваАдминистратораГруппы</Action>
+		</Command>
+		<Command name="ВыйтиИзГруппы" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выйти из группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выйти из группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыйтиИзГруппы</Action>
+		</Command>
+		<Command name="ОтметитьЧатПрочитанным" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить чат прочитанным</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить чат прочитанным</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьЧатПрочитанным</Action>
+		</Command>
+		<Command name="ПолучитьИнформациюОбУстройстве" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об устройстве</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию об устройстве</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьИнформациюОбУстройстве</Action>
+		</Command>
+		<Command name="ПроверитьНаличиеWhatsApp" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить наличие Whats App</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить наличие whats app</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьНаличиеWhatsApp</Action>
+		</Command>
+		<Command name="ПолучитьАватарКонтакта" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить аватар контакта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить аватар контакта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьАватарКонтакта</Action>
+		</Command>
+		<Command name="ПолучитьКонтакты" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить контакты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить контакты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьКонтакты</Action>
 		</Command>
 	</Commands>
 </Form>
