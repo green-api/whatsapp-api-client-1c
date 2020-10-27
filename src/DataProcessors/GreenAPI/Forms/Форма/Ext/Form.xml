@@ -61,7 +61,7 @@
 					<HorizontalStretch>false</HorizontalStretch>
 					<ExtendedTooltip name="РазделыРасширеннаяПодсказка" id="2"/>
 					<ChildItems>
-						<Page name="НастройкиВнешние" id="153">
+						<Page name="Настройки" id="490">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -71,137 +71,447 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Настройки внешние</v8:content>
+									<v8:content>Настройки</v8:content>
 								</v8:item>
 							</ToolTip>
-							<ExtendedTooltip name="НастройкиВнешниеРасширеннаяПодсказка" id="154"/>
+							<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="491"/>
 							<ChildItems>
-								<LabelDecoration name="ОписаниеНачало" id="155">
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<HorizontalStretch>true</HorizontalStretch>
-									<Title formatted="true">
+								<Pages name="ДеталиНастроек" id="492">
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>&lt;fontsize 12&gt;1. Регистрация и подключение телефона&lt;/&gt;
+											<v8:content>Детали настроек</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Детали настроек</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ДеталиНастроекРасширеннаяПодсказка" id="493"/>
+									<ChildItems>
+										<Page name="НастройкиВнешние" id="153">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки внешние</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="НастройкиВнешниеРасширеннаяПодсказка" id="154"/>
+											<ChildItems>
+												<LabelDecoration name="ОписаниеНачало" id="155">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;fontsize 12&gt;1. Регистрация и подключение телефона&lt;/&gt;
 
-Зарегистрируйтесь в личном кабинете GREEN-API
+Зарегистрируйтесь в личном кабинете &lt;link https://cabinet.green-api.com/add_account&gt;GREEN-API&lt;/&gt;
 Выберите бесплатный тариф "Разработчик"
 Подключите телефон к сервису. Для этого сканируйте QR-код в личном кабинете.</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ОписаниеНачалоКонтекстноеМеню" id="156"/>
-									<ExtendedTooltip name="ОписаниеНачалоРасширеннаяПодсказка" id="157"/>
-								</LabelDecoration>
-								<Button name="КнопкаПомощник" id="234">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.КнопкаПомощник</CommandName>
-									<TextColor>web:White</TextColor>
-									<BackColor>#49B349</BackColor>
-									<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Помощник подключения...</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedTooltip name="КнопкаПомощникРасширеннаяПодсказка" id="235"/>
-								</Button>
-								<LabelDecoration name="ОписаниеПродолжение" id="231">
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<HorizontalStretch>true</HorizontalStretch>
-									<Title formatted="true">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>&lt;fontsize 12&gt;2. Укажите параметры "ID Instance" и "API Token"&lt;/&gt;</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ОписаниеПродолжениеКонтекстноеМеню" id="232"/>
-									<ExtendedTooltip name="ОписаниеПродолжениеРасширеннаяПодсказка" id="233"/>
-								</LabelDecoration>
-								<InputField name="IdInstance" id="19">
-									<DataPath>Объект.IdInstance</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ID Instance</v8:content>
-										</v8:item>
-									</Title>
-									<HorizontalStretch>true</HorizontalStretch>
-									<AutoMarkIncomplete>true</AutoMarkIncomplete>
-									<EditTextUpdate>OnValueChange</EditTextUpdate>
-									<InputHint>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>9999</v8:content>
-										</v8:item>
-									</InputHint>
-									<ContextMenu name="IdInstanceКонтекстноеМеню" id="20"/>
-									<ExtendedTooltip name="IdInstanceРасширеннаяПодсказка" id="21"/>
-									<Events>
-										<Event name="OnChange">IdInstanceПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ApiToken" id="16">
-									<DataPath>Объект.ApiToken</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>API Token</v8:content>
-										</v8:item>
-									</Title>
-									<HorizontalStretch>true</HorizontalStretch>
-									<EditTextUpdate>OnValueChange</EditTextUpdate>
-									<InputHint>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>123fdws3214t3456g214234171855e0ff3f597f1</v8:content>
-										</v8:item>
-									</InputHint>
-									<ContextMenu name="ApiTokenКонтекстноеМеню" id="17"/>
-									<ExtendedTooltip name="ApiTokenРасширеннаяПодсказка" id="18"/>
-									<Events>
-										<Event name="OnChange">ApiTokenПриИзменении</Event>
-									</Events>
-								</InputField>
-								<LabelDecoration name="ОписаниеНачалоКонец" id="158">
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<HorizontalStretch>true</HorizontalStretch>
-									<Title formatted="true">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>&lt;fontsize 12&gt;3. Проверьте подключение аккаунта&lt;/&gt;</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ОписаниеНачалоКонецКонтекстноеМеню" id="159"/>
-									<ExtendedTooltip name="ОписаниеНачалоКонецРасширеннаяПодсказка" id="160"/>
-								</LabelDecoration>
-								<Button name="ПроверитьПодключение" id="161">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ПроверитьПодключение</CommandName>
-									<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="162"/>
-								</Button>
-								<LabelField name="СтатусПроверки" id="169">
-									<DataPath>СтатусСервиса</DataPath>
-									<Visible>false</Visible>
-									<TitleLocation>None</TitleLocation>
-									<HorizontalStretch>true</HorizontalStretch>
-									<Format>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>БЛ='Отключен (требуется сканировать QR-код)'; БИ=Подключен</v8:content>
-										</v8:item>
-									</Format>
-									<TextColor>style:AccentColor</TextColor>
-									<ContextMenu name="СтатусПроверкиКонтекстноеМеню" id="170"/>
-									<ExtendedTooltip name="СтатусПроверкиРасширеннаяПодсказка" id="171"/>
-								</LabelField>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ОписаниеНачалоКонтекстноеМеню" id="156"/>
+													<ExtendedTooltip name="ОписаниеНачалоРасширеннаяПодсказка" id="157"/>
+												</LabelDecoration>
+												<Button name="КнопкаПомощник" id="234">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КнопкаПомощник</CommandName>
+													<TextColor>web:White</TextColor>
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Помощник подключения...</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="КнопкаПомощникРасширеннаяПодсказка" id="235"/>
+												</Button>
+												<LabelDecoration name="ОписаниеПродолжение" id="231">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;fontsize 12&gt;2. Укажите параметры "ID Instance" и "API Token"&lt;/&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ОписаниеПродолжениеКонтекстноеМеню" id="232"/>
+													<ExtendedTooltip name="ОписаниеПродолжениеРасширеннаяПодсказка" id="233"/>
+												</LabelDecoration>
+												<InputField name="IdInstance" id="19">
+													<DataPath>Объект.IdInstance</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ID Instance</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<EditTextUpdate>OnValueChange</EditTextUpdate>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>9999</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="IdInstanceКонтекстноеМеню" id="20"/>
+													<ExtendedTooltip name="IdInstanceРасширеннаяПодсказка" id="21"/>
+													<Events>
+														<Event name="OnChange">IdInstanceПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ApiToken" id="16">
+													<DataPath>Объект.ApiToken</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>API Token</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<EditTextUpdate>OnValueChange</EditTextUpdate>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>123fdws3214t3456g214234171855e0ff3f597f1</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ApiTokenКонтекстноеМеню" id="17"/>
+													<ExtendedTooltip name="ApiTokenРасширеннаяПодсказка" id="18"/>
+													<Events>
+														<Event name="OnChange">ApiTokenПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelDecoration name="ОписаниеНачалоКонец" id="158">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;fontsize 12&gt;3. Проверьте подключение аккаунта&lt;/&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ОписаниеНачалоКонецКонтекстноеМеню" id="159"/>
+													<ExtendedTooltip name="ОписаниеНачалоКонецРасширеннаяПодсказка" id="160"/>
+												</LabelDecoration>
+												<Button name="ПроверитьПодключение" id="161">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПроверитьПодключение</CommandName>
+													<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="162"/>
+												</Button>
+												<LabelField name="СтатусПроверки" id="169">
+													<DataPath>СтатусСервиса</DataPath>
+													<Visible>false</Visible>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>БЛ='Отключен (требуется сканировать QR-код)'; БИ=Подключен</v8:content>
+														</v8:item>
+													</Format>
+													<TextColor>style:AccentColor</TextColor>
+													<ContextMenu name="СтатусПроверкиКонтекстноеМеню" id="170"/>
+													<ExtendedTooltip name="СтатусПроверкиРасширеннаяПодсказка" id="171"/>
+												</LabelField>
+											</ChildItems>
+										</Page>
+										<Page name="НастройкиВходящихУведомлений" id="81">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки входящих уведомлений</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки входящих уведомлений</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="НастройкиВходящихУведомленийРасширеннаяПодсказка" id="82"/>
+											<ChildItems>
+												<CheckBoxField name="ПолучатьВходящиеУведомления" id="83">
+													<DataPath>ПолучатьВходящиеУведомления</DataPath>
+													<Visible>false</Visible>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Входящие уведомления позволяют получать сообщения,
+изображения, видео, файлы, статусы ранее отправленных
+сообщений, а также информацию о состоянии аккаунта и
+телефона. Подробнее см. в [документации](https://green-
+api.com/docs/api/receiving/technology-htt</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПолучатьВходящиеУведомленияКонтекстноеМеню" id="84"/>
+													<ExtendedTooltip name="ПолучатьВходящиеУведомленияРасширеннаяПодсказка" id="85">
+														<Width>41</Width>
+														<AutoMaxWidth>false</AutoMaxWidth>
+														<HorizontalStretch>true</HorizontalStretch>
+														<TextColor>style:FieldSelectionBackColor</TextColor>
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Входящие уведомления позволяют получать сообщения,
+изображения, видео, файлы, статусы ранее отправленных
+сообщений, а также информацию о состоянии аккаунта и
+телефона. Подробнее см. в &lt;link https://green-api.com/docs/api/receiving/technology-http-api/&gt;документации&lt;/&gt; </v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ПолучатьВходящиеУведомленияПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<UsualGroup name="ДеталиПредупреждениеСтандартныеНастройки" id="103">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Детали предупреждение стандартные настройки</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Детали предупреждение стандартные настройки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ДеталиПредупреждениеСтандартныеНастройкиРасширеннаяПодсказка" id="104"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаПояснение" id="113">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа пояснение</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа пояснение</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПояснениеРасширеннаяПодсказка" id="114"/>
+															<ChildItems>
+																<PictureDecoration name="Декорация3" id="110">
+																	<Picture>
+																		<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="Декорация3КонтекстноеМеню" id="111"/>
+																	<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="112"/>
+																</PictureDecoration>
+																<LabelDecoration name="Декорация2" id="105">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Установлены нестандартные настройки получения входящих
+уведомлений. Получение уведомлений в текущей обработке
+недоступно.
+Для включения возможности получать входящие
+уведомления нажмите кнопку "Установить стандартные
+настройки"</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="Декорация2КонтекстноеМеню" id="106"/>
+																	<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="107"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<Button name="УстановитьСтандартныеНастройки" id="108">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УстановитьСтандартныеНастройки</CommandName>
+															<ExtendedTooltip name="УстановитьСтандартныеНастройкиРасширеннаяПодсказка" id="109"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ДеталиНастройкиУведомлений" id="89">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Детали настройки уведомлений</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Детали настройки уведомлений</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>NormalSeparation</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ДеталиНастройкиУведомленийРасширеннаяПодсказка" id="90"/>
+													<ChildItems>
+														<CheckBoxField name="ПолучатьВходящиеСообщенияИФайлы" id="91">
+															<DataPath>ПолучатьВходящиеСообщенияИФайлы</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПолучатьВходящиеСообщенияИФайлыКонтекстноеМеню" id="92"/>
+															<ExtendedTooltip name="ПолучатьВходящиеСообщенияИФайлыРасширеннаяПодсказка" id="93"/>
+															<Events>
+																<Event name="OnChange">ПолучатьВходящиеСообщенияИФайлыПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ПолучатьСтатусыОтправленныхСообщений" id="94">
+															<DataPath>ПолучатьСтатусыОтправленныхСообщений</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПолучатьСтатусыОтправленныхСообщенийКонтекстноеМеню" id="95"/>
+															<ExtendedTooltip name="ПолучатьСтатусыОтправленныхСообщенийРасширеннаяПодсказка" id="96"/>
+															<Events>
+																<Event name="OnChange">ПолучатьСтатусыОтправленныхСообщенийПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ПолучатьУведомленииОСостоянииТелефона" id="97">
+															<DataPath>ПолучатьУведомленииОСостоянииТелефона</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПолучатьУведомленииОСостоянииТелефонаКонтекстноеМеню" id="98"/>
+															<ExtendedTooltip name="ПолучатьУведомленииОСостоянииТелефонаРасширеннаяПодсказка" id="99"/>
+															<Events>
+																<Event name="OnChange">ПолучатьУведомленииОСостоянииТелефонаПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ПолучатьУведомленияОСостоянииАккаунта" id="100">
+															<DataPath>ПолучатьУведомленияОСостоянииАккаунта</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПолучатьУведомленияОСостоянииАккаунтаКонтекстноеМеню" id="101"/>
+															<ExtendedTooltip name="ПолучатьУведомленияОСостоянииАккаунтаРасширеннаяПодсказка" id="102"/>
+															<Events>
+																<Event name="OnChange">ПолучатьУведомленияОСостоянииАккаунтаПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
+												<LabelDecoration name="ДекорацияНастройкиНедоступны" id="236">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки доступны только после подключения к Green API</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияНастройкиНедоступныКонтекстноеМеню" id="237"/>
+													<ExtendedTooltip name="ДекорацияНастройкиНедоступныРасширеннаяПодсказка" id="238"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="ПрочиеНастройки" id="123">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Прочие настройки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Прочие настройки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ПрочиеНастройкиРасширеннаяПодсказка" id="124"/>
+											<ChildItems>
+												<CheckBoxField name="ОтмечатьВходящиеСообщенияПрочитанными" id="125">
+													<DataPath>ОтмечатьВходящиеСообщенияПрочитанными</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОтмечатьВходящиеСообщенияПрочитаннымиКонтекстноеМеню" id="126"/>
+													<ExtendedTooltip name="ОтмечатьВходящиеСообщенияПрочитаннымиРасширеннаяПодсказка" id="127">
+														<TextColor>style:FieldSelectionBackColor</TextColor>
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Каждое входящее сообщение на ваш номер будет помечено как прочитанное сразу при получении. Отключите эту настройку, если требуется отслеживать входящие сообщения с телефона</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ОтмечатьВходящиеСообщенияПрочитаннымиПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<UsualGroup name="Группа1" id="141">
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="142"/>
+													<ChildItems>
+														<InputField name="ИнтервалОтправкиСообщений" id="128">
+															<DataPath>ИнтервалОтправкиСообщений</DataPath>
+															<EditTextUpdate>OnValueChange</EditTextUpdate>
+															<MinValue xsi:type="xs:decimal">500</MinValue>
+															<ContextMenu name="ИнтервалОтправкиСообщенийКонтекстноеМеню" id="129"/>
+															<ExtendedTooltip name="ИнтервалОтправкиСообщенийРасширеннаяПодсказка" id="130">
+																<Title formatted="true">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Сообщения будут отправляться из очереди с задержкой на заданный интервал. Подробнее в &lt;link https://green-api.com/docs/api/send-messages-delay/&gt;документации&lt;/&gt; </v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ИнтервалОтправкиСообщенийПриИзменении</Event>
+															</Events>
+														</InputField>
+														<LabelDecoration name="ДекорацияМсек" id="138">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>мсек</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияМсекКонтекстноеМеню" id="139"/>
+															<ExtendedTooltip name="ДекорацияМсекРасширеннаяПодсказка" id="140"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<LabelDecoration name="ПояснениеИнтервалОтправки" id="131">
+													<TextColor>style:FieldSelectionBackColor</TextColor>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сообщения будут отправляться из очереди с задержкой на заданный интервал. Подробнее в &lt;link https://green-api.com/docs/api/send-messages-delay/&gt;документации&lt;/&gt; </v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ПояснениеИнтервалОтправкиКонтекстноеМеню" id="132"/>
+													<ExtendedTooltip name="ПояснениеИнтервалОтправкиРасширеннаяПодсказка" id="133"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
 							</ChildItems>
 						</Page>
 						<Page name="ОтправкаСообщений" id="5">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Отправка сообщений</v8:content>
+									<v8:content>Отправка</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -413,7 +723,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Получение сообщений</v8:content>
+									<v8:content>Получение</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -685,282 +995,6 @@
 								</UsualGroup>
 							</ChildItems>
 						</Page>
-						<Page name="НастройкиВходящихУведомлений" id="81">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Настройки входящих уведомлений</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Настройки входящих уведомлений</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ExtendedTooltip name="НастройкиВходящихУведомленийРасширеннаяПодсказка" id="82"/>
-							<ChildItems>
-								<CheckBoxField name="ПолучатьВходящиеУведомления" id="83">
-									<DataPath>ПолучатьВходящиеУведомления</DataPath>
-									<Visible>false</Visible>
-									<TitleLocation>Right</TitleLocation>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Входящие уведомления позволяют получать сообщения,
-изображения, видео, файлы, статусы ранее отправленных
-сообщений, а также информацию о состоянии аккаунта и
-телефона. Подробнее см. в [документации](https://green-
-api.com/docs/api/receiving/technology-htt</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ПолучатьВходящиеУведомленияКонтекстноеМеню" id="84"/>
-									<ExtendedTooltip name="ПолучатьВходящиеУведомленияРасширеннаяПодсказка" id="85">
-										<Width>41</Width>
-										<AutoMaxWidth>false</AutoMaxWidth>
-										<HorizontalStretch>true</HorizontalStretch>
-										<TextColor>style:FieldSelectionBackColor</TextColor>
-										<Title formatted="true">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Входящие уведомления позволяют получать сообщения,
-изображения, видео, файлы, статусы ранее отправленных
-сообщений, а также информацию о состоянии аккаунта и
-телефона. Подробнее см. в &lt;link https://green-api.com/docs/api/receiving/technology-http-api/&gt;документации&lt;/&gt; </v8:content>
-											</v8:item>
-										</Title>
-									</ExtendedTooltip>
-									<Events>
-										<Event name="OnChange">ПолучатьВходящиеУведомленияПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<UsualGroup name="ДеталиПредупреждениеСтандартныеНастройки" id="103">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Детали предупреждение стандартные настройки</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Детали предупреждение стандартные настройки</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Vertical</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ДеталиПредупреждениеСтандартныеНастройкиРасширеннаяПодсказка" id="104"/>
-									<ChildItems>
-										<UsualGroup name="ГруппаПояснение" id="113">
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа пояснение</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа пояснение</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Group>Horizontal</Group>
-											<Representation>None</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаПояснениеРасширеннаяПодсказка" id="114"/>
-											<ChildItems>
-												<PictureDecoration name="Декорация3" id="110">
-													<Picture>
-														<xr:Ref>StdPicture.DialogExclamation</xr:Ref>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</Picture>
-													<FileDragMode>AsFile</FileDragMode>
-													<ContextMenu name="Декорация3КонтекстноеМеню" id="111"/>
-													<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="112"/>
-												</PictureDecoration>
-												<LabelDecoration name="Декорация2" id="105">
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>true</HorizontalStretch>
-													<Title formatted="false">
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Установлены нестандартные настройки получения входящих
-уведомлений. Получение уведомлений в текущей обработке
-недоступно.
-Для включения возможности получать входящие
-уведомления нажмите кнопку "Установить стандартные
-настройки"</v8:content>
-														</v8:item>
-													</Title>
-													<ContextMenu name="Декорация2КонтекстноеМеню" id="106"/>
-													<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="107"/>
-												</LabelDecoration>
-											</ChildItems>
-										</UsualGroup>
-										<Button name="УстановитьСтандартныеНастройки" id="108">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.УстановитьСтандартныеНастройки</CommandName>
-											<ExtendedTooltip name="УстановитьСтандартныеНастройкиРасширеннаяПодсказка" id="109"/>
-										</Button>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ДеталиНастройкиУведомлений" id="89">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Детали настройки уведомлений</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Детали настройки уведомлений</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Vertical</Group>
-									<Representation>NormalSeparation</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ДеталиНастройкиУведомленийРасширеннаяПодсказка" id="90"/>
-									<ChildItems>
-										<CheckBoxField name="ПолучатьВходящиеСообщенияИФайлы" id="91">
-											<DataPath>ПолучатьВходящиеСообщенияИФайлы</DataPath>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПолучатьВходящиеСообщенияИФайлыКонтекстноеМеню" id="92"/>
-											<ExtendedTooltip name="ПолучатьВходящиеСообщенияИФайлыРасширеннаяПодсказка" id="93"/>
-											<Events>
-												<Event name="OnChange">ПолучатьВходящиеСообщенияИФайлыПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-										<CheckBoxField name="ПолучатьСтатусыОтправленныхСообщений" id="94">
-											<DataPath>ПолучатьСтатусыОтправленныхСообщений</DataPath>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПолучатьСтатусыОтправленныхСообщенийКонтекстноеМеню" id="95"/>
-											<ExtendedTooltip name="ПолучатьСтатусыОтправленныхСообщенийРасширеннаяПодсказка" id="96"/>
-											<Events>
-												<Event name="OnChange">ПолучатьСтатусыОтправленныхСообщенийПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-										<CheckBoxField name="ПолучатьУведомленииОСостоянииТелефона" id="97">
-											<DataPath>ПолучатьУведомленииОСостоянииТелефона</DataPath>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПолучатьУведомленииОСостоянииТелефонаКонтекстноеМеню" id="98"/>
-											<ExtendedTooltip name="ПолучатьУведомленииОСостоянииТелефонаРасширеннаяПодсказка" id="99"/>
-											<Events>
-												<Event name="OnChange">ПолучатьУведомленииОСостоянииТелефонаПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-										<CheckBoxField name="ПолучатьУведомленияОСостоянииАккаунта" id="100">
-											<DataPath>ПолучатьУведомленияОСостоянииАккаунта</DataPath>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПолучатьУведомленияОСостоянииАккаунтаКонтекстноеМеню" id="101"/>
-											<ExtendedTooltip name="ПолучатьУведомленияОСостоянииАккаунтаРасширеннаяПодсказка" id="102"/>
-											<Events>
-												<Event name="OnChange">ПолучатьУведомленияОСостоянииАккаунтаПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-									</ChildItems>
-								</UsualGroup>
-								<LabelDecoration name="ДекорацияНастройкиНедоступны" id="236">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Настройки доступны только после подключения к Green API</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ДекорацияНастройкиНедоступныКонтекстноеМеню" id="237"/>
-									<ExtendedTooltip name="ДекорацияНастройкиНедоступныРасширеннаяПодсказка" id="238"/>
-								</LabelDecoration>
-							</ChildItems>
-						</Page>
-						<Page name="ПрочиеНастройки" id="123">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Прочие настройки</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Прочие настройки</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ExtendedTooltip name="ПрочиеНастройкиРасширеннаяПодсказка" id="124"/>
-							<ChildItems>
-								<CheckBoxField name="ОтмечатьВходящиеСообщенияПрочитанными" id="125">
-									<DataPath>ОтмечатьВходящиеСообщенияПрочитанными</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ОтмечатьВходящиеСообщенияПрочитаннымиКонтекстноеМеню" id="126"/>
-									<ExtendedTooltip name="ОтмечатьВходящиеСообщенияПрочитаннымиРасширеннаяПодсказка" id="127">
-										<TextColor>style:FieldSelectionBackColor</TextColor>
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Каждое входящее сообщение на ваш номер будет помечено как прочитанное сразу при получении. Отключите эту настройку, если требуется отслеживать входящие сообщения с телефона</v8:content>
-											</v8:item>
-										</Title>
-									</ExtendedTooltip>
-									<Events>
-										<Event name="OnChange">ОтмечатьВходящиеСообщенияПрочитаннымиПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<UsualGroup name="Группа1" id="141">
-									<Group>AlwaysHorizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="142"/>
-									<ChildItems>
-										<InputField name="ИнтервалОтправкиСообщений" id="128">
-											<DataPath>ИнтервалОтправкиСообщений</DataPath>
-											<EditTextUpdate>OnValueChange</EditTextUpdate>
-											<MinValue xsi:type="xs:decimal">500</MinValue>
-											<ContextMenu name="ИнтервалОтправкиСообщенийКонтекстноеМеню" id="129"/>
-											<ExtendedTooltip name="ИнтервалОтправкиСообщенийРасширеннаяПодсказка" id="130">
-												<Title formatted="true">
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Сообщения будут отправляться из очереди с задержкой на заданный интервал. Подробнее в &lt;link https://green-api.com/docs/api/send-messages-delay/&gt;документации&lt;/&gt; </v8:content>
-													</v8:item>
-												</Title>
-											</ExtendedTooltip>
-											<Events>
-												<Event name="OnChange">ИнтервалОтправкиСообщенийПриИзменении</Event>
-											</Events>
-										</InputField>
-										<LabelDecoration name="ДекорацияМсек" id="138">
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>мсек</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="ДекорацияМсекКонтекстноеМеню" id="139"/>
-											<ExtendedTooltip name="ДекорацияМсекРасширеннаяПодсказка" id="140"/>
-										</LabelDecoration>
-									</ChildItems>
-								</UsualGroup>
-								<LabelDecoration name="ПояснениеИнтервалОтправки" id="131">
-									<TextColor>style:FieldSelectionBackColor</TextColor>
-									<Title formatted="true">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Сообщения будут отправляться из очереди с задержкой на заданный интервал. Подробнее в &lt;link https://green-api.com/docs/api/send-messages-delay/&gt;документации&lt;/&gt; </v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ПояснениеИнтервалОтправкиКонтекстноеМеню" id="132"/>
-									<ExtendedTooltip name="ПояснениеИнтервалОтправкиРасширеннаяПодсказка" id="133"/>
-								</LabelDecoration>
-							</ChildItems>
-						</Page>
 						<Page name="Аккаунт" id="242">
 							<Title>
 								<v8:item>
@@ -1008,7 +1042,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:content>Группа получить настройки аккаунта</v8:content>
 												</v8:item>
 											</ToolTip>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПолучитьНастройкиАккаунтаРасширеннаяПодсказка" id="264"/>
 											<ChildItems>
@@ -1033,7 +1067,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаУстановитьНастройкуАккаунтаРасширеннаяПодсказка" id="257"/>
 											<ChildItems>
@@ -1075,7 +1109,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:content>Группа получить состояние аккаунта</v8:content>
 												</v8:item>
 											</ToolTip>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПолучитьСостояниеАккаунтаРасширеннаяПодсказка" id="266"/>
 											<ChildItems>
@@ -1099,7 +1133,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:content>Группа перезапустить аккаунт</v8:content>
 												</v8:item>
 											</ToolTip>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПерезапуститьАккаунтРасширеннаяПодсказка" id="270"/>
 											<ChildItems>
@@ -1123,7 +1157,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:content>Группа разлогинить аккаунт</v8:content>
 												</v8:item>
 											</ToolTip>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаРазлогинитьАккаунтРасширеннаяПодсказка" id="274"/>
 											<ChildItems>
@@ -1135,6 +1169,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаПолучитьQRКод" id="277">
+											<Visible>false</Visible>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1148,7 +1183,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПолучитьQRКодРасширеннаяПодсказка" id="278"/>
 											<ChildItems>
@@ -1350,7 +1385,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаСоздатьГруппуРасширеннаяПодсказка" id="316"/>
 											<ChildItems>
@@ -1359,6 +1394,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<CommandName>Form.Command.СоздатьГруппу</CommandName>
 													<ExtendedTooltip name="СоздатьГруппуРасширеннаяПодсказка" id="314"/>
 												</Button>
+												<InputField name="ПараметрИмяГруппы" id="494">
+													<DataPath>ПараметрИмяГруппы</DataPath>
+													<ContextMenu name="ПараметрИмяГруппыКонтекстноеМеню" id="495"/>
+													<ExtendedTooltip name="ПараметрИмяГруппыРасширеннаяПодсказка" id="496"/>
+												</InputField>
 												<InputField name="ПараметрНомерТелефона" id="320">
 													<DataPath>ПараметрНомерТелефона</DataPath>
 													<ContextMenu name="ПараметрНомерТелефонаКонтекстноеМеню" id="321"/>
@@ -1380,7 +1420,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаИзменитьИмяГруппыРасширеннаяПодсказка" id="324"/>
 											<ChildItems>
@@ -1415,7 +1455,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПолучитьИнформациюоГруппеРасширеннаяПодсказка" id="339"/>
 											<ChildItems>
@@ -1439,7 +1479,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаДобавитьУчастникаРасширеннаяПодсказка" id="351"/>
 											<ChildItems>
@@ -1474,7 +1514,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаУдалитьУчастникаРасширеннаяПодсказка" id="366"/>
 											<ChildItems>
@@ -1503,7 +1543,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаНазначитьПраваАдминистратораРасширеннаяПодсказка" id="378"/>
 											<ChildItems>
@@ -1538,7 +1578,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаОтозватьПраваРасширеннаяПодсказка" id="390"/>
 											<ChildItems>
@@ -1624,7 +1664,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
-									<Representation>None</Representation>
+									<Representation>StrongSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОтметкаПрочтенияЗапросыРасширеннаяПодсказка" id="416"/>
 									<ChildItems>
@@ -1754,7 +1794,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПроверитьНаличиеВатсапРасширеннаяПодсказка" id="457"/>
 											<ChildItems>
@@ -1784,7 +1824,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПолучитьАватарКонтактаРасширеннаяПодсказка" id="475"/>
 											<ChildItems>
@@ -1814,7 +1854,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Vertical</Group>
-											<Representation>None</Representation>
+											<Representation>StrongSeparation</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПолучитьКонтактыРасширеннаяПодсказка" id="487"/>
 											<ChildItems>
