@@ -95,7 +95,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Настройки</v8:content>
+													<v8:content>Подключение</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -231,7 +231,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Настройки входящих уведомлений</v8:content>
+													<v8:content>Получение данных</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -425,7 +425,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Прочие настройки</v8:content>
+													<v8:content>Прочие</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -1053,49 +1053,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</Button>
 											</ChildItems>
 										</UsualGroup>
-										<UsualGroup name="ГруппаУстановитьНастройкуАккаунта" id="256">
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Установить настройки аккаунта</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа установить настройку аккаунта</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Group>Vertical</Group>
-											<Representation>StrongSeparation</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаУстановитьНастройкуАккаунтаРасширеннаяПодсказка" id="257"/>
-											<ChildItems>
-												<Button name="УстановитьНастрйокиАккаунта" id="258">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.УстановитьНастройкиАккаунта</CommandName>
-													<ExtendedTooltip name="УстановитьНастрйокиАккаунтаРасширеннаяПодсказка" id="259"/>
-												</Button>
-												<InputField name="ПараметрУстановитьНастройкиАккаунта" id="260">
-													<DataPath>ПараметрУстановитьНастройкиАккаунта</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Тело</v8:content>
-														</v8:item>
-													</Title>
-													<TitleLocation>Top</TitleLocation>
-													<Width>35</Width>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<Height>8</Height>
-													<AutoMaxHeight>false</AutoMaxHeight>
-													<HorizontalStretch>false</HorizontalStretch>
-													<MultiLine>true</MultiLine>
-													<ContextMenu name="ПараметрУстановитьНастройкиАккаунтаКонтекстноеМеню" id="261"/>
-													<ExtendedTooltip name="ПараметрУстановитьНастройкиАккаунтаРасширеннаяПодсказка" id="262"/>
-												</InputField>
-											</ChildItems>
-										</UsualGroup>
 										<UsualGroup name="ГруппаПолучитьСостояниеАккаунта" id="265">
 											<Title>
 												<v8:item>
@@ -1169,7 +1126,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаПолучитьQRКод" id="277">
-											<Visible>false</Visible>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1187,11 +1143,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПолучитьQRКодРасширеннаяПодсказка" id="278"/>
 											<ChildItems>
-												<Button name="ПолучитьQRКод" id="279">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПолучитьQRКод</CommandName>
-													<ExtendedTooltip name="ПолучитьQRКодРасширеннаяПодсказка" id="280"/>
-												</Button>
 												<HTMLDocumentField name="QRКод" id="281">
 													<DataPath>QRКод</DataPath>
 													<Width>36</Width>
@@ -1202,6 +1153,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<ContextMenu name="QRКодКонтекстноеМеню" id="282"/>
 													<ExtendedTooltip name="QRКодРасширеннаяПодсказка" id="283"/>
 												</HTMLDocumentField>
+												<Button name="ПолучитьQRКод" id="279">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьQRКод</CommandName>
+													<ExtendedTooltip name="ПолучитьQRКодРасширеннаяПодсказка" id="280"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -1389,11 +1345,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаСоздатьГруппуРасширеннаяПодсказка" id="316"/>
 											<ChildItems>
-												<Button name="СоздатьГруппу" id="313">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.СоздатьГруппу</CommandName>
-													<ExtendedTooltip name="СоздатьГруппуРасширеннаяПодсказка" id="314"/>
-												</Button>
 												<InputField name="ПараметрИмяГруппы" id="494">
 													<DataPath>ПараметрИмяГруппы</DataPath>
 													<ContextMenu name="ПараметрИмяГруппыКонтекстноеМеню" id="495"/>
@@ -1404,6 +1355,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<ContextMenu name="ПараметрНомерТелефонаКонтекстноеМеню" id="321"/>
 													<ExtendedTooltip name="ПараметрНомерТелефонаРасширеннаяПодсказка" id="322"/>
 												</InputField>
+												<Button name="СоздатьГруппу" id="313">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.СоздатьГруппу</CommandName>
+													<ExtendedTooltip name="СоздатьГруппуРасширеннаяПодсказка" id="314"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаИзменитьИмяГруппы" id="323">
@@ -1424,11 +1380,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаИзменитьИмяГруппыРасширеннаяПодсказка" id="324"/>
 											<ChildItems>
-												<Button name="ИзменитьИмяГруппы" id="333">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ИзменитьИмяГруппы</CommandName>
-													<ExtendedTooltip name="ИзменитьИмяГруппыРасширеннаяПодсказка" id="334"/>
-												</Button>
 												<InputField name="ПараметрИдГруппы" id="335">
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<ContextMenu name="ПараметрИдГруппыКонтекстноеМеню" id="336"/>
@@ -1439,6 +1390,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<ContextMenu name="ИмяГруппыКонтекстноеМеню" id="318"/>
 													<ExtendedTooltip name="ИмяГруппыРасширеннаяПодсказка" id="319"/>
 												</InputField>
+												<Button name="ИзменитьИмяГруппы" id="333">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ИзменитьИмяГруппы</CommandName>
+													<ExtendedTooltip name="ИзменитьИмяГруппыРасширеннаяПодсказка" id="334"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаПолучитьИнформациюоГруппе" id="338">
@@ -1459,16 +1415,16 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПолучитьИнформациюоГруппеРасширеннаяПодсказка" id="339"/>
 											<ChildItems>
-												<Button name="ПолучитьИнформациюОГруппе" id="345">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПолучитьИнформациюОГруппе</CommandName>
-													<ExtendedTooltip name="ПолучитьИнформациюОГруппеРасширеннаяПодсказка" id="346"/>
-												</Button>
 												<InputField name="ПараметрИдГруппы1" id="347">
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<ContextMenu name="ПараметрИдГруппы1КонтекстноеМеню" id="348"/>
 													<ExtendedTooltip name="ПараметрИдГруппы1РасширеннаяПодсказка" id="349"/>
 												</InputField>
+												<Button name="ПолучитьИнформациюОГруппе" id="345">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьИнформациюОГруппе</CommandName>
+													<ExtendedTooltip name="ПолучитьИнформациюОГруппеРасширеннаяПодсказка" id="346"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаДобавитьУчастника" id="350">
@@ -1483,11 +1439,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаДобавитьУчастникаРасширеннаяПодсказка" id="351"/>
 											<ChildItems>
-												<Button name="ДобавитьУчастникаВГруппу" id="357">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ДобавитьУчастникаВГруппу</CommandName>
-													<ExtendedTooltip name="ДобавитьУчастникаВГруппуРасширеннаяПодсказка" id="358"/>
-												</Button>
 												<InputField name="ПараметрИдГруппы2" id="362">
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<ContextMenu name="ПараметрИдГруппы2КонтекстноеМеню" id="363"/>
@@ -1498,6 +1449,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<ContextMenu name="ПараметрИдУчастникаКонтекстноеМеню" id="360"/>
 													<ExtendedTooltip name="ПараметрИдУчастникаРасширеннаяПодсказка" id="361"/>
 												</InputField>
+												<Button name="ДобавитьУчастникаВГруппу" id="357">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ДобавитьУчастникаВГруппу</CommandName>
+													<ExtendedTooltip name="ДобавитьУчастникаВГруппуРасширеннаяПодсказка" id="358"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаУдалитьУчастника" id="365">
@@ -1518,11 +1474,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаУдалитьУчастникаРасширеннаяПодсказка" id="366"/>
 											<ChildItems>
-												<Button name="УдалитьУчастникаИзГруппы" id="375">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.УдалитьУчастникаИзГруппы</CommandName>
-													<ExtendedTooltip name="УдалитьУчастникаИзГруппыРасширеннаяПодсказка" id="376"/>
-												</Button>
 												<InputField name="ПараметрИдГруппы3" id="369">
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<ContextMenu name="ПараметрИдГруппы3КонтекстноеМеню" id="370"/>
@@ -1533,6 +1484,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<ContextMenu name="ПараметрИдУчастника1КонтекстноеМеню" id="373"/>
 													<ExtendedTooltip name="ПараметрИдУчастника1РасширеннаяПодсказка" id="374"/>
 												</InputField>
+												<Button name="УдалитьУчастникаИзГруппы" id="375">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.УдалитьУчастникаИзГруппы</CommandName>
+													<ExtendedTooltip name="УдалитьУчастникаИзГруппыРасширеннаяПодсказка" id="376"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаНазначитьПраваАдминистратора" id="377">
@@ -1547,11 +1503,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаНазначитьПраваАдминистратораРасширеннаяПодсказка" id="378"/>
 											<ChildItems>
-												<Button name="НазначитьПраваАдминистратораГруппы" id="387">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.НазначитьПраваАдминистратораГруппы</CommandName>
-													<ExtendedTooltip name="НазначитьПраваАдминистратораГруппыРасширеннаяПодсказка" id="388"/>
-												</Button>
 												<InputField name="ПараметрИдГруппы4" id="381">
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<ContextMenu name="ПараметрИдГруппы4КонтекстноеМеню" id="382"/>
@@ -1562,6 +1513,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<ContextMenu name="ПараметрИдУчастника2КонтекстноеМеню" id="385"/>
 													<ExtendedTooltip name="ПараметрИдУчастника2РасширеннаяПодсказка" id="386"/>
 												</InputField>
+												<Button name="НазначитьПраваАдминистратораГруппы" id="387">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.НазначитьПраваАдминистратораГруппы</CommandName>
+													<ExtendedTooltip name="НазначитьПраваАдминистратораГруппыРасширеннаяПодсказка" id="388"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаОтозватьПрава" id="389">
@@ -1582,11 +1538,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаОтозватьПраваРасширеннаяПодсказка" id="390"/>
 											<ChildItems>
-												<Button name="ОтозватьПраваАдминистратораГруппы" id="399">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ОтозватьПраваАдминистратораГруппы</CommandName>
-													<ExtendedTooltip name="ОтозватьПраваАдминистратораГруппыРасширеннаяПодсказка" id="400"/>
-												</Button>
 												<InputField name="ПараметрИдГруппы5" id="393">
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<ContextMenu name="ПараметрИдГруппы5КонтекстноеМеню" id="394"/>
@@ -1597,6 +1548,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<ContextMenu name="ПараметрИдУчастника3КонтекстноеМеню" id="397"/>
 													<ExtendedTooltip name="ПараметрИдУчастника3РасширеннаяПодсказка" id="398"/>
 												</InputField>
+												<Button name="ОтозватьПраваАдминистратораГруппы" id="399">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОтозватьПраваАдминистратораГруппы</CommandName>
+													<ExtendedTooltip name="ОтозватьПраваАдминистратораГруппыРасширеннаяПодсказка" id="400"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаВыйти" id="401">
@@ -1617,16 +1573,16 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаВыйтиРасширеннаяПодсказка" id="402"/>
 											<ChildItems>
-												<Button name="ВыйтиИзГруппы" id="411">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ВыйтиИзГруппы</CommandName>
-													<ExtendedTooltip name="ВыйтиИзГруппыРасширеннаяПодсказка" id="412"/>
-												</Button>
 												<InputField name="ПараметрИдГруппы6" id="405">
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<ContextMenu name="ПараметрИдГруппы6КонтекстноеМеню" id="406"/>
 													<ExtendedTooltip name="ПараметрИдГруппы6РасширеннаяПодсказка" id="407"/>
 												</InputField>
+												<Button name="ВыйтиИзГруппы" id="411">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ВыйтиИзГруппы</CommandName>
+													<ExtendedTooltip name="ВыйтиИзГруппыРасширеннаяПодсказка" id="412"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -1680,11 +1636,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаОтметитьЧатПрочитаннымРасширеннаяПодсказка" id="425"/>
 											<ChildItems>
-												<Button name="ОтметитьЧатПрочитанным" id="431">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ОтметитьЧатПрочитанным</CommandName>
-													<ExtendedTooltip name="ОтметитьЧатПрочитаннымРасширеннаяПодсказка" id="432"/>
-												</Button>
 												<InputField name="ПараметрИдЧата" id="433">
 													<DataPath>ПараметрИдЧата</DataPath>
 													<ContextMenu name="ПараметрИдЧатаКонтекстноеМеню" id="434"/>
@@ -1695,6 +1646,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<ContextMenu name="ПараметрИдСообщенияКонтекстноеМеню" id="437"/>
 													<ExtendedTooltip name="ПараметрИдСообщенияРасширеннаяПодсказка" id="438"/>
 												</InputField>
+												<Button name="ОтметитьЧатПрочитанным" id="431">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОтметитьЧатПрочитанным</CommandName>
+													<ExtendedTooltip name="ОтметитьЧатПрочитаннымРасширеннаяПодсказка" id="432"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -1798,16 +1754,16 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПроверитьНаличиеВатсапРасширеннаяПодсказка" id="457"/>
 											<ChildItems>
-												<Button name="ПроверитьНаличиеWhatsApp" id="469">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПроверитьНаличиеWhatsApp</CommandName>
-													<ExtendedTooltip name="ПроверитьНаличиеWhatsAppРасширеннаяПодсказка" id="470"/>
-												</Button>
 												<InputField name="ПараметрНомерТелефона1" id="471">
 													<DataPath>ПараметрНомерТелефона</DataPath>
 													<ContextMenu name="ПараметрНомерТелефона1КонтекстноеМеню" id="472"/>
 													<ExtendedTooltip name="ПараметрНомерТелефона1РасширеннаяПодсказка" id="473"/>
 												</InputField>
+												<Button name="ПроверитьНаличиеWhatsApp" id="469">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПроверитьНаличиеWhatsApp</CommandName>
+													<ExtendedTooltip name="ПроверитьНаличиеWhatsAppРасширеннаяПодсказка" id="470"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаПолучитьАватарКонтакта" id="474">
@@ -1828,16 +1784,16 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПолучитьАватарКонтактаРасширеннаяПодсказка" id="475"/>
 											<ChildItems>
-												<Button name="ПолучитьАватарКонтакта" id="481">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПолучитьАватарКонтакта</CommandName>
-													<ExtendedTooltip name="ПолучитьАватарКонтактаРасширеннаяПодсказка" id="482"/>
-												</Button>
 												<InputField name="ПараметрИдЧата1" id="483">
 													<DataPath>ПараметрИдЧата</DataPath>
 													<ContextMenu name="ПараметрИдЧата1КонтекстноеМеню" id="484"/>
 													<ExtendedTooltip name="ПараметрИдЧата1РасширеннаяПодсказка" id="485"/>
 												</InputField>
+												<Button name="ПолучитьАватарКонтакта" id="481">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьАватарКонтакта</CommandName>
+													<ExtendedTooltip name="ПолучитьАватарКонтактаРасширеннаяПодсказка" id="482"/>
+												</Button>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаПолучитьКонтакты" id="486">
