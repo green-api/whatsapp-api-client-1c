@@ -1125,6 +1125,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</Button>
 											</ChildItems>
 										</UsualGroup>
+										<Button name="УстановитьАватар" id="497">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.УстановитьФотоПрофиля</CommandName>
+											<ExtendedTooltip name="УстановитьАватарРасширеннаяПодсказка" id="498"/>
+										</Button>
 										<UsualGroup name="ГруппаПолучитьQRКод" id="277">
 											<Title>
 												<v8:item>
@@ -2670,6 +2675,21 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьКонтакты</Action>
+		</Command>
+		<Command name="УстановитьФотоПрофиля" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить фото профиля</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить фото профиля</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьФотоПрофиля</Action>
 		</Command>
 	</Commands>
 </Form>
