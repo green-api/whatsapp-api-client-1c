@@ -1152,7 +1152,8 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<DataPath>QRКод</DataPath>
 													<Width>36</Width>
 													<AutoMaxWidth>false</AutoMaxWidth>
-													<Height>8</Height>
+													<Height>12</Height>
+													<AutoMaxHeight>false</AutoMaxHeight>
 													<HorizontalStretch>false</HorizontalStretch>
 													<VerticalStretch>false</VerticalStretch>
 													<ContextMenu name="QRКодКонтекстноеМеню" id="282"/>
