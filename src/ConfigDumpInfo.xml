@@ -3,7 +3,7 @@
 	<ConfigVersions>
 		<Metadata name="Configuration.Конфигурация" id="a7dc518d-fa86-4892-a7af-ba2aca88ad30" configVersion="3dbf7334c2ac9c4dbdb95b1cf06c4a0300000000"/>
 		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="53c341e0-4783-470a-8069-53c443833285.8" configVersion="f2b3836978ddf5408c2f1071067de03b00000000"/>
-		<Metadata name="DataProcessor.GreenAPI" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561" configVersion="23644c42b2298b43abbc430e8502d70c00000000">
+		<Metadata name="DataProcessor.GreenAPI" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561" configVersion="ede751c493d00b48a9b1d1bde3a3c47500000000">
 			<Metadata name="DataProcessor.GreenAPI.Attribute.ТекстПолученноеСообщение" id="260d31c6-e4f2-4778-bd5a-fd2d1bbfba7f"/>
 			<Metadata name="DataProcessor.GreenAPI.Attribute.ApiToken" id="40c96af2-b161-4acc-a444-6eacfde9aaad"/>
 			<Metadata name="DataProcessor.GreenAPI.Attribute.IdInstance" id="41db95e2-482b-4e81-93af-a82b704ccc02"/>
@@ -15,7 +15,7 @@
 		<Metadata name="DataProcessor.GreenAPI.Form.ПомощникПодключения.Form" id="21af060b-36d6-4144-aca7-290e47c884b1.0" configVersion="5a1322116dfc6d43a301902fc2f98e8400000000"/>
 		<Metadata name="DataProcessor.GreenAPI.Form.Форма" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098" configVersion="4e4d22bbf5d7bc4fa117bbcdc0f5229c00000000"/>
 		<Metadata name="DataProcessor.GreenAPI.Form.Форма.Form" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098.0" configVersion="c60acea31e9f7d42b9c4faec604a87bd00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.ObjectModule" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561.0" configVersion="6551b37c4c52714e9e045994dcacf7b200000000"/>
+		<Metadata name="DataProcessor.GreenAPI.ObjectModule" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561.0" configVersion="ee31c4aad17bd64d9064f268f002258b00000000"/>
 		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет" id="48c29a2f-a511-4612-86ed-2ccc82cc294b" configVersion="92ca698507d1f54b94d97e95c5b965fe00000000"/>
 		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет.Template" id="48c29a2f-a511-4612-86ed-2ccc82cc294b.0" configVersion="61031c50b832674a8f93206414ce8c3a00000000"/>
 		<Metadata name="DataProcessor.GreenAPI.Template.ВыборАккаунта" id="e975b9da-c08a-4e19-bdac-abe7ef7db7b3" configVersion="78c416d2f60380459261ab70a338677500000000"/>
