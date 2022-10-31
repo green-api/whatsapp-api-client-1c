@@ -1,4 +1,4 @@
-// BSLLS:DuplicateStringLiteral-off
+﻿// BSLLS:DuplicateStringLiteral-off
 // BSLLS:LatinAndCyrillicSymbolInWord-off
 // BSLLS:MissingTemporaryFileDeletion-off
 // BSLLS:ServerSideExportFormMethod-off
