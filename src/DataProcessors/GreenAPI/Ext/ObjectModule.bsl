@@ -1,4 +1,4 @@
-// BSLLS:MissingTemporaryFileDeletion-off
+﻿// BSLLS:MissingTemporaryFileDeletion-off
 
 #Область ПрограммныйИнтерфейсПолученияДанных
 
