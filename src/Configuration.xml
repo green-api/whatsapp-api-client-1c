@@ -107,10 +107,6 @@
 					<app:use>false</app:use>
 				</app:permission>
 				<app:permission>
-					<app:permission>PermissionGroupCallLog</app:permission>
-					<app:use>false</app:use>
-				</app:permission>
-				<app:permission>
 					<app:permission>CallPhone</app:permission>
 					<app:use>false</app:use>
 				</app:permission>
