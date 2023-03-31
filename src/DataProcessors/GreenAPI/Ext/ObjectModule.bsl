@@ -548,6 +548,37 @@
 	
 КонецФункции
 
+// Метод предназначен для пересылки сообщений в личный или групповой чат.
+// Пересылаемое сообщение будет добавлено в очередь на отправку. Проверка авторизации whatsapp-а
+// на телефоне (т.е. наличие в связанных устройствах) не выполняется. Сообщение на отправку
+// хранится 24 часа в очереди и будет отправлено сразу же после авторизации телефона.
+// Скорость отправки сообщений из очереди регулирует параметр Интервал отправки сообщений.
+// Подробнее https://green-api.com/docs/api/sending/ForwardMessages/
+//
+// Параметры:
+//  ИдЧата - Строка - Номер чата в формате 79001234568@c.us
+//  ИдЧатаИсточника - Строка - Номер чата в формате 79001234568@c.us
+//  МассивИдСообщений - Массив - Коллекция ID (строки) сообщений, которые надо переслать
+// 
+// Возвращаемое значение:
+//  ЧтениеJSON  - Ответ сервера
+//
+Функция ПереслатьСообщения(ИдЧата, ИдЧатаИсточника, МассивИдСообщений) Экспорт
+	
+	Инстанс = IdInstance;
+	Токен = ApiToken;
+	
+	Структура = Новый Структура;
+	Структура.Вставить("chatId",     ИдЧата);
+	Структура.Вставить("chatIdFrom", ИдЧатаИсточника);
+	Структура.Вставить("messages",   МассивИдСообщений);
+	
+	Тело = СериализоватьВJSONСтроку(Структура);
+	
+	Возврат ОтправитьPOSTЗапрос(ХостПоУмолчанию(), URLМетодаСервиса(Инстанс, Токен, "forwardMessages"), Тело);	
+	
+КонецФункции
+
 #КонецОбласти
 
 #Область Получение
@@ -1450,7 +1481,7 @@
 КонецФункции
 
 Функция ВерсияОбработки() Экспорт
-	Возврат "Green API v0.0.33";
+	Возврат "Green API v0.0.35";
 КонецФункции
 
 Функция УстановитьНастройкиСервисаПоДефолту() Экспорт
@@ -1522,153 +1553,156 @@
 Функция СоответствиеMimeTypes() 
 
 	Типы = Новый Соответствие;
-
-	Типы.Вставить(".js"     , "application/javascript");
-	Типы.Вставить(".mjs"    , "application/javascript");
-	Типы.Вставить(".json"   , "application/json");
+	
+	Типы.Вставить(".js",      "application/javascript");
+	Типы.Вставить(".mjs",     "application/javascript");
+	Типы.Вставить(".json",    "application/json");
 	Типы.Вставить(".webmanifest", "application/manifest+json");
-	Типы.Вставить(".doc"    , "application/msword");
-	Типы.Вставить(".dot"    , "application/msword");
-	Типы.Вставить(".wiz"    , "application/msword");
-	Типы.Вставить(".bin"    , "application/octet-stream");
-	Типы.Вставить(".a"      , "application/octet-stream");
-	Типы.Вставить(".dll"    , "application/octet-stream");
-	Типы.Вставить(".exe"    , "application/octet-stream");
-	Типы.Вставить(".o"      , "application/octet-stream");
-	Типы.Вставить(".obj"    , "application/octet-stream");
-	Типы.Вставить(".so"     , "application/octet-stream");
-	Типы.Вставить(".oda"    , "application/oda");
-	Типы.Вставить(".pdf"    , "application/pdf");
-	Типы.Вставить(".p7c"    , "application/pkcs7-mime");
-	Типы.Вставить(".ps"     , "application/postscript");
-	Типы.Вставить(".ai"     , "application/postscript");
-	Типы.Вставить(".eps"    , "application/postscript");
-	Типы.Вставить(".m3u"    , "application/vnd.apple.mpegurl");
-	Типы.Вставить(".m3u8"   , "application/vnd.apple.mpegurl");
-	Типы.Вставить(".xls"    , "application/vnd.ms-excel");
-	Типы.Вставить(".xlb"    , "application/vnd.ms-excel");
-	Типы.Вставить(".ppt"    , "application/vnd.ms-powerpoint");
-	Типы.Вставить(".pot"    , "application/vnd.ms-powerpoint");
-	Типы.Вставить(".ppa"    , "application/vnd.ms-powerpoint");
-	Типы.Вставить(".pps"    , "application/vnd.ms-powerpoint");
-	Типы.Вставить(".pwz"    , "application/vnd.ms-powerpoint");
-	Типы.Вставить(".wasm"   , "application/wasm");
-	Типы.Вставить(".bcpio"  , "application/x-bcpio");
-	Типы.Вставить(".cpio"   , "application/x-cpio");
-	Типы.Вставить(".csh"    , "application/x-csh");
-	Типы.Вставить(".dvi"    , "application/x-dvi");
-	Типы.Вставить(".gtar"   , "application/x-gtar");
-	Типы.Вставить(".hdf"    , "application/x-hdf");
-	Типы.Вставить(".h5"     , "application/x-hdf5");
-	Типы.Вставить(".latex"  , "application/x-latex");
-	Типы.Вставить(".mif"    , "application/x-mif");
-	Типы.Вставить(".cdf"    , "application/x-netcdf");
-	Типы.Вставить(".nc"     , "application/x-netcdf");
-	Типы.Вставить(".p12"    , "application/x-pkcs12");
-	Типы.Вставить(".pfx"    , "application/x-pkcs12");
-	Типы.Вставить(".ram"    , "application/x-pn-realaudio");
-	Типы.Вставить(".pyc"    , "application/x-python-code");
-	Типы.Вставить(".pyo"    , "application/x-python-code");
-	Типы.Вставить(".sh"     , "application/x-sh");
-	Типы.Вставить(".shar"   , "application/x-shar");
-	Типы.Вставить(".swf"    , "application/x-shockwave-flash");
+	Типы.Вставить(".doc",     "application/msword");
+	Типы.Вставить(".dot",     "application/msword");
+	Типы.Вставить(".wiz",     "application/msword");
+	Типы.Вставить(".nq",      "application/n-quads");
+	Типы.Вставить(".nt",      "application/n-triples");
+	Типы.Вставить(".bin",     "application/octet-stream");
+	Типы.Вставить(".a",       "application/octet-stream");
+	Типы.Вставить(".dll",     "application/octet-stream");
+	Типы.Вставить(".exe",     "application/octet-stream");
+	Типы.Вставить(".o",       "application/octet-stream");
+	Типы.Вставить(".obj",     "application/octet-stream");
+	Типы.Вставить(".so",      "application/octet-stream");
+	Типы.Вставить(".oda",     "application/oda");
+	Типы.Вставить(".pdf",     "application/pdf");
+	Типы.Вставить(".p7c",     "application/pkcs7-mime");
+	Типы.Вставить(".ps",      "application/postscript");
+	Типы.Вставить(".ai",      "application/postscript");
+	Типы.Вставить(".eps",     "application/postscript");
+	Типы.Вставить(".trig",    "application/trig");
+	Типы.Вставить(".m3u",     "application/vnd.apple.mpegurl");
+	Типы.Вставить(".m3u8",    "application/vnd.apple.mpegurl");
+	Типы.Вставить(".xls",     "application/vnd.ms-excel");
+	Типы.Вставить(".xlb",     "application/vnd.ms-excel");
+	Типы.Вставить(".ppt",     "application/vnd.ms-powerpoint");
+	Типы.Вставить(".pot",     "application/vnd.ms-powerpoint");
+	Типы.Вставить(".ppa",     "application/vnd.ms-powerpoint");
+	Типы.Вставить(".pps",     "application/vnd.ms-powerpoint");
+	Типы.Вставить(".pwz",     "application/vnd.ms-powerpoint");
+	Типы.Вставить(".wasm",    "application/wasm");
+	Типы.Вставить(".bcpio",   "application/x-bcpio");
+	Типы.Вставить(".cpio",    "application/x-cpio");
+	Типы.Вставить(".csh",     "application/x-csh");
+	Типы.Вставить(".dvi",     "application/x-dvi");
+	Типы.Вставить(".gtar",    "application/x-gtar");
+	Типы.Вставить(".hdf",     "application/x-hdf");
+	Типы.Вставить(".h5",      "application/x-hdf5");
+	Типы.Вставить(".latex",   "application/x-latex");
+	Типы.Вставить(".mif",     "application/x-mif");
+	Типы.Вставить(".cdf",     "application/x-netcdf");
+	Типы.Вставить(".nc",      "application/x-netcdf");
+	Типы.Вставить(".p12",     "application/x-pkcs12");
+	Типы.Вставить(".pfx",     "application/x-pkcs12");
+	Типы.Вставить(".ram",     "application/x-pn-realaudio");
+	Типы.Вставить(".pyc",     "application/x-python-code");
+	Типы.Вставить(".pyo",     "application/x-python-code");
+	Типы.Вставить(".sh",      "application/x-sh");
+	Типы.Вставить(".shar",    "application/x-shar");
+	Типы.Вставить(".swf",     "application/x-shockwave-flash");
 	Типы.Вставить(".sv4cpio", "application/x-sv4cpio");
-	Типы.Вставить(".sv4crc" , "application/x-sv4crc");
-	Типы.Вставить(".tar"    , "application/x-tar");
-	Типы.Вставить(".tcl"    , "application/x-tcl");
-	Типы.Вставить(".tex"    , "application/x-tex");
-	Типы.Вставить(".texi"   , "application/x-texinfo");
+	Типы.Вставить(".sv4crc",  "application/x-sv4crc");
+	Типы.Вставить(".tar",     "application/x-tar");
+	Типы.Вставить(".tcl",     "application/x-tcl");
+	Типы.Вставить(".tex",     "application/x-tex");
+	Типы.Вставить(".texi",    "application/x-texinfo");
 	Типы.Вставить(".texinfo", "application/x-texinfo");
-	Типы.Вставить(".roff"   , "application/x-troff");
-	Типы.Вставить(".t"      , "application/x-troff");
-	Типы.Вставить(".tr"     , "application/x-troff");
-	Типы.Вставить(".man"    , "application/x-troff-man");
-	Типы.Вставить(".me"     , "application/x-troff-me");
-	Типы.Вставить(".ms"     , "application/x-troff-ms");
-	Типы.Вставить(".ustar"  , "application/x-ustar");
-	Типы.Вставить(".src"    , "application/x-wais-source");
-	Типы.Вставить(".xsl"    , "application/xml");
-	Типы.Вставить(".rdf"    , "application/xml");
-	Типы.Вставить(".wsdl"   , "application/xml");
-	Типы.Вставить(".xpdl"   , "application/xml");
-	Типы.Вставить(".zip"    , "application/zip");
-	Типы.Вставить(".au"     , "audio/basic");
-	Типы.Вставить(".snd"    , "audio/basic");
-	Типы.Вставить(".mp3"    , "audio/mpeg");
-	Типы.Вставить(".mp2"    , "audio/mpeg");
-	Типы.Вставить(".aif"    , "audio/x-aiff");
-	Типы.Вставить(".aifc"   , "audio/x-aiff");
-	Типы.Вставить(".aiff"   , "audio/x-aiff");
-	Типы.Вставить(".ra"     , "audio/x-pn-realaudio");
-	Типы.Вставить(".wav"    , "audio/x-wav");
-	Типы.Вставить(".bmp"    , "image/bmp");
-	Типы.Вставить(".gif"    , "image/gif");
-	Типы.Вставить(".ief"    , "image/ief");
-	Типы.Вставить(".jpg"    , "image/jpeg");
-	Типы.Вставить(".png"    , "image/png");
-	Типы.Вставить(".svg"    , "image/svg+xml");
-	Типы.Вставить(".tiff"   , "image/tiff");
-	Типы.Вставить(".tif"    , "image/tiff");
-	Типы.Вставить(".ico"    , "image/vnd.microsoft.icon");
-	Типы.Вставить(".ras"    , "image/x-cmu-raster");
-	Типы.Вставить(".bmp"    , "image/x-ms-bmp");
-	Типы.Вставить(".pnm"    , "image/x-portable-anymap");
-	Типы.Вставить(".pbm"    , "image/x-portable-bitmap");
-	Типы.Вставить(".pgm"    , "image/x-portable-graymap");
-	Типы.Вставить(".ppm"    , "image/x-portable-pixmap");
-	Типы.Вставить(".rgb"    , "image/x-rgb");
-	Типы.Вставить(".xbm"    , "image/x-xbitmap");
-	Типы.Вставить(".xpm"    , "image/x-xpixmap");
-	Типы.Вставить(".xwd"    , "image/x-xwindowdump");
-	Типы.Вставить(".eml"    , "message/rfc822");
-	Типы.Вставить(".mht"    , "message/rfc822");
-	Типы.Вставить(".mhtml"  , "message/rfc822");
-	Типы.Вставить(".nws"    , "message/rfc822");
-	Типы.Вставить(".css"    , "text/css");
-	Типы.Вставить(".csv"    , "text/csv");
-	Типы.Вставить(".html"   , "text/html");
-	Типы.Вставить(".htm"    , "text/html");
-	Типы.Вставить(".txt"    , "text/plain");
-	Типы.Вставить(".bat"    , "text/plain");
-	Типы.Вставить(".c"      , "text/plain");
-	Типы.Вставить(".h"      , "text/plain");
-	Типы.Вставить(".ksh"    , "text/plain");
-	Типы.Вставить(".pl"     , "text/plain");
-	Типы.Вставить(".rtx"    , "text/richtext");
-	Типы.Вставить(".tsv"    , "text/tab-separated-values");
-	Типы.Вставить(".py"     , "text/x-python");
-	Типы.Вставить(".etx"    , "text/x-setext");
-	Типы.Вставить(".sgm"    , "text/x-sgml");
-	Типы.Вставить(".sgml"   , "text/x-sgml");
-	Типы.Вставить(".vcf"    , "text/x-vcard");
-	Типы.Вставить(".xml"    , "text/xml");
-	Типы.Вставить(".mp4"    , "video/mp4");
-	Типы.Вставить(".mpeg"   , "video/mpeg");
-	Типы.Вставить(".m1v"    , "video/mpeg");
-	Типы.Вставить(".mpa"    , "video/mpeg");
-	Типы.Вставить(".mpe"    , "video/mpeg");
-	Типы.Вставить(".mpg"    , "video/mpeg");
-	Типы.Вставить(".mov"    , "video/quicktime");
-	Типы.Вставить(".qt"     , "video/quicktime");
-	Типы.Вставить(".webm"   , "video/webm");
-	Типы.Вставить(".avi"    , "video/x-msvideo");
-	Типы.Вставить(".movie"  , "video/x-sgi-movie");
-	Типы.Вставить(".aac"    , "audio/aac");
-	Типы.Вставить(".aac"    , "audio/aac");
-	Типы.Вставить(".aac"    , "audio/aac");
-	Типы.Вставить(".aac"    , "audio/aac");
-	Типы.Вставить(".aac"    , "audio/aac");
-	Типы.Вставить(".aac"    , "audio/aac");
-	Типы.Вставить(".midi"   , "audio/midi");
-	Типы.Вставить(".midi"   , "audio/x-midi");
-	Типы.Вставить(".mp3"    , "audio/mpeg");
-	Типы.Вставить(".ogg"    , "audio/ogg");
-	Типы.Вставить(".opus"   , "audio/opus");
-	Типы.Вставить(".wav"    , "audio/wav");
-	Типы.Вставить(".weba"   , "audio/webm");
-	Типы.Вставить(".3gp"    , "audio/3gpp");
-	Типы.Вставить(".3gpp2 " , "audio/3gpp2");
-	Типы.Вставить(".mp3"    , "audio/mpeg");
+	Типы.Вставить(".roff",    "application/x-troff");
+	Типы.Вставить(".t",       "application/x-troff");
+	Типы.Вставить(".tr",      "application/x-troff");
+	Типы.Вставить(".man",     "application/x-troff-man");
+	Типы.Вставить(".me",      "application/x-troff-me");
+	Типы.Вставить(".ms",      "application/x-troff-ms");
+	Типы.Вставить(".ustar",   "application/x-ustar");
+	Типы.Вставить(".src",     "application/x-wais-source");
+	Типы.Вставить(".xsl",     "application/xml");
+	Типы.Вставить(".rdf",     "application/xml");
+	Типы.Вставить(".wsdl",    "application/xml");
+	Типы.Вставить(".xpdl",    "application/xml");
+	Типы.Вставить(".zip",     "application/zip");
+	Типы.Вставить(".3gp",     "audio/3gpp");
+	Типы.Вставить(".3gpp",    "audio/3gpp");
+	Типы.Вставить(".3g2",     "audio/3gpp2");
+	Типы.Вставить(".3gpp2",   "audio/3gpp2");
+	Типы.Вставить(".aac",     "audio/aac");
+	Типы.Вставить(".adts",    "audio/aac");
+	Типы.Вставить(".loas",    "audio/aac");
+	Типы.Вставить(".ass",     "audio/aac");
+	Типы.Вставить(".au",      "audio/basic");
+	Типы.Вставить(".snd",     "audio/basic");
+	Типы.Вставить(".mp3",     "audio/mpeg");
+	Типы.Вставить(".mp2",     "audio/mpeg");
+	Типы.Вставить(".opus",    "audio/opus");
+	Типы.Вставить(".aif",     "audio/x-aiff");
+	Типы.Вставить(".aifc",    "audio/x-aiff");
+	Типы.Вставить(".aiff",    "audio/x-aiff");
+	Типы.Вставить(".ra",      "audio/x-pn-realaudio");
+	Типы.Вставить(".wav",     "audio/x-wav");
+	Типы.Вставить(".avif",    "image/avif");
+	Типы.Вставить(".bmp",     "image/bmp");
+	Типы.Вставить(".gif",     "image/gif");
+	Типы.Вставить(".ief",     "image/ief");
+	Типы.Вставить(".jpg",     "image/jpeg");
+	Типы.Вставить(".jpe",     "image/jpeg");
+	Типы.Вставить(".jpeg",    "image/jpeg");
+	Типы.Вставить(".heic",    "image/heic");
+	Типы.Вставить(".heif",    "image/heif");
+	Типы.Вставить(".png",     "image/png");
+	Типы.Вставить(".svg",     "image/svg+xml");
+	Типы.Вставить(".tiff",    "image/tiff");
+	Типы.Вставить(".tif",     "image/tiff");
+	Типы.Вставить(".ico",     "image/vnd.microsoft.icon");
+	Типы.Вставить(".ras",     "image/x-cmu-raster");
+	Типы.Вставить(".pnm",     "image/x-portable-anymap");
+	Типы.Вставить(".pbm",     "image/x-portable-bitmap");
+	Типы.Вставить(".pgm",     "image/x-portable-graymap");
+	Типы.Вставить(".ppm",     "image/x-portable-pixmap");
+	Типы.Вставить(".rgb",     "image/x-rgb");
+	Типы.Вставить(".xbm",     "image/x-xbitmap");
+	Типы.Вставить(".xpm",     "image/x-xpixmap");
+	Типы.Вставить(".xwd",     "image/x-xwindowdump");
+	Типы.Вставить(".eml",     "message/rfc822");
+	Типы.Вставить(".mht",     "message/rfc822");
+	Типы.Вставить(".mhtml",   "message/rfc822");
+	Типы.Вставить(".nws",     "message/rfc822");
+	Типы.Вставить(".css",     "text/css");
+	Типы.Вставить(".csv",     "text/csv");
+	Типы.Вставить(".html",    "text/html");
+	Типы.Вставить(".htm",     "text/html");
+	Типы.Вставить(".n3",      "text/n3");
+	Типы.Вставить(".txt",     "text/plain");
+	Типы.Вставить(".bat",     "text/plain");
+	Типы.Вставить(".c",       "text/plain");
+	Типы.Вставить(".h",       "text/plain");
+	Типы.Вставить(".ksh",     "text/plain");
+	Типы.Вставить(".pl",      "text/plain");
+	Типы.Вставить(".srt",     "text/plain");
+	Типы.Вставить(".rtx",     "text/richtext");
+	Типы.Вставить(".tsv",     "text/tab-separated-values");
+	Типы.Вставить(".vtt",     "text/vtt");
+	Типы.Вставить(".py",      "text/x-python");
+	Типы.Вставить(".etx",     "text/x-setext");
+	Типы.Вставить(".sgm",     "text/x-sgml");
+	Типы.Вставить(".sgml",    "text/x-sgml");
+	Типы.Вставить(".vcf",     "text/x-vcard");
+	Типы.Вставить(".xml",     "text/xml");
+	Типы.Вставить(".mp4",     "video/mp4");
+	Типы.Вставить(".mpeg",    "video/mpeg");
+	Типы.Вставить(".m1v",     "video/mpeg");
+	Типы.Вставить(".mpa",     "video/mpeg");
+	Типы.Вставить(".mpe",     "video/mpeg");
+	Типы.Вставить(".mpg",     "video/mpeg");
+	Типы.Вставить(".mov",     "video/quicktime");
+	Типы.Вставить(".qt",      "video/quicktime");
+	Типы.Вставить(".webm",    "video/webm");
+	Типы.Вставить(".avi",     "video/x-msvideo");
+	Типы.Вставить(".movie",   "video/x-sgi-movie");
 	
 	Возврат Типы;
 	
