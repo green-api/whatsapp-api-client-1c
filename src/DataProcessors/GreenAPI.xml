@@ -183,6 +183,8 @@
 			<Form>Форма</Form>
 			<Form>ПомощникПодключения</Form>
 			<Form>ВыборСсылкиНаФайл</Form>
+			<Form>ВыборКонтакта</Form>
+			<Form>ВыборГеолокации</Form>
 			<Template>QRМакет</Template>
 			<Template>ИконкаWhatsApp</Template>
 			<Template>ВыборАккаунта</Template>
