@@ -7,6 +7,75 @@
 
 #Область API
 
+#Область Отправка
+
+&НаСервере
+Процедура ОтправитьСообщениеWhatsApp()
+	
+	Если ПереключательТипаЧата = 1 Тогда
+		Ответ = ОбработкаОбъект().ОтправитьТекстВГруппу(ПараметрИдЧата, ТекстСообщения);
+	Иначе
+		Ответ = ОбработкаОбъект().ОтправитьТекст(НомерТелефона, ТекстСообщения);
+	КонецЕсли;
+	
+	Сообщить("Сообщение отправлено успешно. idMessage=" + Ответ.idMessage);
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура ВыбратьФотоДляАватараСервер(АдресХранилища, ИмяФайла)
+	
+	ИмяВременногоФайла = КаталогВременныхФайлов() + ИмяФайла;
+	
+	ДвоичныеДанные = ПолучитьИзВременногоХранилища(АдресХранилища);
+	ДвоичныеДанные.Записать(ИмяВременногоФайла);
+	
+	Ответ = ОбработкаОбъект().УстановитьФотоПрофиля(ИмяВременногоФайла);
+	
+	Сообщить("Фото установлено. setProfilePicture=" + Ответ.setProfilePicture);
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура ВыбратьКонтакт(ТелефонКонтакта, Имя, Фамилия, Отчество, Компания)
+	
+	Если ПереключательТипаЧата = 1 Тогда
+		Ответ = ОбработкаОбъект().ОтправитьКонтакт(ПараметрИдЧата, ТелефонКонтакта, Имя, Фамилия, Отчество, Компания);	
+	Иначе
+		Ответ = ОбработкаОбъект().ОтправитьКонтакт(НомерТелефона, ТелефонКонтакта, Имя, Фамилия, Отчество, Компания);
+	КонецЕсли;
+	
+	Сообщить("Контакт отправлен успешно. idMessage=" + Ответ.idMessage);
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура ВыбратьГеолокацию(НазваниеЛокации, Адрес, Широта, Долгота)
+	
+	Если ПереключательТипаЧата = 1 Тогда
+		Ответ = ОбработкаОбъект().ОтправитьГеолокацию(ПараметрИдЧата, НазваниеЛокации, Адрес, Широта, Долгота);	
+	Иначе
+		Ответ = ОбработкаОбъект().ОтправитьГеолокацию(НомерТелефона, НазваниеЛокации, Адрес, Широта, Долгота);
+	КонецЕсли;
+	
+	Сообщить("Геолокация отправлена успешно. idMessage=" + Ответ.idMessage);
+	
+КонецПроцедуры
+
+Процедура КомандаПереслатьСообщение()
+	
+	МассивСообщений = Новый Массив;
+	МассивСообщений.Добавить(ПараметрИдСообщения);
+	
+	Ответ = ОбработкаОбъект().ПереслатьСообщения(ПараметрИдЧата, ПараметрИдЧатаИсточника, МассивСообщений);
+	
+	Сообщить("Сообщения отправлены");
+	
+КонецПроцедуры
+
+#КонецОбласти
+
+
 #Область Аккаунт
 
 &НаСервере
@@ -53,17 +122,30 @@
 
 &НаСервере
 Процедура КомандаПолучитьЖурналВходящихСообщений()
-	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьЖурналВходящихСообщений());
+	Если ЗначениеЗаполнено(Интервал) Тогда
+		Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьЖурналВходящихСообщений(Интервал));
+	Иначе
+		Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьЖурналВходящихСообщений());
+	КонецЕсли;
 КонецПроцедуры
 
 &НаСервере
 Процедура КомандаПолучитьЖурналОтправленныхСообщений()
-	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьЖурналОтправленныхСообщений());
+	Если ЗначениеЗаполнено(Интервал) Тогда
+		Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьЖурналОтправленныхСообщений(Интервал));
+	Иначе
+		Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьЖурналОтправленныхСообщений());
+	КонецЕсли;
 КонецПроцедуры
 
 &НаСервере
 Процедура КомандаПолучитьИсториюСообщенийЧата()
-	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьИсториюСообщенийЧата(ИдЧата, КоличествоСообщений));
+	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьИсториюСообщенийЧата(ПараметрИдЧата, КоличествоСообщений));
+КонецПроцедуры
+
+&НаСервере
+Процедура КомандаПолучитьСообщениеЧата()
+	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьСообщениеЧата(ПараметрИдЧата, ПараметрИдСообщения));
 КонецПроцедуры
 
 #КонецОбласти
@@ -172,6 +254,12 @@
 
 КонецПроцедуры
 
+Процедура КомандаПолучитьИнфоКонтакта()
+
+	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().ПолучитьИнфоКонтакта(ПараметрИдЧата));
+
+КонецПроцедуры
+	
 &НаСервере
 Процедура КомандаПолучитьКонтакты()
 	
@@ -179,7 +267,43 @@
 
 КонецПроцедуры
 
+&НаСервере
+Процедура КомандаУдалитьСообщение()
+	
+	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().УдалитьСообщение(ПараметрИдЧата, ПараметрИдСообщения));
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура КомандаАрхивироватьЧат()
+	
+	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().АрхивироватьЧат(ПараметрИдЧата));
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура КомандаРазархивироватьЧат()
+	
+	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().РазархивироватьЧат(ПараметрИдЧата));
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура КомандаУстановитьИсчезающиеСообщения()
+	
+	Консоль = СтруктураВJSONСтроку(ОбработкаОбъект().УстановитьИсчезающиеСообщения(ПараметрИдЧата, ПараметрВремяЖизни));
+	
+КонецПроцедуры
+
 #КонецОбласти
+
+Процедура КомандаСкачатьФайлИзВходящегоУведомления()
+	
+	Ответ = ОбработкаОбъект().СкачатьФайлИзВходящегоУведомления(ПараметрИдЧата, ПараметрИдСообщения);
+	
+	Сообщить("Ссылка для скачивания downloadUrl=" + Ответ.downloadUrl);
+	
+КонецПроцедуры
 
 #КонецОбласти       
 
@@ -411,7 +535,7 @@
 КонецФункции
 
 Функция ВерсияОбработки() Экспорт
-	Возврат "Green API v0.0.39";
+	Возврат "Green API v0.0.50";
 КонецФункции
 
 Функция УстановитьНастройкиСервисаПоДефолту() Экспорт
@@ -444,7 +568,7 @@
 Процедура ВыбратьСсылкуДляОтправкиСервер(АдресФайла, ИмяФайла)
 	
 	Если ПереключательТипаЧата = 1 Тогда
-		Ответ = ОбработкаОбъект().ОтправитьВидеоАудиоИзображениеДокументПоURL(ИдЧата, АдресФайла, ИмяФайла, ТекстСообщения);	
+		Ответ = ОбработкаОбъект().ОтправитьВидеоАудиоИзображениеДокументПоURL(ПараметрИдЧата, АдресФайла, ИмяФайла, ТекстСообщения);	
 	Иначе
 		Ответ = ОбработкаОбъект().ОтправитьВидеоАудиоИзображениеДокументПоURL(НомерТелефона, АдресФайла, ИмяФайла, ТекстСообщения);
 	КонецЕсли;
@@ -476,11 +600,46 @@
 	ДвоичныеДанные.Записать(ИмяВременногоФайла);
 	
 	Если ПереключательТипаЧата = 1 Тогда
-		Ответ = ОбработкаОбъект().ОтправитьВидеоАудиоИзображениеДокумент(ИдЧата, ИмяВременногоФайла, ТекстСообщения);
+		Ответ = ОбработкаОбъект().ОтправитьВидеоАудиоИзображениеДокумент(ПараметрИдЧата, ИмяВременногоФайла, ТекстСообщения);
 	Иначе
 		Ответ = ОбработкаОбъект().ОтправитьВидеоАудиоИзображениеДокумент(НомерТелефона, ИмяВременногоФайла, ТекстСообщения);
 	КонецЕсли;
 	Сообщить("Файл отправлен успешно. idMessage=" + Ответ.idMessage);
+	
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ВыбратьФайлДляЗагрузки(ВыбранныеФайлы, ДопПараметры) Экспорт
+	
+	Если ВыбранныеФайлы = Неопределено Или ВыбранныеФайлы.Количество() = 0 Тогда
+		Возврат;
+	КонецЕсли;
+	
+	Файл = Новый Файл(ВыбранныеФайлы[0]);
+	
+	АдресХранилища = ПоместитьВоВременноеХранилище(Новый ДвоичныеДанные(Файл.ПолноеИмя));
+	
+	ОтправитьФайл = ДопПараметры = Истина;
+	
+	ВыбратьФайлДляЗагрузкиСервер(АдресХранилища, Файл.Имя, ОтправитьФайл);
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура ВыбратьФайлДляЗагрузкиСервер(АдресХранилища, ИмяФайла, ОтправитьФайл = Ложь)
+	
+	ИмяВременногоФайла = КаталогВременныхФайлов() + ИмяФайла;
+	
+	ДвоичныеДанные = ПолучитьИзВременногоХранилища(АдресХранилища);
+	ДвоичныеДанные.Записать(ИмяВременногоФайла);
+	
+	Ответ = ОбработкаОбъект().ЗагрузитьФайл(ИмяВременногоФайла);
+	
+	Если ОтправитьФайл Тогда
+		ВыбратьСсылкуДляОтправкиСервер(Ответ.urlFile, ИмяФайла);
+	Иначе
+		Сообщить("Файл отправлен успешно. urlFile=" + Ответ.urlFile);
+	КонецЕсли;
 	
 КонецПроцедуры
 
@@ -491,17 +650,16 @@
 		Возврат;
 	КонецЕсли;
 	
-	ВыбратьФотоДляАватараСервер(ВыбранныеФайлы[0]);
+	Файл = Новый Файл(ВыбранныеФайлы[0]);
+	
+	АдресХранилища = ПоместитьВоВременноеХранилище(Новый ДвоичныеДанные(Файл.ПолноеИмя));
+	
+	ВыбратьФотоДляАватараСервер(АдресХранилища, Файл.Имя);
 	
 КонецПроцедуры
 
-&НаСервере
-Процедура ВыбратьФотоДляАватараСервер(ИмяФайла)
-	
-	Ответ = ОбработкаОбъект().УстановитьФотоПрофиля(ИмяФайла);
-	Сообщить("Фото установлено. setProfilePicture=" + Ответ.setProfilePicture);
-	
-КонецПроцедуры
+
+
 
 &НаСервере
 Процедура ПолучатьВходящиеУведомленияПриИзмененииСервер()
@@ -515,16 +673,6 @@
 	НастройкиСохранены = ОбработкаОбъект().УстановитьНастройкуСервиса("webhookUrl", webhookUrl);
 	ОбновитьСтатусСервиса();
 	
-КонецПроцедуры
-
-&НаСервере
-Процедура ОтправитьСообщениеWhatsApp()
-	Если ПереключательТипаЧата = 1 Тогда
-		Ответ = ОбработкаОбъект().ОтправитьТекстВГруппу(ИдЧата, ТекстСообщения);
-	Иначе
-		Ответ = ОбработкаОбъект().ОтправитьТекст(НомерТелефона, ТекстСообщения);
-	КонецЕсли;
-	Сообщить("Сообщение отправлено успешно. idMessage=" + Ответ.idMessage);
 КонецПроцедуры
 
 &НаСервере
@@ -678,24 +826,6 @@
 КонецПроцедуры
 
 &НаКлиенте
-Процедура СсылкаФорматВходящихУведомленийНажатие(Элемент)
-	Оповещение = Новый ОписаниеОповещения("ЗавершитьЗапускПриложенияGR", ЭтотОбъект);
-	НачатьЗапускПриложения(Оповещение, "https://green-api.com/docs/api/receiving/notifications-format/");
-КонецПроцедуры
-
-&НаКлиенте
-Процедура СсылкаПолучитьУведомлениеНажатие(Элемент)
-	Оповещение = Новый ОписаниеОповещения("ЗавершитьЗапускПриложенияGR", ЭтотОбъект);	
-	НачатьЗапускПриложения(Оповещение, "https://green-api.com/docs/api/receiving/technology-http-api/ReceiveNotification/");
-КонецПроцедуры
-
-&НаКлиенте
-Процедура СсылкаУдалитьУведомлениеНажатие(Элемент)
-	Оповещение = Новый ОписаниеОповещения("ЗавершитьЗапускПриложенияGR", ЭтотОбъект);
-	НачатьЗапускПриложения(Оповещение, "https://green-api.com/docs/api/receiving/technology-http-api/DeleteNotification/");
-КонецПроцедуры
-
-&НаКлиенте
 Процедура ПолученФайлНачалоВыбора(Элемент, ДанныеВыбора, СтандартнаяОбработка)
 	ПолноеИмяФайла = СтрЗаменить(Объект.ПолученФайл, "\", "//");
 	КаталогФайла = Лев(ПолноеИмяФайла, СтрНайти(ПолноеИмяФайла, "//", НаправлениеПоиска.СКонца));
@@ -778,6 +908,35 @@
 	
 КонецПроцедуры
 
+&НаКлиенте
+Процедура ВыбратьФотоДляАватараГруппы(ВыбранныеФайлы, ДопПараметры) Экспорт
+	
+	Если ВыбранныеФайлы = Неопределено Или ВыбранныеФайлы.Количество() = 0 Тогда
+		Возврат;
+	КонецЕсли;
+	
+	Файл = Новый Файл(ВыбранныеФайлы[0]);
+	
+	АдресХранилища = ПоместитьВоВременноеХранилище(Новый ДвоичныеДанные(Файл.ПолноеИмя));
+	
+	ВыбратьФотоДляАватараГруппыСервер(АдресХранилища, Файл.Имя);
+	
+КонецПроцедуры
+
+&НаСервере
+Процедура ВыбратьФотоДляАватараГруппыСервер(АдресХранилища, ИмяФайла)
+	
+	ИмяВременногоФайла = КаталогВременныхФайлов() + ИмяФайла;
+	
+	ДвоичныеДанные = ПолучитьИзВременногоХранилища(АдресХранилища);
+	ДвоичныеДанные.Записать(ИмяВременногоФайла);
+	
+	Ответ = ОбработкаОбъект().УстановитьФотоГруппы(ПараметрИдГруппы, ИмяВременногоФайла);
+
+	Сообщить("Фото группы установлено. setGroupPicture=" + Ответ.setProfilePicture);
+	
+КонецПроцедуры
+
 #КонецОбласти
 
 #Область JSON
@@ -801,7 +960,7 @@
 	Типы = СоответствиеMimeTypes();
 	
 	Для каждого КлючЗначение Из Типы Цикл
-		Если СтрНайти(НРег(ИскомыйТип), НРег(КлючЗначение.Значение)) <> 0 Тогда
+		Если НРег(ИскомыйТип) = НРег(КлючЗначение.Значение) Тогда
 			Возврат КлючЗначение.Ключ;
 		КонецЕсли;
 	КонецЦикла;
@@ -819,7 +978,7 @@
 	КонецЕсли;
 	
 	Для каждого КлючЗначение Из Типы Цикл
-		Если СтрНайти(НРег(ИскомоеРасширение), НРег(КлючЗначение.Ключ)) <> 0 Тогда
+		Если НРег(ИскомоеРасширение) = НРег(КлючЗначение.Ключ) Тогда
 			Возврат КлючЗначение.Значение;
 		КонецЕсли;
 	КонецЦикла;
@@ -829,6 +988,1003 @@
 КонецФункции
 
 Функция СоответствиеMimeTypes() 
+
+	Типы = Новый Соответствие;
+	
+	Типы.Вставить(".ez",       "application/andrew-inset");
+	Типы.Вставить(".aw",       "application/applixware");
+	Типы.Вставить(".atom",     "application/atom+xml");
+	Типы.Вставить(".atomcat",  "application/atomcat+xml");
+	Типы.Вставить(".atomsvc",  "application/atomsvc+xml");
+	Типы.Вставить(".ccxml",    "application/ccxml+xml");
+	Типы.Вставить(".cdmia",    "application/cdmi-capability");
+	Типы.Вставить(".cdmic",    "application/cdmi-container");
+	Типы.Вставить(".cdmid",    "application/cdmi-domain");
+	Типы.Вставить(".cdmio",    "application/cdmi-object");
+	Типы.Вставить(".cdmiq",    "application/cdmi-queue");
+	Типы.Вставить(".cu",       "application/cu-seeme");
+	Типы.Вставить(".davmount", "application/davmount+xml");
+	Типы.Вставить(".dbk",      "application/docbook+xml");
+	Типы.Вставить(".dssc",     "application/dssc+der");
+	Типы.Вставить(".xdssc",    "application/dssc+xml");
+	Типы.Вставить(".ecma",     "application/ecmascript");
+	Типы.Вставить(".emma",     "application/emma+xml");
+	Типы.Вставить(".epub",     "application/epub+zip");
+	Типы.Вставить(".exi",      "application/exi");
+	Типы.Вставить(".pfr",      "application/font-tdpfr");
+	Типы.Вставить(".gml",      "application/gml+xml");
+	Типы.Вставить(".gpx",      "application/gpx+xml");
+	Типы.Вставить(".gxf",      "application/gxf");
+	Типы.Вставить(".stk",      "application/hyperstudio");
+	Типы.Вставить(".ink",      "application/inkml+xml");
+	Типы.Вставить(".inkml",    "application/inkml+xml");
+	Типы.Вставить(".ipfix",    "application/ipfix");
+	Типы.Вставить(".jar",      "application/java-archive");
+	Типы.Вставить(".ser",      "application/java-serialized-object");
+	Типы.Вставить(".class",    "application/java-vm");
+	Типы.Вставить(".json",     "application/json");
+	Типы.Вставить(".jsonml",   "application/jsonml+json");
+	Типы.Вставить(".lostxml",  "application/lost+xml");
+	Типы.Вставить(".hqx",      "application/mac-binhex40");
+	Типы.Вставить(".cpt",      "application/mac-compactpro");
+	Типы.Вставить(".mads",     "application/mads+xml");
+	Типы.Вставить(".mrc",      "application/marc");
+	Типы.Вставить(".mrcx",     "application/marcxml+xml");
+	Типы.Вставить(".ma",       "application/mathematica");
+	Типы.Вставить(".nb",       "application/mathematica");
+	Типы.Вставить(".mb",       "application/mathematica");
+	Типы.Вставить(".mathml",   "application/mathml+xml");
+	Типы.Вставить(".mbox",     "application/mbox");
+	Типы.Вставить(".mscml",    "application/mediaservercontrol+xml");
+	Типы.Вставить(".metalink", "application/metalink+xml");
+	Типы.Вставить(".meta4",    "application/metalink4+xml");
+	Типы.Вставить(".mets",     "application/mets+xml");
+	Типы.Вставить(".mods",     "application/mods+xml");
+	Типы.Вставить(".m21",      "application/mp21");
+	Типы.Вставить(".mp21",     "application/mp21");
+	Типы.Вставить(".mp4s",     "application/mp4");
+	Типы.Вставить(".doc",      "application/msword");
+	Типы.Вставить(".dot",      "application/msword");
+	Типы.Вставить(".mxf",      "application/mxf");
+	Типы.Вставить(".bin",      "application/octet-stream");
+	Типы.Вставить(".dms",      "application/octet-stream");
+	Типы.Вставить(".lrf",      "application/octet-stream");
+	Типы.Вставить(".mar",      "application/octet-stream");
+	Типы.Вставить(".so",       "application/octet-stream");
+	Типы.Вставить(".dist",     "application/octet-stream");
+	Типы.Вставить(".distz",    "application/octet-stream");
+	Типы.Вставить(".pkg",      "application/octet-stream");
+	Типы.Вставить(".bpk",      "application/octet-stream");
+	Типы.Вставить(".dump",     "application/octet-stream");
+	Типы.Вставить(".elc",      "application/octet-stream");
+	Типы.Вставить(".deploy",   "application/octet-stream");
+	Типы.Вставить(".oda",      "application/oda");
+	Типы.Вставить(".opf",      "application/oebps-package+xml");
+	Типы.Вставить(".ogx",      "application/ogg");
+	Типы.Вставить(".omdoc",    "application/omdoc+xml");
+	Типы.Вставить(".onetoc",   "application/onenote");
+	Типы.Вставить(".onetoc2",  "application/onenote");
+	Типы.Вставить(".onetmp",   "application/onenote");
+	Типы.Вставить(".onepkg",   "application/onenote");
+	Типы.Вставить(".oxps",     "application/oxps");
+	Типы.Вставить(".xer",      "application/patch-ops-error+xml");
+	Типы.Вставить(".pdf",      "application/pdf");
+	Типы.Вставить(".pgp",      "application/pgp-encrypted");
+	Типы.Вставить(".asc",      "application/pgp-signature");
+	Типы.Вставить(".sig",      "application/pgp-signature");
+	Типы.Вставить(".prf",      "application/pics-rules");
+	Типы.Вставить(".p10",      "application/pkcs10");
+	Типы.Вставить(".p7m",      "application/pkcs7-mime");
+	Типы.Вставить(".p7c",      "application/pkcs7-mime");
+	Типы.Вставить(".p7s",      "application/pkcs7-signature");
+	Типы.Вставить(".p8",       "application/pkcs8");
+	Типы.Вставить(".ac",       "application/pkix-attr-cert");
+	Типы.Вставить(".cer",      "application/pkix-cert");
+	Типы.Вставить(".crl",      "application/pkix-crl");
+	Типы.Вставить(".pkipath",  "application/pkix-pkipath");
+	Типы.Вставить(".pki",      "application/pkixcmp");
+	Типы.Вставить(".pls",      "application/pls+xml");
+	Типы.Вставить(".ai",       "application/postscript");
+	Типы.Вставить(".eps",      "application/postscript");
+	Типы.Вставить(".ps",       "application/postscript");
+	Типы.Вставить(".cww",      "application/prs.cww");
+	Типы.Вставить(".pskcxml",  "application/pskc+xml");
+	Типы.Вставить(".rdf",      "application/rdf+xml");
+	Типы.Вставить(".rif",      "application/reginfo+xml");
+	Типы.Вставить(".rnc",      "application/relax-ng-compact-syntax");
+	Типы.Вставить(".rl",       "application/resource-lists+xml");
+	Типы.Вставить(".rld",      "application/resource-lists-diff+xml");
+	Типы.Вставить(".rs",       "application/rls-services+xml");
+	Типы.Вставить(".gbr",      "application/rpki-ghostbusters");
+	Типы.Вставить(".mft",      "application/rpki-manifest");
+	Типы.Вставить(".roa",      "application/rpki-roa");
+	Типы.Вставить(".rsd",      "application/rsd+xml");
+	Типы.Вставить(".rss",      "application/rss+xml");
+	Типы.Вставить(".rtf",      "application/rtf");
+	Типы.Вставить(".sbml",     "application/sbml+xml");
+	Типы.Вставить(".scq",      "application/scvp-cv-request");
+	Типы.Вставить(".scs",      "application/scvp-cv-response");
+	Типы.Вставить(".spq",      "application/scvp-vp-request");
+	Типы.Вставить(".spp",      "application/scvp-vp-response");
+	Типы.Вставить(".sdp",      "application/sdp");
+	Типы.Вставить(".setpay",   "application/set-payment-initiation");
+	Типы.Вставить(".setreg",   "application/set-registration-initiation");
+	Типы.Вставить(".shf",      "application/shf+xml");
+	Типы.Вставить(".smi",      "application/smil+xml");
+	Типы.Вставить(".smil",     "application/smil+xml");
+	Типы.Вставить(".rq",       "application/sparql-query");
+	Типы.Вставить(".srx",      "application/sparql-results+xml");
+	Типы.Вставить(".gram",     "application/srgs");
+	Типы.Вставить(".grxml",    "application/srgs+xml");
+	Типы.Вставить(".sru",      "application/sru+xml");
+	Типы.Вставить(".ssdl",     "application/ssdl+xml");
+	Типы.Вставить(".ssml",     "application/ssml+xml");
+	Типы.Вставить(".tei",      "application/tei+xml");
+	Типы.Вставить(".teicorpus", "application/tei+xml");
+	Типы.Вставить(".tfi",      "application/thraud+xml");
+	Типы.Вставить(".tsd",      "application/timestamped-data");
+	Типы.Вставить(".plb",      "application/vnd.3gpp.pic-bw-large");
+	Типы.Вставить(".psb",      "application/vnd.3gpp.pic-bw-small");
+	Типы.Вставить(".pvb",      "application/vnd.3gpp.pic-bw-var");
+	Типы.Вставить(".tcap",     "application/vnd.3gpp2.tcap");
+	Типы.Вставить(".pwn",      "application/vnd.3m.post-it-notes");
+	Типы.Вставить(".aso",      "application/vnd.accpac.simply.aso");
+	Типы.Вставить(".imp",      "application/vnd.accpac.simply.imp");
+	Типы.Вставить(".acu",      "application/vnd.acucobol");
+	Типы.Вставить(".atc",      "application/vnd.acucorp");
+	Типы.Вставить(".acutc",    "application/vnd.acucorp");
+	Типы.Вставить(".air",      "application/vnd.adobe.air-application-installer-package+zip");
+	Типы.Вставить(".fcdt",     "application/vnd.adobe.formscentral.fcdt");
+	Типы.Вставить(".fxp",      "application/vnd.adobe.fxp");
+	Типы.Вставить(".fxpl",     "application/vnd.adobe.fxp");
+	Типы.Вставить(".xdp",      "application/vnd.adobe.xdp+xml");
+	Типы.Вставить(".xfdf",     "application/vnd.adobe.xfdf");
+	Типы.Вставить(".ahead",    "application/vnd.ahead.space");
+	Типы.Вставить(".azf",      "application/vnd.airzip.filesecure.azf");
+	Типы.Вставить(".azs",      "application/vnd.airzip.filesecure.azs");
+	Типы.Вставить(".azw",      "application/vnd.amazon.ebook");
+	Типы.Вставить(".acc",      "application/vnd.americandynamics.acc");
+	Типы.Вставить(".ami",      "application/vnd.amiga.ami");
+	Типы.Вставить(".apk",      "application/vnd.android.package-archive");
+	Типы.Вставить(".cii",      "application/vnd.anser-web-certificate-issue-initiation");
+	Типы.Вставить(".fti",      "application/vnd.anser-web-funds-transfer-initiation");
+	Типы.Вставить(".atx",      "application/vnd.antix.game-component");
+	Типы.Вставить(".mpkg",     "application/vnd.apple.installer+xml");
+	Типы.Вставить(".m3u8",     "application/vnd.apple.mpegurl");
+	Типы.Вставить(".swi",      "application/vnd.aristanetworks.swi");
+	Типы.Вставить(".iota",     "application/vnd.astraea-software.iota");
+	Типы.Вставить(".aep",      "application/vnd.audiograph");
+	Типы.Вставить(".mpm",      "application/vnd.blueice.multipass");
+	Типы.Вставить(".bmi",      "application/vnd.bmi");
+	Типы.Вставить(".rep",      "application/vnd.businessobjects");
+	Типы.Вставить(".cdxml",    "application/vnd.chemdraw+xml");
+	Типы.Вставить(".mmd",      "application/vnd.chipnuts.karaoke-mmd");
+	Типы.Вставить(".cdy",      "application/vnd.cinderella");
+	Типы.Вставить(".cla",      "application/vnd.claymore");
+	Типы.Вставить(".rp9",      "application/vnd.cloanto.rp9");
+	Типы.Вставить(".c4g",      "application/vnd.clonk.c4group");
+	Типы.Вставить(".c4d",      "application/vnd.clonk.c4group");
+	Типы.Вставить(".c4f",      "application/vnd.clonk.c4group");
+	Типы.Вставить(".c4p",      "application/vnd.clonk.c4group");
+	Типы.Вставить(".c4u",      "application/vnd.clonk.c4group");
+	Типы.Вставить(".c11amc",   "application/vnd.cluetrust.cartomobile-config");
+	Типы.Вставить(".c11amz",   "application/vnd.cluetrust.cartomobile-config-pkg");
+	Типы.Вставить(".csp",      "application/vnd.commonspace");
+	Типы.Вставить(".cdbcmsg",  "application/vnd.contact.cmsg");
+	Типы.Вставить(".cmc",      "application/vnd.cosmocaller");
+	Типы.Вставить(".clkx",     "application/vnd.crick.clicker");
+	Типы.Вставить(".clkk",     "application/vnd.crick.clicker.keyboard");
+	Типы.Вставить(".clkp",     "application/vnd.crick.clicker.palette");
+	Типы.Вставить(".clkt",     "application/vnd.crick.clicker.template");
+	Типы.Вставить(".clkw",     "application/vnd.crick.clicker.wordbank");
+	Типы.Вставить(".wbs",      "application/vnd.criticaltools.wbs+xml");
+	Типы.Вставить(".pml",      "application/vnd.ctc-posml");
+	Типы.Вставить(".ppd",      "application/vnd.cups-ppd");
+	Типы.Вставить(".car",      "application/vnd.curl.car");
+	Типы.Вставить(".pcurl",    "application/vnd.curl.pcurl");
+	Типы.Вставить(".dart",     "application/vnd.dart");
+	Типы.Вставить(".rdz",      "application/vnd.data-vision.rdz");
+	Типы.Вставить(".uvf",      "application/vnd.dece.data");
+	Типы.Вставить(".uvvf",     "application/vnd.dece.data");
+	Типы.Вставить(".uvd",      "application/vnd.dece.data");
+	Типы.Вставить(".uvvd",     "application/vnd.dece.data");
+	Типы.Вставить(".uvt",      "application/vnd.dece.ttml+xml");
+	Типы.Вставить(".uvvt",     "application/vnd.dece.ttml+xml");
+	Типы.Вставить(".uvx",      "application/vnd.dece.unspecified");
+	Типы.Вставить(".uvvx",     "application/vnd.dece.unspecified");
+	Типы.Вставить(".uvz",      "application/vnd.dece.zip");
+	Типы.Вставить(".uvvz",     "application/vnd.dece.zip");
+	Типы.Вставить(".fe_launch", "application/vnd.denovo.fcselayout-link");
+	Типы.Вставить(".dna",      "application/vnd.dna");
+	Типы.Вставить(".mlp",      "application/vnd.dolby.mlp");
+	Типы.Вставить(".dpg",      "application/vnd.dpgraph");
+	Типы.Вставить(".dfac",     "application/vnd.dreamfactory");
+	Типы.Вставить(".kpxx",     "application/vnd.ds-keypoint");
+	Типы.Вставить(".ait",      "application/vnd.dvb.ait");
+	Типы.Вставить(".svc",      "application/vnd.dvb.service");
+	Типы.Вставить(".geo",      "application/vnd.dynageo");
+	Типы.Вставить(".mag",      "application/vnd.ecowin.chart");
+	Типы.Вставить(".nml",      "application/vnd.enliven");
+	Типы.Вставить(".esf",      "application/vnd.epson.esf");
+	Типы.Вставить(".msf",      "application/vnd.epson.msf");
+	Типы.Вставить(".qam",      "application/vnd.epson.quickanime");
+	Типы.Вставить(".slt",      "application/vnd.epson.salt");
+	Типы.Вставить(".ssf",      "application/vnd.epson.ssf");
+	Типы.Вставить(".es3",      "application/vnd.eszigno3+xml");
+	Типы.Вставить(".et3",      "application/vnd.eszigno3+xml");
+	Типы.Вставить(".ez2",      "application/vnd.ezpix-album");
+	Типы.Вставить(".ez3",      "application/vnd.ezpix-package");
+	Типы.Вставить(".fdf",      "application/vnd.fdf");
+	Типы.Вставить(".mseed",    "application/vnd.fdsn.mseed");
+	Типы.Вставить(".seed",     "application/vnd.fdsn.seed");
+	Типы.Вставить(".dataless", "application/vnd.fdsn.seed");
+	Типы.Вставить(".gph",      "application/vnd.flographit");
+	Типы.Вставить(".ftc",      "application/vnd.fluxtime.clip");
+	Типы.Вставить(".fm",       "application/vnd.framemaker");
+	Типы.Вставить(".frame",    "application/vnd.framemaker");
+	Типы.Вставить(".maker",    "application/vnd.framemaker");
+	Типы.Вставить(".book",     "application/vnd.framemaker");
+	Типы.Вставить(".fnc",      "application/vnd.frogans.fnc");
+	Типы.Вставить(".ltf",      "application/vnd.frogans.ltf");
+	Типы.Вставить(".fsc",      "application/vnd.fsc.weblaunch");
+	Типы.Вставить(".oas",      "application/vnd.fujitsu.oasys");
+	Типы.Вставить(".oa2",      "application/vnd.fujitsu.oasys2");
+	Типы.Вставить(".oa3",      "application/vnd.fujitsu.oasys3");
+	Типы.Вставить(".fg5",      "application/vnd.fujitsu.oasysgp");
+	Типы.Вставить(".bh2",      "application/vnd.fujitsu.oasysprs");
+	Типы.Вставить(".ddd",      "application/vnd.fujixerox.ddd");
+	Типы.Вставить(".xdw",      "application/vnd.fujixerox.docuworks");
+	Типы.Вставить(".xbd",      "application/vnd.fujixerox.docuworks.binder");
+	Типы.Вставить(".fzs",      "application/vnd.fuzzysheet");
+	Типы.Вставить(".txd",      "application/vnd.genomatix.tuxedo");
+	Типы.Вставить(".ggb",      "application/vnd.geogebra.file");
+	Типы.Вставить(".ggt",      "application/vnd.geogebra.tool");
+	Типы.Вставить(".gex",      "application/vnd.geometry-explorer");
+	Типы.Вставить(".gre",      "application/vnd.geometry-explorer");
+	Типы.Вставить(".gxt",      "application/vnd.geonext");
+	Типы.Вставить(".g2w",      "application/vnd.geoplan");
+	Типы.Вставить(".g3w",      "application/vnd.geospace");
+	Типы.Вставить(".gmx",      "application/vnd.gmx");
+	Типы.Вставить(".kml",      "application/vnd.google-earth.kml+xml");
+	Типы.Вставить(".kmz",      "application/vnd.google-earth.kmz");
+	Типы.Вставить(".gqf",      "application/vnd.grafeq");
+	Типы.Вставить(".gqs",      "application/vnd.grafeq");
+	Типы.Вставить(".gac",      "application/vnd.groove-account");
+	Типы.Вставить(".ghf",      "application/vnd.groove-help");
+	Типы.Вставить(".gim",      "application/vnd.groove-identity-message");
+	Типы.Вставить(".grv",      "application/vnd.groove-injector");
+	Типы.Вставить(".gtm",      "application/vnd.groove-tool-message");
+	Типы.Вставить(".tpl",      "application/vnd.groove-tool-template");
+	Типы.Вставить(".vcg",      "application/vnd.groove-vcard");
+	Типы.Вставить(".hal",      "application/vnd.hal+xml");
+	Типы.Вставить(".zmm",      "application/vnd.handheld-entertainment+xml");
+	Типы.Вставить(".hbci",     "application/vnd.hbci");
+	Типы.Вставить(".les",      "application/vnd.hhe.lesson-player");
+	Типы.Вставить(".hpgl",     "application/vnd.hp-hpgl");
+	Типы.Вставить(".hpid",     "application/vnd.hp-hpid");
+	Типы.Вставить(".hps",      "application/vnd.hp-hps");
+	Типы.Вставить(".jlt",      "application/vnd.hp-jlyt");
+	Типы.Вставить(".pcl",      "application/vnd.hp-pcl");
+	Типы.Вставить(".pclxl",    "application/vnd.hp-pclxl");
+	Типы.Вставить(".sfd-hdstx", "application/vnd.hydrostatix.sof-data");
+	Типы.Вставить(".mpy",      "application/vnd.ibm.minipay");
+	Типы.Вставить(".afp",      "application/vnd.ibm.modcap");
+	Типы.Вставить(".listafp",  "application/vnd.ibm.modcap");
+	Типы.Вставить(".list3820", "application/vnd.ibm.modcap");
+	Типы.Вставить(".irm",      "application/vnd.ibm.rights-management");
+	Типы.Вставить(".sc",       "application/vnd.ibm.secure-container");
+	Типы.Вставить(".icc",      "application/vnd.iccprofile");
+	Типы.Вставить(".icm",      "application/vnd.iccprofile");
+	Типы.Вставить(".igl",      "application/vnd.igloader");
+	Типы.Вставить(".ivp",      "application/vnd.immervision-ivp");
+	Типы.Вставить(".ivu",      "application/vnd.immervision-ivu");
+	Типы.Вставить(".igm",      "application/vnd.insors.igm");
+	Типы.Вставить(".xpw",      "application/vnd.intercon.formnet");
+	Типы.Вставить(".xpx",      "application/vnd.intercon.formnet");
+	Типы.Вставить(".i2g",      "application/vnd.intergeo");
+	Типы.Вставить(".qbo",      "application/vnd.intu.qbo");
+	Типы.Вставить(".qfx",      "application/vnd.intu.qfx");
+	Типы.Вставить(".rcprofile", "application/vnd.ipunplugged.rcprofile");
+	Типы.Вставить(".irp",      "application/vnd.irepository.package+xml");
+	Типы.Вставить(".xpr",      "application/vnd.is-xpr");
+	Типы.Вставить(".fcs",      "application/vnd.isac.fcs");
+	Типы.Вставить(".jam",      "application/vnd.jam");
+	Типы.Вставить(".rms",      "application/vnd.jcp.javame.midlet-rms");
+	Типы.Вставить(".jisp",     "application/vnd.jisp");
+	Типы.Вставить(".joda",     "application/vnd.joost.joda-archive");
+	Типы.Вставить(".ktz",      "application/vnd.kahootz");
+	Типы.Вставить(".ktr",      "application/vnd.kahootz");
+	Типы.Вставить(".karbon",   "application/vnd.kde.karbon");
+	Типы.Вставить(".chrt",     "application/vnd.kde.kchart");
+	Типы.Вставить(".kfo",      "application/vnd.kde.kformula");
+	Типы.Вставить(".flw",      "application/vnd.kde.kivio");
+	Типы.Вставить(".kon",      "application/vnd.kde.kontour");
+	Типы.Вставить(".kpr",      "application/vnd.kde.kpresenter");
+	Типы.Вставить(".kpt",      "application/vnd.kde.kpresenter");
+	Типы.Вставить(".ksp",      "application/vnd.kde.kspread");
+	Типы.Вставить(".kwd",      "application/vnd.kde.kword");
+	Типы.Вставить(".kwt",      "application/vnd.kde.kword");
+	Типы.Вставить(".htke",     "application/vnd.kenameaapp");
+	Типы.Вставить(".kia",      "application/vnd.kidspiration");
+	Типы.Вставить(".kne",      "application/vnd.kinar");
+	Типы.Вставить(".knp",      "application/vnd.kinar");
+	Типы.Вставить(".skp",      "application/vnd.koan");
+	Типы.Вставить(".skd",      "application/vnd.koan");
+	Типы.Вставить(".skt",      "application/vnd.koan");
+	Типы.Вставить(".skm",      "application/vnd.koan");
+	Типы.Вставить(".sse",      "application/vnd.kodak-descriptor");
+	Типы.Вставить(".lasxml",   "application/vnd.las.las+xml");
+	Типы.Вставить(".lbd",      "application/vnd.llamagraphics.life-balance.desktop");
+	Типы.Вставить(".lbe",      "application/vnd.llamagraphics.life-balance.exchange+xml");
+	Типы.Вставить(".123",      "application/vnd.lotus-1-2-3");
+	Типы.Вставить(".apr",      "application/vnd.lotus-approach");
+	Типы.Вставить(".pre",      "application/vnd.lotus-freelance");
+	Типы.Вставить(".nsf",      "application/vnd.lotus-notes");
+	Типы.Вставить(".org",      "application/vnd.lotus-organizer");
+	Типы.Вставить(".scm",      "application/vnd.lotus-screencam");
+	Типы.Вставить(".lwp",      "application/vnd.lotus-wordpro");
+	Типы.Вставить(".portpkg",  "application/vnd.macports.portpkg");
+	Типы.Вставить(".mcd",      "application/vnd.mcd");
+	Типы.Вставить(".mc1",      "application/vnd.medcalcdata");
+	Типы.Вставить(".cdkey",    "application/vnd.mediastation.cdkey");
+	Типы.Вставить(".mwf",      "application/vnd.mfer");
+	Типы.Вставить(".mfm",      "application/vnd.mfmp");
+	Типы.Вставить(".flo",      "application/vnd.micrografx.flo");
+	Типы.Вставить(".igx",      "application/vnd.micrografx.igx");
+	Типы.Вставить(".mif",      "application/vnd.mif");
+	Типы.Вставить(".daf",      "application/vnd.mobius.daf");
+	Типы.Вставить(".dis",      "application/vnd.mobius.dis");
+	Типы.Вставить(".mbk",      "application/vnd.mobius.mbk");
+	Типы.Вставить(".mqy",      "application/vnd.mobius.mqy");
+	Типы.Вставить(".msl",      "application/vnd.mobius.msl");
+	Типы.Вставить(".plc",      "application/vnd.mobius.plc");
+	Типы.Вставить(".txf",      "application/vnd.mobius.txf");
+	Типы.Вставить(".mpn",      "application/vnd.mophun.application");
+	Типы.Вставить(".mpc",      "application/vnd.mophun.certificate");
+	Типы.Вставить(".xul",      "application/vnd.mozilla.xul+xml");
+	Типы.Вставить(".cil",      "application/vnd.ms-artgalry");
+	Типы.Вставить(".cab",      "application/vnd.ms-cab-compressed");
+	Типы.Вставить(".xls",      "application/vnd.ms-excel");
+	Типы.Вставить(".xlm",      "application/vnd.ms-excel");
+	Типы.Вставить(".xla",      "application/vnd.ms-excel");
+	Типы.Вставить(".xlc",      "application/vnd.ms-excel");
+	Типы.Вставить(".xlt",      "application/vnd.ms-excel");
+	Типы.Вставить(".xlw",      "application/vnd.ms-excel");
+	Типы.Вставить(".xlam",     "application/vnd.ms-excel.addin.macroenabled.12");
+	Типы.Вставить(".xlsb",     "application/vnd.ms-excel.sheet.binary.macroenabled.12");
+	Типы.Вставить(".xlsm",     "application/vnd.ms-excel.sheet.macroenabled.12");
+	Типы.Вставить(".xltm",     "application/vnd.ms-excel.template.macroenabled.12");
+	Типы.Вставить(".eot",      "application/vnd.ms-fontobject");
+	Типы.Вставить(".chm",      "application/vnd.ms-htmlhelp");
+	Типы.Вставить(".ims",      "application/vnd.ms-ims");
+	Типы.Вставить(".lrm",      "application/vnd.ms-lrm");
+	Типы.Вставить(".thmx",     "application/vnd.ms-officetheme");
+	Типы.Вставить(".cat",      "application/vnd.ms-pki.seccat");
+	Типы.Вставить(".stl",      "application/vnd.ms-pki.stl");
+	Типы.Вставить(".ppt",      "application/vnd.ms-powerpoint");
+	Типы.Вставить(".pps",      "application/vnd.ms-powerpoint");
+	Типы.Вставить(".pot",      "application/vnd.ms-powerpoint");
+	Типы.Вставить(".ppam",     "application/vnd.ms-powerpoint.addin.macroenabled.12");
+	Типы.Вставить(".pptm",     "application/vnd.ms-powerpoint.presentation.macroenabled.12");
+	Типы.Вставить(".sldm",     "application/vnd.ms-powerpoint.slide.macroenabled.12");
+	Типы.Вставить(".ppsm",     "application/vnd.ms-powerpoint.slideshow.macroenabled.12");
+	Типы.Вставить(".potm",     "application/vnd.ms-powerpoint.template.macroenabled.12");
+	Типы.Вставить(".mpp",      "application/vnd.ms-project");
+	Типы.Вставить(".mpt",      "application/vnd.ms-project");
+	Типы.Вставить(".docm",     "application/vnd.ms-word.document.macroenabled.12");
+	Типы.Вставить(".dotm",     "application/vnd.ms-word.template.macroenabled.12");
+	Типы.Вставить(".wps",      "application/vnd.ms-works");
+	Типы.Вставить(".wks",      "application/vnd.ms-works");
+	Типы.Вставить(".wcm",      "application/vnd.ms-works");
+	Типы.Вставить(".wdb",      "application/vnd.ms-works");
+	Типы.Вставить(".wpl",      "application/vnd.ms-wpl");
+	Типы.Вставить(".xps",      "application/vnd.ms-xpsdocument");
+	Типы.Вставить(".mseq",     "application/vnd.mseq");
+	Типы.Вставить(".mus",      "application/vnd.musician");
+	Типы.Вставить(".msty",     "application/vnd.muvee.style");
+	Типы.Вставить(".taglet",   "application/vnd.mynfc");
+	Типы.Вставить(".nlu",      "application/vnd.neurolanguage.nlu");
+	Типы.Вставить(".ntf",      "application/vnd.nitf");
+	Типы.Вставить(".nitf",     "application/vnd.nitf");
+	Типы.Вставить(".nnd",      "application/vnd.noblenet-directory");
+	Типы.Вставить(".nns",      "application/vnd.noblenet-sealer");
+	Типы.Вставить(".nnw",      "application/vnd.noblenet-web");
+	Типы.Вставить(".ngdat",    "application/vnd.nokia.n-gage.data");
+	Типы.Вставить(".n-gage",   "application/vnd.nokia.n-gage.symbian.install");
+	Типы.Вставить(".rpst",     "application/vnd.nokia.radio-preset");
+	Типы.Вставить(".rpss",     "application/vnd.nokia.radio-presets");
+	Типы.Вставить(".edm",      "application/vnd.novadigm.edm");
+	Типы.Вставить(".edx",      "application/vnd.novadigm.edx");
+	Типы.Вставить(".ext",      "application/vnd.novadigm.ext");
+	Типы.Вставить(".odc",      "application/vnd.oasis.opendocument.chart");
+	Типы.Вставить(".otc",      "application/vnd.oasis.opendocument.chart-template");
+	Типы.Вставить(".odb",      "application/vnd.oasis.opendocument.database");
+	Типы.Вставить(".odf",      "application/vnd.oasis.opendocument.formula");
+	Типы.Вставить(".odft",     "application/vnd.oasis.opendocument.formula-template");
+	Типы.Вставить(".odg",      "application/vnd.oasis.opendocument.graphics");
+	Типы.Вставить(".otg",      "application/vnd.oasis.opendocument.graphics-template");
+	Типы.Вставить(".odi",      "application/vnd.oasis.opendocument.image");
+	Типы.Вставить(".oti",      "application/vnd.oasis.opendocument.image-template");
+	Типы.Вставить(".odp",      "application/vnd.oasis.opendocument.presentation");
+	Типы.Вставить(".otp",      "application/vnd.oasis.opendocument.presentation-template");
+	Типы.Вставить(".ods",      "application/vnd.oasis.opendocument.spreadsheet");
+	Типы.Вставить(".ots",      "application/vnd.oasis.opendocument.spreadsheet-template");
+	Типы.Вставить(".odt",      "application/vnd.oasis.opendocument.text");
+	Типы.Вставить(".odm",      "application/vnd.oasis.opendocument.text-master");
+	Типы.Вставить(".ott",      "application/vnd.oasis.opendocument.text-template");
+	Типы.Вставить(".oth",      "application/vnd.oasis.opendocument.text-web");
+	Типы.Вставить(".xo",       "application/vnd.olpc-sugar");
+	Типы.Вставить(".dd2",      "application/vnd.oma.dd2+xml");
+	Типы.Вставить(".oxt",      "application/vnd.openofficeorg.extension");
+	Типы.Вставить(".pptx",     "application/vnd.openxmlformats-officedocument.presentationml.presentation");
+	Типы.Вставить(".sldx",     "application/vnd.openxmlformats-officedocument.presentationml.slide");
+	Типы.Вставить(".ppsx",     "application/vnd.openxmlformats-officedocument.presentationml.slideshow");
+	Типы.Вставить(".potx",     "application/vnd.openxmlformats-officedocument.presentationml.template");
+	Типы.Вставить(".xlsx",     "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+	Типы.Вставить(".xltx",     "application/vnd.openxmlformats-officedocument.spreadsheetml.template");
+	Типы.Вставить(".docx",     "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+	Типы.Вставить(".dotx",     "application/vnd.openxmlformats-officedocument.wordprocessingml.template");
+	Типы.Вставить(".mgp",      "application/vnd.osgeo.mapguide.package");
+	Типы.Вставить(".dp",       "application/vnd.osgi.dp");
+	Типы.Вставить(".esa",      "application/vnd.osgi.subsystem");
+	Типы.Вставить(".pdb",      "application/vnd.palm");
+	Типы.Вставить(".pqa",      "application/vnd.palm");
+	Типы.Вставить(".oprc",     "application/vnd.palm");
+	Типы.Вставить(".paw",      "application/vnd.pawaafile");
+	Типы.Вставить(".str",      "application/vnd.pg.format");
+	Типы.Вставить(".ei6",      "application/vnd.pg.osasli");
+	Типы.Вставить(".efif",     "application/vnd.picsel");
+	Типы.Вставить(".wg",       "application/vnd.pmi.widget");
+	Типы.Вставить(".plf",      "application/vnd.pocketlearn");
+	Типы.Вставить(".pbd",      "application/vnd.powerbuilder6");
+	Типы.Вставить(".box",      "application/vnd.previewsystems.box");
+	Типы.Вставить(".mgz",      "application/vnd.proteus.magazine");
+	Типы.Вставить(".qps",      "application/vnd.publishare-delta-tree");
+	Типы.Вставить(".ptid",     "application/vnd.pvi.ptid1");
+	Типы.Вставить(".qxd",      "application/vnd.quark.quarkxpress");
+	Типы.Вставить(".qxt",      "application/vnd.quark.quarkxpress");
+	Типы.Вставить(".qwd",      "application/vnd.quark.quarkxpress");
+	Типы.Вставить(".qwt",      "application/vnd.quark.quarkxpress");
+	Типы.Вставить(".qxl",      "application/vnd.quark.quarkxpress");
+	Типы.Вставить(".qxb",      "application/vnd.quark.quarkxpress");
+	Типы.Вставить(".bed",      "application/vnd.realvnc.bed");
+	Типы.Вставить(".mxl",      "application/vnd.recordare.musicxml");
+	Типы.Вставить(".musicxml", "application/vnd.recordare.musicxml+xml");
+	Типы.Вставить(".cryptonote", "application/vnd.rig.cryptonote");
+	Типы.Вставить(".cod",      "application/vnd.rim.cod");
+	Типы.Вставить(".rm",       "application/vnd.rn-realmedia");
+	Типы.Вставить(".rmvb",     "application/vnd.rn-realmedia-vbr");
+	Типы.Вставить(".link66",   "application/vnd.route66.link66+xml");
+	Типы.Вставить(".st",       "application/vnd.sailingtracker.track");
+	Типы.Вставить(".see",      "application/vnd.seemail");
+	Типы.Вставить(".sema",     "application/vnd.sema");
+	Типы.Вставить(".semd",     "application/vnd.semd");
+	Типы.Вставить(".semf",     "application/vnd.semf");
+	Типы.Вставить(".ifm",      "application/vnd.shana.informed.formdata");
+	Типы.Вставить(".itp",      "application/vnd.shana.informed.formtemplate");
+	Типы.Вставить(".iif",      "application/vnd.shana.informed.interchange");
+	Типы.Вставить(".ipk",      "application/vnd.shana.informed.package");
+	Типы.Вставить(".twd",      "application/vnd.simtech-mindmapper");
+	Типы.Вставить(".twds",     "application/vnd.simtech-mindmapper");
+	Типы.Вставить(".mmf",      "application/vnd.smaf");
+	Типы.Вставить(".teacher",  "application/vnd.smart.teacher");
+	Типы.Вставить(".sdkm",     "application/vnd.solent.sdkm+xml");
+	Типы.Вставить(".sdkd",     "application/vnd.solent.sdkm+xml");
+	Типы.Вставить(".dxp",      "application/vnd.spotfire.dxp");
+	Типы.Вставить(".sfs",      "application/vnd.spotfire.sfs");
+	Типы.Вставить(".sdc",      "application/vnd.stardivision.calc");
+	Типы.Вставить(".sda",      "application/vnd.stardivision.draw");
+	Типы.Вставить(".sdd",      "application/vnd.stardivision.impress");
+	Типы.Вставить(".smf",      "application/vnd.stardivision.math");
+	Типы.Вставить(".sdw",      "application/vnd.stardivision.writer");
+	Типы.Вставить(".vor",      "application/vnd.stardivision.writer");
+	Типы.Вставить(".sgl",      "application/vnd.stardivision.writer-global");
+	Типы.Вставить(".smzip",    "application/vnd.stepmania.package");
+	Типы.Вставить(".sm",       "application/vnd.stepmania.stepchart");
+	Типы.Вставить(".sxc",      "application/vnd.sun.xml.calc");
+	Типы.Вставить(".stc",      "application/vnd.sun.xml.calc.template");
+	Типы.Вставить(".sxd",      "application/vnd.sun.xml.draw");
+	Типы.Вставить(".std",      "application/vnd.sun.xml.draw.template");
+	Типы.Вставить(".sxi",      "application/vnd.sun.xml.impress");
+	Типы.Вставить(".sti",      "application/vnd.sun.xml.impress.template");
+	Типы.Вставить(".sxm",      "application/vnd.sun.xml.math");
+	Типы.Вставить(".sxw",      "application/vnd.sun.xml.writer");
+	Типы.Вставить(".sxg",      "application/vnd.sun.xml.writer.global");
+	Типы.Вставить(".stw",      "application/vnd.sun.xml.writer.template");
+	Типы.Вставить(".sus",      "application/vnd.sus-calendar");
+	Типы.Вставить(".susp",     "application/vnd.sus-calendar");
+	Типы.Вставить(".svd",      "application/vnd.svd");
+	Типы.Вставить(".sis",      "application/vnd.symbian.install");
+	Типы.Вставить(".sisx",     "application/vnd.symbian.install");
+	Типы.Вставить(".xsm",      "application/vnd.syncml+xml");
+	Типы.Вставить(".bdm",      "application/vnd.syncml.dm+wbxml");
+	Типы.Вставить(".xdm",      "application/vnd.syncml.dm+xml");
+	Типы.Вставить(".tao",      "application/vnd.tao.intent-module-archive");
+	Типы.Вставить(".pcap",     "application/vnd.tcpdump.pcap");
+	Типы.Вставить(".cap",      "application/vnd.tcpdump.pcap");
+	Типы.Вставить(".dmp",      "application/vnd.tcpdump.pcap");
+	Типы.Вставить(".tmo",      "application/vnd.tmobile-livetv");
+	Типы.Вставить(".tpt",      "application/vnd.trid.tpt");
+	Типы.Вставить(".mxs",      "application/vnd.triscape.mxs");
+	Типы.Вставить(".tra",      "application/vnd.trueapp");
+	Типы.Вставить(".ufd",      "application/vnd.ufdl");
+	Типы.Вставить(".ufdl",     "application/vnd.ufdl");
+	Типы.Вставить(".utz",      "application/vnd.uiq.theme");
+	Типы.Вставить(".umj",      "application/vnd.umajin");
+	Типы.Вставить(".unityweb", "application/vnd.unity");
+	Типы.Вставить(".uoml",     "application/vnd.uoml+xml");
+	Типы.Вставить(".vcx",      "application/vnd.vcx");
+	Типы.Вставить(".vsd",      "application/vnd.visio");
+	Типы.Вставить(".vst",      "application/vnd.visio");
+	Типы.Вставить(".vss",      "application/vnd.visio");
+	Типы.Вставить(".vsw",      "application/vnd.visio");
+	Типы.Вставить(".vis",      "application/vnd.visionary");
+	Типы.Вставить(".vsf",      "application/vnd.vsf");
+	Типы.Вставить(".wbxml",    "application/vnd.wap.wbxml");
+	Типы.Вставить(".wmlc",     "application/vnd.wap.wmlc");
+	Типы.Вставить(".wmlsc",    "application/vnd.wap.wmlscriptc");
+	Типы.Вставить(".wtb",      "application/vnd.webturbo");
+	Типы.Вставить(".nbp",      "application/vnd.wolfram.player");
+	Типы.Вставить(".wpd",      "application/vnd.wordperfect");
+	Типы.Вставить(".wqd",      "application/vnd.wqd");
+	Типы.Вставить(".stf",      "application/vnd.wt.stf");
+	Типы.Вставить(".xar",      "application/vnd.xara");
+	Типы.Вставить(".xfdl",     "application/vnd.xfdl");
+	Типы.Вставить(".hvd",      "application/vnd.yamaha.hv-dic");
+	Типы.Вставить(".hvs",      "application/vnd.yamaha.hv-script");
+	Типы.Вставить(".hvp",      "application/vnd.yamaha.hv-voice");
+	Типы.Вставить(".osf",      "application/vnd.yamaha.openscoreformat");
+	Типы.Вставить(".osfpvg",   "application/vnd.yamaha.openscoreformat.osfpvg+xml");
+	Типы.Вставить(".saf",      "application/vnd.yamaha.smaf-audio");
+	Типы.Вставить(".spf",      "application/vnd.yamaha.smaf-phrase");
+	Типы.Вставить(".cmp",      "application/vnd.yellowriver-custom-menu");
+	Типы.Вставить(".zir",      "application/vnd.zul");
+	Типы.Вставить(".zirz",     "application/vnd.zul");
+	Типы.Вставить(".zaz",      "application/vnd.zzazz.deck+xml");
+	Типы.Вставить(".vxml",     "application/voicexml+xml");
+	Типы.Вставить(".wgt",      "application/widget");
+	Типы.Вставить(".hlp",      "application/winhlp");
+	Типы.Вставить(".wsdl",     "application/wsdl+xml");
+	Типы.Вставить(".wspolicy", "application/wspolicy+xml");
+	Типы.Вставить(".7z",       "application/x-7z-compressed");
+	Типы.Вставить(".abw",      "application/x-abiword");
+	Типы.Вставить(".ace",      "application/x-ace-compressed");
+	Типы.Вставить(".dmg",      "application/x-apple-diskimage");
+	Типы.Вставить(".aab",      "application/x-authorware-bin");
+	Типы.Вставить(".x32",      "application/x-authorware-bin");
+	Типы.Вставить(".u32",      "application/x-authorware-bin");
+	Типы.Вставить(".vox",      "application/x-authorware-bin");
+	Типы.Вставить(".aam",      "application/x-authorware-map");
+	Типы.Вставить(".aas",      "application/x-authorware-seg");
+	Типы.Вставить(".bcpio",    "application/x-bcpio");
+	Типы.Вставить(".torrent",  "application/x-bittorrent");
+	Типы.Вставить(".blb",      "application/x-blorb");
+	Типы.Вставить(".blorb",    "application/x-blorb");
+	Типы.Вставить(".bz",       "application/x-bzip");
+	Типы.Вставить(".bz2",      "application/x-bzip2");
+	Типы.Вставить(".boz",      "application/x-bzip2");
+	Типы.Вставить(".cbr",      "application/x-cbr");
+	Типы.Вставить(".cba",      "application/x-cbr");
+	Типы.Вставить(".cbt",      "application/x-cbr");
+	Типы.Вставить(".cbz",      "application/x-cbr");
+	Типы.Вставить(".cb7",      "application/x-cbr");
+	Типы.Вставить(".vcd",      "application/x-cdlink");
+	Типы.Вставить(".cfs",      "application/x-cfs-compressed");
+	Типы.Вставить(".chat",     "application/x-chat");
+	Типы.Вставить(".pgn",      "application/x-chess-pgn");
+	Типы.Вставить(".nsc",      "application/x-conference");
+	Типы.Вставить(".cpio",     "application/x-cpio");
+	Типы.Вставить(".csh",      "application/x-csh");
+	Типы.Вставить(".deb",      "application/x-debian-package");
+	Типы.Вставить(".udeb",     "application/x-debian-package");
+	Типы.Вставить(".dgc",      "application/x-dgc-compressed");
+	Типы.Вставить(".dir",      "application/x-director");
+	Типы.Вставить(".dcr",      "application/x-director");
+	Типы.Вставить(".dxr",      "application/x-director");
+	Типы.Вставить(".cst",      "application/x-director");
+	Типы.Вставить(".cct",      "application/x-director");
+	Типы.Вставить(".cxt",      "application/x-director");
+	Типы.Вставить(".w3d",      "application/x-director");
+	Типы.Вставить(".fgd",      "application/x-director");
+	Типы.Вставить(".swa",      "application/x-director");
+	Типы.Вставить(".wad",      "application/x-doom");
+	Типы.Вставить(".ncx",      "application/x-dtbncx+xml");
+	Типы.Вставить(".dtb",      "application/x-dtbook+xml");
+	Типы.Вставить(".res",      "application/x-dtbresource+xml");
+	Типы.Вставить(".dvi",      "application/x-dvi");
+	Типы.Вставить(".evy",      "application/x-envoy");
+	Типы.Вставить(".eva",      "application/x-eva");
+	Типы.Вставить(".bdf",      "application/x-font-bdf");
+	Типы.Вставить(".gsf",      "application/x-font-ghostscript");
+	Типы.Вставить(".psf",      "application/x-font-linux-psf");
+	Типы.Вставить(".pcf",      "application/x-font-pcf");
+	Типы.Вставить(".snf",      "application/x-font-snf");
+	Типы.Вставить(".pfa",      "application/x-font-type1");
+	Типы.Вставить(".pfb",      "application/x-font-type1");
+	Типы.Вставить(".pfm",      "application/x-font-type1");
+	Типы.Вставить(".afm",      "application/x-font-type1");
+	Типы.Вставить(".arc",      "application/x-freearc");
+	Типы.Вставить(".spl",      "application/x-futuresplash");
+	Типы.Вставить(".gca",      "application/x-gca-compressed");
+	Типы.Вставить(".ulx",      "application/x-glulx");
+	Типы.Вставить(".gnumeric", "application/x-gnumeric");
+	Типы.Вставить(".gramps",   "application/x-gramps-xml");
+	Типы.Вставить(".gtar",     "application/x-gtar");
+	Типы.Вставить(".hdf",      "application/x-hdf");
+	Типы.Вставить(".install",  "application/x-install-instructions");
+	Типы.Вставить(".iso",      "application/x-iso9660-image");
+	Типы.Вставить(".jnlp",     "application/x-java-jnlp-file");
+	Типы.Вставить(".latex",    "application/x-latex");
+	Типы.Вставить(".lzh",      "application/x-lzh-compressed");
+	Типы.Вставить(".lha",      "application/x-lzh-compressed");
+	Типы.Вставить(".mie",      "application/x-mie");
+	Типы.Вставить(".prc",      "application/x-mobipocket-ebook");
+	Типы.Вставить(".mobi",     "application/x-mobipocket-ebook");
+	Типы.Вставить(".application", "application/x-ms-application");
+	Типы.Вставить(".lnk",      "application/x-ms-shortcut");
+	Типы.Вставить(".wmd",      "application/x-ms-wmd");
+	Типы.Вставить(".wmz",      "application/x-ms-wmz");
+	Типы.Вставить(".xbap",     "application/x-ms-xbap");
+	Типы.Вставить(".mdb",      "application/x-msaccess");
+	Типы.Вставить(".obd",      "application/x-msbinder");
+	Типы.Вставить(".crd",      "application/x-mscardfile");
+	Типы.Вставить(".clp",      "application/x-msclip");
+	Типы.Вставить(".exe",      "application/x-msdownload");
+	Типы.Вставить(".dll",      "application/x-msdownload");
+	Типы.Вставить(".com",      "application/x-msdownload");
+	Типы.Вставить(".bat",      "application/x-msdownload");
+	Типы.Вставить(".msi",      "application/x-msdownload");
+	Типы.Вставить(".mvb",      "application/x-msmediaview");
+	Типы.Вставить(".m13",      "application/x-msmediaview");
+	Типы.Вставить(".m14",      "application/x-msmediaview");
+	Типы.Вставить(".wmf",      "application/x-msmetafile");
+	Типы.Вставить(".wmz",      "application/x-msmetafile");
+	Типы.Вставить(".emf",      "application/x-msmetafile");
+	Типы.Вставить(".emz",      "application/x-msmetafile");
+	Типы.Вставить(".mny",      "application/x-msmoney");
+	Типы.Вставить(".pub",      "application/x-mspublisher");
+	Типы.Вставить(".scd",      "application/x-msschedule");
+	Типы.Вставить(".trm",      "application/x-msterminal");
+	Типы.Вставить(".wri",      "application/x-mswrite");
+	Типы.Вставить(".nc",       "application/x-netcdf");
+	Типы.Вставить(".cdf",      "application/x-netcdf");
+	Типы.Вставить(".nzb",      "application/x-nzb");
+	Типы.Вставить(".p12",      "application/x-pkcs12");
+	Типы.Вставить(".pfx",      "application/x-pkcs12");
+	Типы.Вставить(".p7b",      "application/x-pkcs7-certificates");
+	Типы.Вставить(".spc",      "application/x-pkcs7-certificates");
+	Типы.Вставить(".p7r",      "application/x-pkcs7-certreqresp");
+	Типы.Вставить(".rar",      "application/x-rar-compressed");
+	Типы.Вставить(".ris",      "application/x-research-info-systems");
+	Типы.Вставить(".sh",       "application/x-sh");
+	Типы.Вставить(".shar",     "application/x-shar");
+	Типы.Вставить(".swf",      "application/x-shockwave-flash");
+	Типы.Вставить(".xap",      "application/x-silverlight-app");
+	Типы.Вставить(".sql",      "application/x-sql");
+	Типы.Вставить(".sit",      "application/x-stuffit");
+	Типы.Вставить(".sitx",     "application/x-stuffitx");
+	Типы.Вставить(".srt",      "application/x-subrip");
+	Типы.Вставить(".sv4cpio",  "application/x-sv4cpio");
+	Типы.Вставить(".sv4crc",   "application/x-sv4crc");
+	Типы.Вставить(".t3",       "application/x-t3vm-image");
+	Типы.Вставить(".gam",      "application/x-tads");
+	Типы.Вставить(".tar",      "application/x-tar");
+	Типы.Вставить(".tcl",      "application/x-tcl");
+	Типы.Вставить(".tex",      "application/x-tex");
+	Типы.Вставить(".tfm",      "application/x-tex-tfm");
+	Типы.Вставить(".texinfo",  "application/x-texinfo");
+	Типы.Вставить(".texi",     "application/x-texinfo");
+	Типы.Вставить(".obj",      "application/x-tgif");
+	Типы.Вставить(".ustar",    "application/x-ustar");
+	Типы.Вставить(".src",      "application/x-wais-source");
+	Типы.Вставить(".der",      "application/x-x509-ca-cert");
+	Типы.Вставить(".crt",      "application/x-x509-ca-cert");
+	Типы.Вставить(".fig",      "application/x-xfig");
+	Типы.Вставить(".xlf",      "application/x-xliff+xml");
+	Типы.Вставить(".xpi",      "application/x-xpinstall");
+	Типы.Вставить(".xz",       "application/x-xz");
+	Типы.Вставить(".z1",       "application/x-zmachine");
+	Типы.Вставить(".z2",       "application/x-zmachine");
+	Типы.Вставить(".z3",       "application/x-zmachine");
+	Типы.Вставить(".z4",       "application/x-zmachine");
+	Типы.Вставить(".z5",       "application/x-zmachine");
+	Типы.Вставить(".z6",       "application/x-zmachine");
+	Типы.Вставить(".z7",       "application/x-zmachine");
+	Типы.Вставить(".z8",       "application/x-zmachine");
+	Типы.Вставить(".xaml",     "application/xaml+xml");
+	Типы.Вставить(".xdf",      "application/xcap-diff+xml");
+	Типы.Вставить(".xenc",     "application/xenc+xml");
+	Типы.Вставить(".xhtml",    "application/xhtml+xml");
+	Типы.Вставить(".xht",      "application/xhtml+xml");
+	Типы.Вставить(".xml",      "application/xml");
+	Типы.Вставить(".xsl",      "application/xml");
+	Типы.Вставить(".dtd",      "application/xml-dtd");
+	Типы.Вставить(".xop",      "application/xop+xml");
+	Типы.Вставить(".xpl",      "application/xproc+xml");
+	Типы.Вставить(".xslt",     "application/xslt+xml");
+	Типы.Вставить(".xspf",     "application/xspf+xml");
+	Типы.Вставить(".mxml",     "application/xv+xml");
+	Типы.Вставить(".xhvml",    "application/xv+xml");
+	Типы.Вставить(".xvml",     "application/xv+xml");
+	Типы.Вставить(".xvm",      "application/xv+xml");
+	Типы.Вставить(".yang",     "application/yang");
+	Типы.Вставить(".yin",      "application/yin+xml");
+	Типы.Вставить(".zip",      "application/zip");
+	Типы.Вставить(".adp",      "audio/adpcm");
+	Типы.Вставить(".au",       "audio/basic");
+	Типы.Вставить(".snd",      "audio/basic");
+	Типы.Вставить(".mid",      "audio/midi");
+	Типы.Вставить(".midi",     "audio/midi");
+	Типы.Вставить(".kar",      "audio/midi");
+	Типы.Вставить(".rmi",      "audio/midi");
+	Типы.Вставить(".m4a",      "audio/mp4");
+	Типы.Вставить(".mp4a",     "audio/mp4");
+	Типы.Вставить(".mpga",     "audio/mpeg");
+	Типы.Вставить(".mp2",      "audio/mpeg");
+	Типы.Вставить(".mp2a",     "audio/mpeg");
+	Типы.Вставить(".mp3",      "audio/mpeg");
+	Типы.Вставить(".m2a",      "audio/mpeg");
+	Типы.Вставить(".m3a",      "audio/mpeg");
+	Типы.Вставить(".oga",      "audio/ogg");
+	Типы.Вставить(".ogg",      "audio/ogg");
+	Типы.Вставить(".spx",      "audio/ogg");
+	Типы.Вставить(".opus",     "audio/ogg");
+	Типы.Вставить(".s3m",      "audio/s3m");
+	Типы.Вставить(".sil",      "audio/silk");
+	Типы.Вставить(".uva",      "audio/vnd.dece.audio");
+	Типы.Вставить(".uvva",     "audio/vnd.dece.audio");
+	Типы.Вставить(".eol",      "audio/vnd.digital-winds");
+	Типы.Вставить(".dra",      "audio/vnd.dra");
+	Типы.Вставить(".dts",      "audio/vnd.dts");
+	Типы.Вставить(".dtshd",    "audio/vnd.dts.hd");
+	Типы.Вставить(".lvp",      "audio/vnd.lucent.voice");
+	Типы.Вставить(".pya",      "audio/vnd.ms-playready.media.pya");
+	Типы.Вставить(".ecelp4800", "audio/vnd.nuera.ecelp4800");
+	Типы.Вставить(".ecelp7470", "audio/vnd.nuera.ecelp7470");
+	Типы.Вставить(".ecelp9600", "audio/vnd.nuera.ecelp9600");
+	Типы.Вставить(".rip",      "audio/vnd.rip");
+	Типы.Вставить(".weba",     "audio/webm");
+	Типы.Вставить(".aac",      "audio/x-aac");
+	Типы.Вставить(".aif",      "audio/x-aiff");
+	Типы.Вставить(".aiff",     "audio/x-aiff");
+	Типы.Вставить(".aifc",     "audio/x-aiff");
+	Типы.Вставить(".caf",      "audio/x-caf");
+	Типы.Вставить(".flac",     "audio/x-flac");
+	Типы.Вставить(".mka",      "audio/x-matroska");
+	Типы.Вставить(".m3u",      "audio/x-mpegurl");
+	Типы.Вставить(".wax",      "audio/x-ms-wax");
+	Типы.Вставить(".wma",      "audio/x-ms-wma");
+	Типы.Вставить(".ram",      "audio/x-pn-realaudio");
+	Типы.Вставить(".ra",       "audio/x-pn-realaudio");
+	Типы.Вставить(".rmp",      "audio/x-pn-realaudio-plugin");
+	Типы.Вставить(".wav",      "audio/x-wav");
+	Типы.Вставить(".xm",       "audio/xm");
+	Типы.Вставить(".cdx",      "chemical/x-cdx");
+	Типы.Вставить(".cif",      "chemical/x-cif");
+	Типы.Вставить(".cmdf",     "chemical/x-cmdf");
+	Типы.Вставить(".cml",      "chemical/x-cml");
+	Типы.Вставить(".csml",     "chemical/x-csml");
+	Типы.Вставить(".xyz",      "chemical/x-xyz");
+	Типы.Вставить(".ttc",      "font/collection");
+	Типы.Вставить(".otf",      "font/otf");
+	Типы.Вставить(".ttf",      "font/ttf");
+	Типы.Вставить(".woff",     "font/woff");
+	Типы.Вставить(".woff2",    "font/woff2");
+	Типы.Вставить(".bmp",      "image/bmp");
+	Типы.Вставить(".cgm",      "image/cgm");
+	Типы.Вставить(".g3",       "image/g3fax");
+	Типы.Вставить(".gif",      "image/gif");
+	Типы.Вставить(".ief",      "image/ief");
+	Типы.Вставить(".jpeg",     "image/jpeg");
+	Типы.Вставить(".jpg",      "image/jpeg");
+	Типы.Вставить(".jpe",      "image/jpeg");
+	Типы.Вставить(".ktx",      "image/ktx");
+	Типы.Вставить(".png",      "image/png");
+	Типы.Вставить(".btif",     "image/prs.btif");
+	Типы.Вставить(".sgi",      "image/sgi");
+	Типы.Вставить(".svg",      "image/svg+xml");
+	Типы.Вставить(".svgz",     "image/svg+xml");
+	Типы.Вставить(".tiff",     "image/tiff");
+	Типы.Вставить(".tif",      "image/tiff");
+	Типы.Вставить(".psd",      "image/vnd.adobe.photoshop");
+	Типы.Вставить(".uvi",      "image/vnd.dece.graphic");
+	Типы.Вставить(".uvvi",     "image/vnd.dece.graphic");
+	Типы.Вставить(".uvg",      "image/vnd.dece.graphic");
+	Типы.Вставить(".uvvg",     "image/vnd.dece.graphic");
+	Типы.Вставить(".djvu",     "image/vnd.djvu");
+	Типы.Вставить(".djv",      "image/vnd.djvu");
+	Типы.Вставить(".sub",      "image/vnd.dvb.subtitle");
+	Типы.Вставить(".dwg",      "image/vnd.dwg");
+	Типы.Вставить(".dxf",      "image/vnd.dxf");
+	Типы.Вставить(".fbs",      "image/vnd.fastbidsheet");
+	Типы.Вставить(".fpx",      "image/vnd.fpx");
+	Типы.Вставить(".fst",      "image/vnd.fst");
+	Типы.Вставить(".mmr",      "image/vnd.fujixerox.edmics-mmr");
+	Типы.Вставить(".rlc",      "image/vnd.fujixerox.edmics-rlc");
+	Типы.Вставить(".mdi",      "image/vnd.ms-modi");
+	Типы.Вставить(".wdp",      "image/vnd.ms-photo");
+	Типы.Вставить(".npx",      "image/vnd.net-fpx");
+	Типы.Вставить(".wbmp",     "image/vnd.wap.wbmp");
+	Типы.Вставить(".xif",      "image/vnd.xiff");
+	Типы.Вставить(".webp",     "image/webp");
+	Типы.Вставить(".3ds",      "image/x-3ds");
+	Типы.Вставить(".ras",      "image/x-cmu-raster");
+	Типы.Вставить(".cmx",      "image/x-cmx");
+	Типы.Вставить(".cdr",      "image/x-coreldraw");
+	Типы.Вставить(".fh",       "image/x-freehand");
+	Типы.Вставить(".fhc",      "image/x-freehand");
+	Типы.Вставить(".fh4",      "image/x-freehand");
+	Типы.Вставить(".fh5",      "image/x-freehand");
+	Типы.Вставить(".fh7",      "image/x-freehand");
+	Типы.Вставить(".ico",      "image/x-icon");
+	Типы.Вставить(".sid",      "image/x-mrsid-image");
+	Типы.Вставить(".pcx",      "image/x-pcx");
+	Типы.Вставить(".pic",      "image/x-pict");
+	Типы.Вставить(".pct",      "image/x-pict");
+	Типы.Вставить(".pnm",      "image/x-portable-anymap");
+	Типы.Вставить(".pbm",      "image/x-portable-bitmap");
+	Типы.Вставить(".pgm",      "image/x-portable-graymap");
+	Типы.Вставить(".ppm",      "image/x-portable-pixmap");
+	Типы.Вставить(".rgb",      "image/x-rgb");
+	Типы.Вставить(".tga",      "image/x-tga");
+	Типы.Вставить(".xbm",      "image/x-xbitmap");
+	Типы.Вставить(".xpm",      "image/x-xpixmap");
+	Типы.Вставить(".xwd",      "image/x-xwindowdump");
+	Типы.Вставить(".eml",      "message/rfc822");
+	Типы.Вставить(".mime",     "message/rfc822");
+	Типы.Вставить(".igs",      "model/iges");
+	Типы.Вставить(".iges",     "model/iges");
+	Типы.Вставить(".msh",      "model/mesh");
+	Типы.Вставить(".mesh",     "model/mesh");
+	Типы.Вставить(".silo",     "model/mesh");
+	Типы.Вставить(".dae",      "model/vnd.collada+xml");
+	Типы.Вставить(".dwf",      "model/vnd.dwf");
+	Типы.Вставить(".gdl",      "model/vnd.gdl");
+	Типы.Вставить(".gtw",      "model/vnd.gtw");
+	Типы.Вставить(".mts",      "model/vnd.mts");
+	Типы.Вставить(".vtu",      "model/vnd.vtu");
+	Типы.Вставить(".wrl",      "model/vrml");
+	Типы.Вставить(".vrml",     "model/vrml");
+	Типы.Вставить(".x3db",     "model/x3d+binary");
+	Типы.Вставить(".x3dbz",    "model/x3d+binary");
+	Типы.Вставить(".x3dv",     "model/x3d+vrml");
+	Типы.Вставить(".x3dvz",    "model/x3d+vrml");
+	Типы.Вставить(".x3d",      "model/x3d+xml");
+	Типы.Вставить(".x3dz",     "model/x3d+xml");
+	Типы.Вставить(".appcache", "text/cache-manifest");
+	Типы.Вставить(".ics",      "text/calendar");
+	Типы.Вставить(".ifb",      "text/calendar");
+	Типы.Вставить(".css",      "text/css");
+	Типы.Вставить(".csv",      "text/csv");
+	Типы.Вставить(".html",     "text/html");
+	Типы.Вставить(".htm",      "text/html");
+	Типы.Вставить(".js",       "text/javascript");
+	Типы.Вставить(".mjs",      "text/javascript");
+	Типы.Вставить(".n3",       "text/n3");
+	Типы.Вставить(".txt",      "text/plain");
+	Типы.Вставить(".text",     "text/plain");
+	Типы.Вставить(".conf",     "text/plain");
+	Типы.Вставить(".def",      "text/plain");
+	Типы.Вставить(".list",     "text/plain");
+	Типы.Вставить(".log",      "text/plain");
+	Типы.Вставить(".in",       "text/plain");
+	Типы.Вставить(".dsc",      "text/prs.lines.tag");
+	Типы.Вставить(".rtx",      "text/richtext");
+	Типы.Вставить(".sgml",     "text/sgml");
+	Типы.Вставить(".sgm",      "text/sgml");
+	Типы.Вставить(".tsv",      "text/tab-separated-values");
+	Типы.Вставить(".t",        "text/troff");
+	Типы.Вставить(".tr",       "text/troff");
+	Типы.Вставить(".roff",     "text/troff");
+	Типы.Вставить(".man",      "text/troff");
+	Типы.Вставить(".me",       "text/troff");
+	Типы.Вставить(".ms",       "text/troff");
+	Типы.Вставить(".ttl",      "text/turtle");
+	Типы.Вставить(".uri",      "text/uri-list");
+	Типы.Вставить(".uris",     "text/uri-list");
+	Типы.Вставить(".urls",     "text/uri-list");
+	Типы.Вставить(".vcard",    "text/vcard");
+	Типы.Вставить(".curl",     "text/vnd.curl");
+	Типы.Вставить(".dcurl",    "text/vnd.curl.dcurl");
+	Типы.Вставить(".mcurl",    "text/vnd.curl.mcurl");
+	Типы.Вставить(".scurl",    "text/vnd.curl.scurl");
+	Типы.Вставить(".sub",      "text/vnd.dvb.subtitle");
+	Типы.Вставить(".fly",      "text/vnd.fly");
+	Типы.Вставить(".flx",      "text/vnd.fmi.flexstor");
+	Типы.Вставить(".gv",       "text/vnd.graphviz");
+	Типы.Вставить(".3dml",     "text/vnd.in3d.3dml");
+	Типы.Вставить(".spot",     "text/vnd.in3d.spot");
+	Типы.Вставить(".jad",      "text/vnd.sun.j2me.app-descriptor");
+	Типы.Вставить(".wml",      "text/vnd.wap.wml");
+	Типы.Вставить(".wmls",     "text/vnd.wap.wmlscript");
+	Типы.Вставить(".s",        "text/x-asm");
+	Типы.Вставить(".asm",      "text/x-asm");
+	Типы.Вставить(".c",        "text/x-c");
+	Типы.Вставить(".cc",       "text/x-c");
+	Типы.Вставить(".cxx",      "text/x-c");
+	Типы.Вставить(".cpp",      "text/x-c");
+	Типы.Вставить(".h",        "text/x-c");
+	Типы.Вставить(".hh",       "text/x-c");
+	Типы.Вставить(".dic",      "text/x-c");
+	Типы.Вставить(".f",        "text/x-fortran");
+	Типы.Вставить(".for",      "text/x-fortran");
+	Типы.Вставить(".f77",      "text/x-fortran");
+	Типы.Вставить(".f90",      "text/x-fortran");
+	Типы.Вставить(".java",     "text/x-java-source");
+	Типы.Вставить(".nfo",      "text/x-nfo");
+	Типы.Вставить(".opml",     "text/x-opml");
+	Типы.Вставить(".p",        "text/x-pascal");
+	Типы.Вставить(".pas",      "text/x-pascal");
+	Типы.Вставить(".etx",      "text/x-setext");
+	Типы.Вставить(".sfv",      "text/x-sfv");
+	Типы.Вставить(".uu",       "text/x-uuencode");
+	Типы.Вставить(".vcs",      "text/x-vcalendar");
+	Типы.Вставить(".vcf",      "text/x-vcard");
+	Типы.Вставить(".3gp",      "video/3gpp");
+	Типы.Вставить(".3g2",      "video/3gpp2");
+	Типы.Вставить(".h261",     "video/h261");
+	Типы.Вставить(".h263",     "video/h263");
+	Типы.Вставить(".h264",     "video/h264");
+	Типы.Вставить(".jpgv",     "video/jpeg");
+	Типы.Вставить(".jpm",      "video/jpm");
+	Типы.Вставить(".jpgm",     "video/jpm");
+	Типы.Вставить(".mj2",      "video/mj2");
+	Типы.Вставить(".mjp2",     "video/mj2");
+	Типы.Вставить(".mp4",      "video/mp4");
+	Типы.Вставить(".mp4v",     "video/mp4");
+	Типы.Вставить(".mpg4",     "video/mp4");
+	Типы.Вставить(".mpeg",     "video/mpeg");
+	Типы.Вставить(".mpg",      "video/mpeg");
+	Типы.Вставить(".mpe",      "video/mpeg");
+	Типы.Вставить(".m1v",      "video/mpeg");
+	Типы.Вставить(".m2v",      "video/mpeg");
+	Типы.Вставить(".ogv",      "video/ogg");
+	Типы.Вставить(".qt",       "video/quicktime");
+	Типы.Вставить(".mov",      "video/quicktime");
+	Типы.Вставить(".uvh",      "video/vnd.dece.hd");
+	Типы.Вставить(".uvvh",     "video/vnd.dece.hd");
+	Типы.Вставить(".uvm",      "video/vnd.dece.mobile");
+	Типы.Вставить(".uvvm",     "video/vnd.dece.mobile");
+	Типы.Вставить(".uvp",      "video/vnd.dece.pd");
+	Типы.Вставить(".uvvp",     "video/vnd.dece.pd");
+	Типы.Вставить(".uvs",      "video/vnd.dece.sd");
+	Типы.Вставить(".uvvs",     "video/vnd.dece.sd");
+	Типы.Вставить(".uvv",      "video/vnd.dece.video");
+	Типы.Вставить(".uvvv",     "video/vnd.dece.video");
+	Типы.Вставить(".dvb",      "video/vnd.dvb.file");
+	Типы.Вставить(".fvt",      "video/vnd.fvt");
+	Типы.Вставить(".mxu",      "video/vnd.mpegurl");
+	Типы.Вставить(".m4u",      "video/vnd.mpegurl");
+	Типы.Вставить(".pyv",      "video/vnd.ms-playready.media.pyv");
+	Типы.Вставить(".uvu",      "video/vnd.uvvu.mp4");
+	Типы.Вставить(".uvvu",     "video/vnd.uvvu.mp4");
+	Типы.Вставить(".viv",      "video/vnd.vivo");
+	Типы.Вставить(".webm",     "video/webm");
+	Типы.Вставить(".f4v",      "video/x-f4v");
+	Типы.Вставить(".fli",      "video/x-fli");
+	Типы.Вставить(".flv",      "video/x-flv");
+	Типы.Вставить(".m4v",      "video/x-m4v");
+	Типы.Вставить(".mkv",      "video/x-matroska");
+	Типы.Вставить(".mk3d",     "video/x-matroska");
+	Типы.Вставить(".mks",      "video/x-matroska");
+	Типы.Вставить(".mng",      "video/x-mng");
+	Типы.Вставить(".asf",      "video/x-ms-asf");
+	Типы.Вставить(".asx",      "video/x-ms-asf");
+	Типы.Вставить(".vob",      "video/x-ms-vob");
+	Типы.Вставить(".wm",       "video/x-ms-wm");
+	Типы.Вставить(".wmv",      "video/x-ms-wmv");
+	Типы.Вставить(".wmx",      "video/x-ms-wmx");
+	Типы.Вставить(".wvx",      "video/x-ms-wvx");
+	Типы.Вставить(".avi",      "video/x-msvideo");
+	Типы.Вставить(".movie",    "video/x-sgi-movie");
+	Типы.Вставить(".smv",      "video/x-smv");
+	Типы.Вставить(".ice",      "x-conference/x-cooltalk");
+	
+	Возврат Типы;
+	
+КонецФункции
+
+Функция _СоответствиеMimeTypes() 
 
 	Типы = Новый Соответствие;
 	
@@ -1031,6 +2187,10 @@
 			Объект.ApiToken = ВыбранноеЗначение.ApiToken;
 		ИначеЕсли ВыбранноеЗначение.ИмяФормы = "ВыборСсылкиНаФайл" Тогда
 			ВыбратьСсылкуДляОтправкиСервер(ВыбранноеЗначение.АдресФайла, ВыбранноеЗначение.ИмяФайла);
+		ИначеЕсли ВыбранноеЗначение.ИмяФормы = "ВыборКонтакта" Тогда
+			ВыбратьКонтакт(ВыбранноеЗначение.Телефон, ВыбранноеЗначение.Имя, ВыбранноеЗначение.Фамилия, ВыбранноеЗначение.Отчество, ВыбранноеЗначение.Компания);
+		ИначеЕсли ВыбранноеЗначение.ИмяФормы = "ВыборГеолокации" Тогда
+			ВыбратьГеолокацию(ВыбранноеЗначение.НазваниеЛокации, ВыбранноеЗначение.Адрес, ВыбранноеЗначение.Широта, ВыбранноеЗначение.Долгота);
 		КонецЕсли;
 	КонецЕсли;
 КонецПроцедуры
@@ -1040,38 +2200,29 @@
 #Область ОбработчикиРеквизитовКомандФормы
 
 &НаКлиенте
-Процедура ПолучитьКонтакты(Команда)
-	КомандаПолучитьКонтакты();
-КонецПроцедуры
-
-&НаКлиенте
-Процедура ПроверитьНаличиеWhatsApp(Команда)
-	КомандаПроверитьНаличиеWhatsApp();
-КонецПроцедуры
-
-&НаКлиенте
-Процедура ПолучитьАватарКонтакта(Команда)
-	КомандаПолучитьАватарКонтакта();
-КонецПроцедуры
-
-&НаКлиенте
-Процедура ПолучитьИнформациюОбУстройстве(Команда)
-	КомандаПолучитьИнформациюОбУстройстве();
-КонецПроцедуры
-
-&НаКлиенте
 Процедура ОтметитьЧатПрочитанным(Команда)
 	КомандаОтметитьЧатПрочитанным();
 КонецПроцедуры
 
+#Область Группы
+
 &НаКлиенте
-Процедура ВыйтиИзГруппы(Команда)
-	КомандаВыйтиИзГруппы();
+Процедура СоздатьГруппу(Команда)
+	КомандаСоздатьГруппу();
 КонецПроцедуры
 
 &НаКлиенте
-Процедура ОтозватьПраваАдминистратораГруппы(Команда)
-	КомандаОтозватьПраваАдминистратораГруппы();
+Процедура ИзменитьИмяГруппы(Команда)
+	КомандаИзменитьИмяГруппы();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура УстановитьФотоГруппы(Команда)
+	
+	Диалог = Новый ДиалогВыбораФайла(РежимДиалогаВыбораФайла.Открытие);
+	Оповещение = Новый ОписаниеОповещения("ВыбратьФотоДляАватараГруппы", ЭтотОбъект);
+	Диалог.Показать(Оповещение);
+	
 КонецПроцедуры
 
 &НаКлиенте
@@ -1095,13 +2246,22 @@
 КонецПроцедуры
 
 &НаКлиенте
-Процедура СоздатьГруппу(Команда)
-	КомандаСоздатьГруппу();
+Процедура ОтозватьПраваАдминистратораГруппы(Команда)
+	КомандаОтозватьПраваАдминистратораГруппы();
 КонецПроцедуры
 
 &НаКлиенте
-Процедура ИзменитьИмяГруппы(Команда)
-	КомандаИзменитьИмяГруппы();
+Процедура ВыйтиИзГруппы(Команда)
+	КомандаВыйтиИзГруппы();
+КонецПроцедуры
+
+#КонецОбласти
+
+#Область Очереди
+
+&НаКлиенте
+Процедура ПолучитьОчередьСообщенийКОтправке(Команда)
+	КомандаПолучитьОчередьСообщенийКОтправке();
 КонецПроцедуры
 
 &НаКлиенте
@@ -1109,10 +2269,7 @@
 	КомандаОчиститьОчередьСообщенийКОтправке();
 КонецПроцедуры
 
-&НаКлиенте
-Процедура ПолучитьОчередьСообщенийКОтправке(Команда)
-	КомандаПолучитьОчередьСообщенийКОтправке();
-КонецПроцедуры
+#КОнецОбласти
 
 &НаКлиенте
 Процедура ПолучитьЖурналОтправленныхСообщений(Команда)
@@ -1122,6 +2279,16 @@
 &НаКлиенте
 Процедура ПолучитьЖурналВходящихСообщений(Команда)
 	КомандаПолучитьЖурналВходящихСообщений();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ПолучитьИсториюСообщенийЧата(Команда)
+	КомандаПолучитьИсториюСообщенийЧата();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ПолучитьСообщениеЧата(Команда)
+	КомандаПолучитьСообщениеЧата();
 КонецПроцедуры
 
 &НаКлиенте
@@ -1180,7 +2347,7 @@
 Процедура ОтправитьСообщение(Команда)
 	
 	Если Не ЗначениеЗаполнено(НомерТелефона)
-		И Не ЗначениеЗаполнено(ИдЧата) Тогда
+		И Не ЗначениеЗаполнено(ПараметрИдЧата) Тогда
 		Если ПереключательТипаЧата = 1 Тогда
 			Сообщить("ИД чата не заполнен");	
 		Иначе
@@ -1237,10 +2404,39 @@
 	
 КонецПроцедуры
 
+
+#Область Отправка
+
+&НаКлиенте
+Процедура ОтправитьКонтакт(Команда)
+	ОткрытьФормуОбработки("ВыборКонтакта");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ОтправитьГеолокацию(Команда)
+	ОткрытьФормуОбработки("ВыборГеолокации");
+КонецПроцедуры
+
 &НаКлиенте
 Процедура ОтправитьФайл(Команда)
 	Диалог = Новый ДиалогВыбораФайла(РежимДиалогаВыбораФайла.Открытие);
 	Оповещение = Новый ОписаниеОповещения("ВыбратьФайлДляОтправки", ЭтотОбъект);
+	Диалог.Показать(Оповещение);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ЗагрузитьФайл(Команда)
+	Диалог = Новый ДиалогВыбораФайла(РежимДиалогаВыбораФайла.Открытие);
+	ОтправитьСсылку = Ложь;
+	Оповещение = Новый ОписаниеОповещения("ВыбратьФайлДляЗагрузки", ЭтотОбъект, ОтправитьСсылку);
+	Диалог.Показать(Оповещение);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ЗагрузитьФайлИОтправитьСсылку(Команда)
+	Диалог = Новый ДиалогВыбораФайла(РежимДиалогаВыбораФайла.Открытие);
+	ОтправитьСсылку = Истина;
+	Оповещение = Новый ОписаниеОповещения("ВыбратьФайлДляЗагрузки", ЭтотОбъект, ОтправитьСсылку);
 	Диалог.Показать(Оповещение);
 КонецПроцедуры
 
@@ -1250,22 +2446,11 @@
 КонецПроцедуры
 
 &НаКлиенте
-Процедура СсылкаОтправитьТекстНажатие(Элемент)
-	Оповещение = Новый ОписаниеОповещения("ЗавершитьЗапускПриложенияGR", ЭтотОбъект);
-	НачатьЗапускПриложения(Оповещение, "https://green-api.com/docs/api/sending/SendMessage/");
+Процедура ПереслатьСообщение(Команда)
+	КомандаПереслатьСообщение();
 КонецПроцедуры
 
-&НаКлиенте
-Процедура СсылкаОтправитьФайлНажатие(Элемент)
-	Оповещение = Новый ОписаниеОповещения("ЗавершитьЗапускПриложенияGR", ЭтотОбъект);	
-	НачатьЗапускПриложения(Оповещение, "https://green-api.com/docs/api/sending/SendFileByUpload/");
-КонецПроцедуры
-
-&НаКлиенте
-Процедура СсылкаОтправитьФайлПоСсылкеНажатие(Элемент)
-	Оповещение = Новый ОписаниеОповещения("ЗавершитьЗапускПриложенияGR", ЭтотОбъект);	
-	НачатьЗапускПриложения(Оповещение, "https://green-api.com/docs/api/sending/SendFileByUrl/");
-КонецПроцедуры
+#КонецОбласти
 
 &НаКлиенте
 Процедура КнопкаПомощник(Команда)
@@ -1281,9 +2466,78 @@
 
 &НаКлиенте
 Процедура УстановитьФотоПрофиля(Команда)
+
 	Диалог = Новый ДиалогВыбораФайла(РежимДиалогаВыбораФайла.Открытие);
 	Оповещение = Новый ОписаниеОповещения("ВыбратьФотоДляАватара", ЭтотОбъект);
 	Диалог.Показать(Оповещение);
+
+КонецПроцедуры
+
+#Область Устройство
+
+&НаКлиенте
+Процедура ПолучитьИнформациюОбУстройстве(Команда)
+	КомандаПолучитьИнформациюОбУстройстве();
+КонецПроцедуры
+
+#КонецОбласти
+
+#Область СервисныеМетоды
+
+&НаКлиенте
+Процедура ПроверитьНаличиеWhatsApp(Команда)
+	КомандаПроверитьНаличиеWhatsApp();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ПолучитьКонтакты(Команда)
+	КомандаПолучитьКонтакты();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ПолучитьАватарКонтакта(Команда)
+	КомандаПолучитьАватарКонтакта();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ПолучитьИнфоКонтакта(Команда)
+	КомандаПолучитьИнфоКонтакта();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура УдалитьСообщение(Команда)
+	КомандаУдалитьСообщение();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура АрхивироватьЧат(Команда)
+	КомандаАрхивироватьЧат();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура РазархивироватьЧат(Команда)
+	КомандаРазархивироватьЧат();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура УстановитьИсчезающиеСообщения(Команда)
+	
+	Если ПараметрВремяЖизни <> 0 И
+		ПараметрВремяЖизни <> 86400 И
+		ПараметрВремяЖизни <> 604800 И
+		ПараметрВремяЖизни <> 7776000 Тогда
+		Сообщить("Параметр ""Время жизни"" может содержать одно из следующих значений - 0 (выключено), 86400 (24 часа), 604800 (7 дней), 7776000 (90 дней)");
+		Возврат;
+	КонецЕсли;
+	
+	КомандаУстановитьИсчезающиеСообщения();
+КонецПроцедуры
+
+#КонецОбласти
+
+&НаКлиенте
+Процедура СкачатьФайлИзВходящегоУведомления(Команда)
+	КомандаСкачатьФайлИзВходящегоУведомления();
 КонецПроцедуры
 
 #КонецОбласти
@@ -1308,10 +2562,262 @@
 	
 КонецПроцедуры
 
+#КонецОбласти
+
+#Область Документация
+
 &НаКлиенте
-Процедура ПолучитьИсториюСообщенийЧата(Команда)
-	КомандаПолучитьИсториюСообщенийЧата();
+Процедура ОткрытьСсылку(ВебСсылка)
+	Оповещение = Новый ОписаниеОповещения("ЗавершитьЗапускПриложенияGR", ЭтотОбъект);
+	НачатьЗапускПриложения(Оповещение, ВебСсылка);
 КонецПроцедуры
 
+#Область Отправка
+
+&НаКлиенте
+Процедура СсылкаОтправитьТекстНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/sending/SendMessage/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаОтправитьКонтактНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/sending/SendContact/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаОтправитьГеолокациюНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/sending/SendLocation/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаОтправитьФайлНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/sending/SendFileByUpload/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаОтправитьФайлПоСсылкеНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/sending/SendFileByUrl/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаЗагрузитьФайлНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/sending/UploadFile/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПереслатьСообщенияНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/sending/ForwardMessages/");
+КонецПроцедуры
+
+#КонецОбласти
+
+#Область Получение
+
+&НаКлиенте
+Процедура СсылкаФорматВходящихУведомленийНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/receiving/notifications-format/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьУведомлениеНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/receiving/technology-http-api/ReceiveNotification/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаУдалитьУведомлениеНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/receiving/technology-http-api/DeleteNotification/");
+КонецПроцедуры
+
+
+&НаКлиенте
+Процедура СсылкаСкачатьФайлИзВходящегоУведомленияНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/receiving/files/DownloadFile/");
+КонецПроцедуры
+
+
+#КонецОбласти
+
+#Область Журналы
+
+&НаКлиенте
+Процедура СсылкаПолучитьЖурналВходящихСообщенийНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/journals/LastIncomingMessages/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьЖурналИсходящихСообщенийНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/journals/LastOutgoingMessages/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьИсториюСообщенийЧатаНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/journals/GetChatHistory/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьСообщениеЧатаНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/journals/GetMessage/");
+КонецПроцедуры
+
+#КонецОбласти
+
+#Область Очереди
+
+&НаКлиенте
+Процедура СсылкаПолучитьОчередьСообщенийКОтправкеНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/queues/ShowMessagesQueue/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаОчиститьОчередьСообщенийКОтправкеНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/queues/ClearMessagesQueue/");
+КонецПроцедуры
+
+#КонецОбласти
+
+#Область Группы
+
+&НаКлиенте
+Процедура СсылкаСоздатьГруппуНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/groups/CreateGroup/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаИзменитьИмяГруппыНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/groups/UpdateGroupName/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаУстановитьФотоГруппыНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/groups/SetGroupPicture/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьИнформациюОГруппеНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/groups/GetGroupData/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаДобавитьУчастникаВГруппуНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/groups/AddGroupParticipant/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаУдалитьУчастникаИзГруппыНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/groups/RemoveGroupParticipant/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаНазначитьПраваАдминистратораГруппыНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/groups/RemoveAdmin/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаОтозватьПраваАдминистратораГруппыНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/service/CheckWhatsapp/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаВыйтиИзГруппыНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/groups/LeaveGroup/");
+КонецПроцедуры
+
+#КонецОбласти
+
+#Область ОтметкаПрочтения
+
+&НаКлиенте
+Процедура СсылкаОтметитьЧатПрочитаннымНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/marks/ReadChat/");
+КонецПроцедуры
+
+#КонецОбласти
+
+#Область Устройство
+
+&НаКлиенте
+Процедура СсылкаПолучитьИнформациюОбУстройствеНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/phone/GetDeviceInfo/");
+КонецПроцедуры
+
+#КонецОбласти
+
+#Область Аккаунт
+
+&НаКлиенте
+Процедура СсылкаПолучитьНастройкиАккаунтаНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/account/GetSettings/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьСостояниеАккаунтаНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/account/GetStateInstance/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПерезапуститьАккаунтНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/account/Reboot/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаРазлогинитьАккаунтНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/account/Logout/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаУстановитьФотоПрофиляНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/account/SetProfilePicture/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьQRКодНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/account/QR/");
+КонецПроцедуры
+
+#КонецОбласти
+
+#Область Сервис
+
+&НаКлиенте
+Процедура СсылкаПроверитьНаличиеWhatsAppНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/service/CheckWhatsapp/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьИнфоКонтактаНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/service/GetContactInfo/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьАватарКонтактаНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/service/GetAvatar/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаПолучитьКонтактыНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/service/GetContacts/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаУдалитьСообщениеНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/service/deleteMessage/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаАрхивироватьЧатНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/service/archiveChat/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаРазархивироватьЧатНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/service/unarchiveChat/");
+КонецПроцедуры
+
+&НаКлиенте
+Процедура СсылкаУстановитьИзчезающиеСообщенияНажатие(Элемент)
+	ОткрытьСсылку("https://green-api.com/docs/api/service/SetDisappearingChat/");
+КонецПроцедуры
+
+#КонецОбласти
 
 #КонецОбласти
