@@ -749,6 +749,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<CommandName>Form.Command.ОтправитьГеолокацию</CommandName>
 													<ExtendedTooltip name="ОтправитьГеолокациюРасширеннаяПодсказка" id="534"/>
 												</Button>
+												<Button name="ОтправитьОпрос" id="752">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОтправитьОпрос</CommandName>
+													<ExtendedTooltip name="ОтправитьОпросРасширеннаяПодсказка" id="753"/>
+												</Button>
 												<Button name="ОтправитьФайл" id="179">
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.ОтправитьФайл</CommandName>
@@ -846,6 +851,20 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<ExtendedTooltip name="СсылкаОтправитьГеолокациюРасширеннаяПодсказка" id="540"/>
 													<Events>
 														<Event name="Click">СсылкаОтправитьТекстНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="СсылкаОтправитьОпрос" id="754">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отправить опрос</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="СсылкаОтправитьОпросКонтекстноеМеню" id="755"/>
+													<ExtendedTooltip name="СсылкаОтправитьОпросРасширеннаяПодсказка" id="756"/>
+													<Events>
+														<Event name="Click">СсылкаОтправитьОпросНажатие</Event>
 													</Events>
 												</LabelDecoration>
 												<LabelDecoration name="СсылкаОтправитьФайл" id="198">
@@ -4121,6 +4140,21 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СкачатьФайлИзВходящегоУведомления</Action>
+		</Command>
+		<Command name="ОтправитьОпрос" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить опрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить опрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьОпрос</Action>
 		</Command>
 	</Commands>
 </Form>
