@@ -45,7 +45,7 @@
 		</row>
 	</rowsItem>
 	<rowsItem>
-		<index>45</index>
+		<index>44</index>
 		<row>
 			<c>
 				<i>5</i>
@@ -58,8 +58,8 @@
 	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>1</defaultFormatIndex>
-	<height>46</height>
-	<vgRows>46</vgRows>
+	<height>45</height>
+	<vgRows>45</vgRows>
 	<format>
 		<width>72</width>
 	</format>
