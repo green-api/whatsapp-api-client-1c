@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.18">
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.11">
 	<ConfigVersions>
-		<Metadata name="Configuration.Конфигурация" id="a7dc518d-fa86-4892-a7af-ba2aca88ad30" configVersion="adcc7338549af14bb21844dae8363ea300000000"/>
-		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="53c341e0-4783-470a-8069-53c443833285.8" configVersion="3630c18e956b5c4db69773cc28ca2de900000000"/>
-		<Metadata name="DataProcessor.GreenAPI" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561" configVersion="b036e99d1fce7747a98bd2876ca78aee00000000">
+		<Metadata name="Configuration.Конфигурация" id="a7dc518d-fa86-4892-a7af-ba2aca88ad30" configVersion="92ef58a5eff69f44aeac7825f8ff351e00000000"/>
+		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="53c341e0-4783-470a-8069-53c443833285.8" configVersion="d3e3fa8988a3e744aea6d2d8bef29e5c00000000"/>
+		<Metadata name="DataProcessor.GreenAPI" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561" configVersion="4bef1c23091f8a439cffe01fb435664f00000000">
 			<Metadata name="DataProcessor.GreenAPI.Attribute.ТекстПолученноеСообщение" id="260d31c6-e4f2-4778-bd5a-fd2d1bbfba7f"/>
 			<Metadata name="DataProcessor.GreenAPI.Attribute.ApiToken" id="40c96af2-b161-4acc-a444-6eacfde9aaad"/>
 			<Metadata name="DataProcessor.GreenAPI.Attribute.IdInstance" id="41db95e2-482b-4e81-93af-a82b704ccc02"/>
@@ -12,31 +12,31 @@
 			<Metadata name="DataProcessor.GreenAPI.Attribute.PartnerToken" id="696cf025-20dc-460b-8322-c126bd2072a3"/>
 			<Metadata name="DataProcessor.GreenAPI.Attribute.ПолученФайл" id="860dfc21-c910-4bf6-95ff-ca71dd975667"/>
 		</Metadata>
-		<Metadata name="DataProcessor.GreenAPI.Form.ВыборГеолокации" id="aafcbbf3-afec-4a4b-80d1-09aa8c717b24" configVersion="9952b42f5336644f9e7e06b5d52afffe00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.ВыборГеолокации.Form" id="aafcbbf3-afec-4a4b-80d1-09aa8c717b24.0" configVersion="e7a2e965673a954b823cb2ad5e3f11ac00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.ВыборКонтакта" id="ebc099c2-d34a-4724-8178-94e237ff9dba" configVersion="b8fb77420b59d246b02e3fb6cd9b05f900000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.ВыборКонтакта.Form" id="ebc099c2-d34a-4724-8178-94e237ff9dba.0" configVersion="07bc6ef4faab6a4e9924e903bcea72cf00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.ВыборСсылкиНаФайл" id="439b9c39-938c-4872-b079-9520e74b8473" configVersion="ba10355d8dd5da4aad950a7808a499e700000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.ВыборСсылкиНаФайл.Form" id="439b9c39-938c-4872-b079-9520e74b8473.0" configVersion="9e4a94a5f7fd6c4f966cf4ce297cf1dd00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.ПомощникПодключения" id="21af060b-36d6-4144-aca7-290e47c884b1" configVersion="22983479a2e2d043bbf72add59e5b50e00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.ПомощникПодключения.Form" id="21af060b-36d6-4144-aca7-290e47c884b1.0" configVersion="42e93bb35354f94da17c525323143cc300000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.СоздатьОпрос" id="a921d7a8-d65c-4bab-9473-77d49a2b3071" configVersion="9a5eed3febbe53418bb3cfb0d4f8645b00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.СоздатьОпрос.Form" id="a921d7a8-d65c-4bab-9473-77d49a2b3071.0" configVersion="d3dc109c86343a488b8392ef8c3cf28800000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.Форма" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098" configVersion="7af146e5cb2fe842a9374f99ec0ad23e00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Form.Форма.Form" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098.0" configVersion="9b12144b46918843a4e982d14d4f345400000000"/>
-		<Metadata name="DataProcessor.GreenAPI.ObjectModule" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561.0" configVersion="ccbca43960b66d448fc5f8347745799a00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет" id="48c29a2f-a511-4612-86ed-2ccc82cc294b" configVersion="13d5ab66bbce954c9067e53165cf215a00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет.Template" id="48c29a2f-a511-4612-86ed-2ccc82cc294b.0" configVersion="6dfb6b757c743d4aae689cb623c9e05b00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.ВыборАккаунта" id="e975b9da-c08a-4e19-bdac-abe7ef7db7b3" configVersion="bd6dea8343d16b49971eee7d21a5785700000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.ВыборАккаунта.Template" id="e975b9da-c08a-4e19-bdac-abe7ef7db7b3.0" configVersion="2bf3f1887c446a4cae13e42ef3c75dff00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.ДанныеАккаунта" id="cbf18ee8-d3d4-44ba-b668-8ab14a46b546" configVersion="bb2c78a38a34d340bf0f04d357a7051700000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.ДанныеАккаунта.Template" id="cbf18ee8-d3d4-44ba-b668-8ab14a46b546.0" configVersion="1b804f6fa20a904cb2db39366d75142b00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.ИконкаWhatsApp" id="f16942f7-c13c-4bb8-888f-98ec1d80b35d" configVersion="fd7d136f558aa647b67d63456ea0c8cc00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.ИконкаWhatsApp.Template" id="f16942f7-c13c-4bb8-888f-98ec1d80b35d.0" configVersion="87f4e527d24ade48ba3ae6afef97913e00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.ИконкаФиниш" id="19009793-398e-48c9-a5f1-2d9f4784f736" configVersion="fb1622caa028694080e1bfb5627e744300000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.ИконкаФиниш.Template" id="19009793-398e-48c9-a5f1-2d9f4784f736.0" configVersion="4cfa34b5ce3aa949ba69901cfac812cd00000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.СканQR" id="6b2f2ecd-6863-4b42-90d4-be5d23472c8c" configVersion="e4aea97862f9eb4bb8cc94bbc41e9ee300000000"/>
-		<Metadata name="DataProcessor.GreenAPI.Template.СканQR.Template" id="6b2f2ecd-6863-4b42-90d4-be5d23472c8c.0" configVersion="d6d6a90840c86f4195b36aaa338a51a500000000"/>
-		<Metadata name="Language.Русский" id="4c15b64d-a55e-47ed-b29e-0a8e70ab6712" configVersion="e9590a718c7b614883bd05081d9bb23700000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.ВыборГеолокации" id="aafcbbf3-afec-4a4b-80d1-09aa8c717b24" configVersion="363879a4908d5f4e9e6c278129d966f000000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.ВыборГеолокации.Form" id="aafcbbf3-afec-4a4b-80d1-09aa8c717b24.0" configVersion="b84fbc8d08b91547b1919f10b279301800000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.ВыборКонтакта" id="ebc099c2-d34a-4724-8178-94e237ff9dba" configVersion="33a6f285095f2142a1abc68ffdcf277d00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.ВыборКонтакта.Form" id="ebc099c2-d34a-4724-8178-94e237ff9dba.0" configVersion="cf3f90a928bfa54c8a7f3d43bca4c6ef00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.ВыборСсылкиНаФайл" id="439b9c39-938c-4872-b079-9520e74b8473" configVersion="f34c964271b2e14e8022f369214fcc5700000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.ВыборСсылкиНаФайл.Form" id="439b9c39-938c-4872-b079-9520e74b8473.0" configVersion="dafb2889fe73aa419118587099287d5900000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.ПомощникПодключения" id="21af060b-36d6-4144-aca7-290e47c884b1" configVersion="08b7b85c3d622c40a425dc5a80a94d8a00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.ПомощникПодключения.Form" id="21af060b-36d6-4144-aca7-290e47c884b1.0" configVersion="2aa9336fe5b9bb41b9a010cd0c96518500000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.СоздатьОпрос" id="a921d7a8-d65c-4bab-9473-77d49a2b3071" configVersion="4266b9abf05a67419c22fe700a81f19100000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.СоздатьОпрос.Form" id="a921d7a8-d65c-4bab-9473-77d49a2b3071.0" configVersion="15f63d2965840e49bd0b5c1caff5deb700000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.Форма" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098" configVersion="f342615ecf01e34888ac6e505b92646f00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Form.Форма.Form" id="cbac5b2b-5bb0-4fff-9e8f-28d494138098.0" configVersion="c86eba81230e7742b86fb30bdef2adc600000000"/>
+		<Metadata name="DataProcessor.GreenAPI.ObjectModule" id="c7a0c435-ff2f-4f23-b5f8-12c0a0031561.0" configVersion="c37fd6d3622a7242b20e35b9d2717fd500000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет" id="48c29a2f-a511-4612-86ed-2ccc82cc294b" configVersion="51bd966b3201584dabef3104a6a386ff00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.QRМакет.Template" id="48c29a2f-a511-4612-86ed-2ccc82cc294b.0" configVersion="4e26cdddad23224e91a36361b6f0757a00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.ВыборАккаунта" id="e975b9da-c08a-4e19-bdac-abe7ef7db7b3" configVersion="dd9d8f05e4f17d4aa3b859f461f7a00d00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.ВыборАккаунта.Template" id="e975b9da-c08a-4e19-bdac-abe7ef7db7b3.0" configVersion="0a67985659569442a48acf3139ee4cf200000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.ДанныеАккаунта" id="cbf18ee8-d3d4-44ba-b668-8ab14a46b546" configVersion="28f1f37ffb13cf48b4e9c42f33b90b9e00000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.ДанныеАккаунта.Template" id="cbf18ee8-d3d4-44ba-b668-8ab14a46b546.0" configVersion="fce40ca0aa911d4490f2ac4e1cd1f09100000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.ИконкаWhatsApp" id="f16942f7-c13c-4bb8-888f-98ec1d80b35d" configVersion="7822d6224afb8b488d48aedbb0aa607100000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.ИконкаWhatsApp.Template" id="f16942f7-c13c-4bb8-888f-98ec1d80b35d.0" configVersion="9e04a31fa7762847a8b027762a0644d900000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.ИконкаФиниш" id="19009793-398e-48c9-a5f1-2d9f4784f736" configVersion="5c5a39c6153f3641ba5e40d8db78fd5100000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.ИконкаФиниш.Template" id="19009793-398e-48c9-a5f1-2d9f4784f736.0" configVersion="84014a622182d648ba065de79ce348c100000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.СканQR" id="6b2f2ecd-6863-4b42-90d4-be5d23472c8c" configVersion="12936a8f33a21e44bfe06b15cd016b2400000000"/>
+		<Metadata name="DataProcessor.GreenAPI.Template.СканQR.Template" id="6b2f2ecd-6863-4b42-90d4-be5d23472c8c.0" configVersion="570968bdcb290644b5a1618e46c8cf4f00000000"/>
+		<Metadata name="Language.Русский" id="4c15b64d-a55e-47ed-b29e-0a8e70ab6712" configVersion="951862fb64eff445901bf51689d4d1ff00000000"/>
 	</ConfigVersions>
 </ConfigDumpInfo>

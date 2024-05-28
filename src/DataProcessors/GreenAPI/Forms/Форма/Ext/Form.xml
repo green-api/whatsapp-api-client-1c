@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
@@ -12,18 +12,42 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Группа4" id="188">
+		<UsualGroup name="ГруппаОбработка" id="188">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обработка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обработка</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="189"/>
+			<ExtendedTooltip name="ГруппаОбработкаРасширеннаяПодсказка" id="189"/>
 			<ChildItems>
-				<UsualGroup name="Группа3" id="183">
+				<UsualGroup name="ГруппаШапка" id="183">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка</v8:content>
+						</v8:item>
+					</ToolTip>
 					<Width>130</Width>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>#4FAD4F</BackColor>
-					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="184"/>
+					<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="184"/>
 					<ChildItems>
 						<LabelDecoration name="GREENAPI" id="185">
 							<HorizontalStretch>true</HorizontalStretch>
@@ -57,7 +81,6 @@
 					</ToolTip>
 					<Width>130</Width>
 					<HorizontalStretch>false</HorizontalStretch>
-					<PagesRepresentation>TabsOnTop</PagesRepresentation>
 					<ExtendedTooltip name="РазделыРасширеннаяПодсказка" id="2"/>
 					<ChildItems>
 						<Page name="Настройки" id="490">
@@ -88,7 +111,6 @@
 											<v8:content>Детали настроек</v8:content>
 										</v8:item>
 									</ToolTip>
-									<PagesRepresentation>TabsOnTop</PagesRepresentation>
 									<ExtendedTooltip name="ДеталиНастроекРасширеннаяПодсказка" id="493"/>
 									<ChildItems>
 										<Page name="НастройкиВнешние" id="153">
@@ -148,51 +170,142 @@
 													<ContextMenu name="ОписаниеПродолжениеКонтекстноеМеню" id="232"/>
 													<ExtendedTooltip name="ОписаниеПродолжениеРасширеннаяПодсказка" id="233"/>
 												</LabelDecoration>
-												<InputField name="IdInstance" id="19">
-													<DataPath>Объект.IdInstance</DataPath>
+												<LabelDecoration name="ДекорацияПояснениеПодключение" id="972">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<TextColor>style:FieldSelectionBackColor</TextColor>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Поля apiUrl и mediaUrl заполнены универсальными значениями. Для уменьшения времени ответа API и исключения проблем с доступностью хостов рекомендуется использовать значения из &lt;link https://console.green-api.com/instanceList&gt;личного кабинета&lt;/&gt; Вашего инстанса. Значения хостов для Вашего инстанса могут отличаться от значений по умолчанию.</v8:content>
+														</v8:item>
+													</Title>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ContextMenu name="ДекорацияПояснениеПодключениеКонтекстноеМеню" id="973"/>
+													<ExtendedTooltip name="ДекорацияПояснениеПодключениеРасширеннаяПодсказка" id="974"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаПодключение" id="968">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>ID Instance</v8:content>
+															<v8:content>Группа подключение</v8:content>
 														</v8:item>
 													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа подключение</v8:content>
+														</v8:item>
+													</ToolTip>
 													<HorizontalStretch>true</HorizontalStretch>
-													<AutoMarkIncomplete>true</AutoMarkIncomplete>
-													<EditTextUpdate>OnValueChange</EditTextUpdate>
-													<InputHint>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>9999</v8:content>
-														</v8:item>
-													</InputHint>
-													<ContextMenu name="IdInstanceКонтекстноеМеню" id="20"/>
-													<ExtendedTooltip name="IdInstanceРасширеннаяПодсказка" id="21"/>
-													<Events>
-														<Event name="OnChange">IdInstanceПриИзменении</Event>
-													</Events>
-												</InputField>
-												<InputField name="ApiToken" id="16">
-													<DataPath>Объект.ApiToken</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>API Token</v8:content>
-														</v8:item>
-													</Title>
-													<HorizontalStretch>true</HorizontalStretch>
-													<EditTextUpdate>OnValueChange</EditTextUpdate>
-													<InputHint>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>123fdws3214t3456g214234171855e0ff3f597f1</v8:content>
-														</v8:item>
-													</InputHint>
-													<ContextMenu name="ApiTokenКонтекстноеМеню" id="17"/>
-													<ExtendedTooltip name="ApiTokenРасширеннаяПодсказка" id="18"/>
-													<Events>
-														<Event name="OnChange">ApiTokenПриИзменении</Event>
-													</Events>
-												</InputField>
+													<Group>Vertical</Group>
+													<Representation>StrongSeparation</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПодключениеРасширеннаяПодсказка" id="969"/>
+													<ChildItems>
+														<UsualGroup name="ГруппапараметрыХостов" id="978">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группапараметры хостов</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группапараметры хостов</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппапараметрыХостовРасширеннаяПодсказка" id="979"/>
+															<ChildItems>
+																<InputField name="apiUrl_Подключение" id="962">
+																	<DataPath>Объект.apiUrl</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>apiUrl</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="apiUrl_ПодключениеКонтекстноеМеню" id="963"/>
+																	<ExtendedTooltip name="apiUrl_ПодключениеРасширеннаяПодсказка" id="964"/>
+																	<Events>
+																		<Event name="TextEditEnd">apiUrlОкончаниеВводаТекста</Event>
+																	</Events>
+																</InputField>
+																<Button name="УстановитьСтандартныеНастройкиПараметрыХостов" id="769">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.УстановитьСтандартныеНастройкиПараметрыХостов</CommandName>
+																	<TextColor>#FFFFFF</TextColor>
+																	<BackColor>#49B349</BackColor>
+																	<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+																	<ExtendedTooltip name="УстановитьСтандартныеНастройкиПараметрыХостовРасширеннаяПодсказка" id="770"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+														<InputField name="mediaUrl_Подключение" id="965">
+															<DataPath>Объект.mediaUrl</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>mediaUrl</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="mediaUrl_ПодключениеКонтекстноеМеню" id="966"/>
+															<ExtendedTooltip name="mediaUrl_ПодключениеРасширеннаяПодсказка" id="967"/>
+															<Events>
+																<Event name="TextEditEnd">mediaUrlОкончаниеВводаТекста</Event>
+															</Events>
+														</InputField>
+														<InputField name="IdInstance" id="19">
+															<DataPath>Объект.IdInstance</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>idInstance</v8:content>
+																</v8:item>
+															</Title>
+															<HorizontalStretch>true</HorizontalStretch>
+															<AutoMarkIncomplete>true</AutoMarkIncomplete>
+															<EditTextUpdate>OnValueChange</EditTextUpdate>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>9999999999</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="IdInstanceКонтекстноеМеню" id="20"/>
+															<ExtendedTooltip name="IdInstanceРасширеннаяПодсказка" id="21"/>
+															<Events>
+																<Event name="OnChange">IdInstanceПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="ApiToken" id="16">
+															<DataPath>Объект.ApiToken</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>apiTokenInstance</v8:content>
+																</v8:item>
+															</Title>
+															<HorizontalStretch>true</HorizontalStretch>
+															<EditTextUpdate>OnValueChange</EditTextUpdate>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>123fdws3214t3456g214234171855e0ff3f597f1</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="ApiTokenКонтекстноеМеню" id="17"/>
+															<ExtendedTooltip name="ApiTokenРасширеннаяПодсказка" id="18"/>
+															<Events>
+																<Event name="OnChange">ApiTokenПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 												<LabelDecoration name="ОписаниеНачалоКонец" id="158">
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
@@ -530,49 +643,378 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												</LabelDecoration>
 											</ChildItems>
 										</Page>
-										<Page name="ПараметрыХостов" id="761">
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</Page>
+						<Page name="Аккаунт" id="242">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аккаунт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аккаунт</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="АккаунтРасширеннаяПодсказка" id="243"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗапросы" id="251">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа запросы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа запросы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>30</Width>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗапросыРасширеннаяПодсказка" id="252"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаАккаунтКоманды" id="939">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Параметры хостов</v8:content>
+													<v8:content>Группа аккаунт команды</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Параметры хостов</v8:content>
+													<v8:content>Группа аккаунт команды</v8:content>
 												</v8:item>
 											</ToolTip>
-											<ExtendedTooltip name="ПараметрыХостовРасширеннаяПодсказка" id="762"/>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАккаунтКомандыРасширеннаяПодсказка" id="940"/>
 											<ChildItems>
-												<InputField name="apiUrl" id="763">
-													<DataPath>Объект.apiUrl</DataPath>
-													<ContextMenu name="apiUrlКонтекстноеМеню" id="764"/>
-													<ExtendedTooltip name="apiUrlРасширеннаяПодсказка" id="765"/>
-													<Events>
-														<Event name="TextEditEnd">apiUrlОкончаниеВводаТекста</Event>
-													</Events>
-												</InputField>
-												<InputField name="mediaUrl" id="766">
-													<DataPath>Объект.mediaUrl</DataPath>
-													<ContextMenu name="mediaUrlКонтекстноеМеню" id="767"/>
-													<ExtendedTooltip name="mediaUrlРасширеннаяПодсказка" id="768"/>
-													<Events>
-														<Event name="TextEditEnd">mediaUrlОкончаниеВводаТекста</Event>
-													</Events>
-												</InputField>
-												<Button name="УстановитьСтандартныеНастройкиПараметрыХостов" id="769">
+												<Button name="ПолучитьНастройкиАккаунта" id="249">
 													<Type>UsualButton</Type>
-													<CommandName>Form.Command.УстановитьСтандартныеНастройкиПараметрыХостов</CommandName>
+													<CommandName>Form.Command.ПолучитьНастройкиАккаунта</CommandName>
 													<TextColor>#FFFFFF</TextColor>
 													<BackColor>#49B349</BackColor>
 													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-													<ExtendedTooltip name="УстановитьСтандартныеНастройкиПараметрыХостовРасширеннаяПодсказка" id="770"/>
+													<ExtendedTooltip name="ПолучитьНастройкиАккаунтаРасширеннаяПодсказка" id="250"/>
+												</Button>
+												<Button name="ПолучитьСостояниеАккаунта" id="267">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьСостояниеАккаунта</CommandName>
+													<TextColor>#FFFFFF</TextColor>
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+													<ExtendedTooltip name="ПолучитьСостояниеАккаунтаРасширеннаяПодсказка" id="268"/>
+												</Button>
+												<Button name="ПерезапуститьАккаунт" id="271">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПерезапуститьАккаунт</CommandName>
+													<TextColor>#FFFFFF</TextColor>
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+													<ExtendedTooltip name="ПерезапуститьАккаунтРасширеннаяПодсказка" id="272"/>
+												</Button>
+												<Button name="РазлогинитьАккаунт" id="275">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.РазлогинитьАккаунт</CommandName>
+													<TextColor>#FFFFFF</TextColor>
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+													<ExtendedTooltip name="РазлогинитьАккаунтРасширеннаяПодсказка" id="276"/>
+												</Button>
+												<Button name="УстановитьАватар" id="497">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.УстановитьФотоПрофиля</CommandName>
+													<TextColor>#FFFFFF</TextColor>
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+													<ExtendedTooltip name="УстановитьАватарРасширеннаяПодсказка" id="498"/>
 												</Button>
 											</ChildItems>
-										</Page>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПолучитьQRКод" id="277">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить QR Код</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа получить QRКод</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучитьQRКодРасширеннаяПодсказка" id="278"/>
+											<ChildItems>
+												<Button name="ПолучитьQRКод" id="279">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьQRКод</CommandName>
+													<TextColor>#FFFFFF</TextColor>
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Получить QR код</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ПолучитьQRКодРасширеннаяПодсказка" id="280"/>
+												</Button>
+												<HTMLDocumentField name="QRКод" id="281">
+													<DataPath>QRКод</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>45</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>12</Height>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<ContextMenu name="QRКодКонтекстноеМеню" id="282"/>
+													<ExtendedTooltip name="QRКодРасширеннаяПодсказка" id="283"/>
+												</HTMLDocumentField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПолучитьРегистрационныйКод" id="1054">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа получить регистрационный код</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>StrongSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучитьРегистрационныйКодРасширеннаяПодсказка" id="1055"/>
+											<ChildItems>
+												<InputField name="НомерТелефонаАккаунт" id="1056">
+													<DataPath>НомерТелефона</DataPath>
+													<HorizontalAlign>Left</HorizontalAlign>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧГ=0</v8:content>
+														</v8:item>
+													</EditFormat>
+													<ContextMenu name="НомерТелефонаАккаунтКонтекстноеМеню" id="1057"/>
+													<ExtendedTooltip name="НомерТелефонаАккаунтРасширеннаяПодсказка" id="1058"/>
+												</InputField>
+												<Button name="ПолучитьРегистрационныйКод" id="1049">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьРегистрационныйКод</CommandName>
+													<TextColor>#FFFFFF</TextColor>
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+													<ExtendedTooltip name="ПолучитьРегистрационныйКодРасширеннаяПодсказка" id="1050"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПолучитьИнформациюАккаунта" id="1059">
+											<Representation>StrongSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПолучитьИнформациюАккаунтаРасширеннаяПодсказка" id="1060"/>
+											<ChildItems>
+												<Button name="ПолучитьИнформациюАккаунт" id="1061">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПолучитьИнформациюАккаунт</CommandName>
+													<TextColor>#FFFFFF</TextColor>
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+													<ExtendedTooltip name="ПолучитьИнформациюАккаунтРасширеннаяПодсказка" id="1062"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
-								</Pages>
+								</UsualGroup>
+								<UsualGroup name="ГруппаАккаунтОтвет" id="937">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ответ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа аккаунт ответ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаАккаунтОтветРасширеннаяПодсказка" id="938"/>
+									<ChildItems>
+										<InputField name="КонсольАккаунт" id="290">
+											<DataPath>Консоль</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ответ</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="КонсольАккаунтКонтекстноеМеню" id="291"/>
+											<ExtendedTooltip name="КонсольАккаунтРасширеннаяПодсказка" id="292"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаАккаунтДокументация" id="666">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа аккаунт документация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа аккаунт документация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>30</Width>
+									<Representation>StrongSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаАккаунтДокументацияРасширеннаяПодсказка" id="667"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьДокументацияАккаунт" id="594">
+											<Font ref="style:LargeTextFont" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Документация</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьДокументацияАккаунтКонтекстноеМеню" id="595"/>
+											<ExtendedTooltip name="НадписьДокументацияАккаунтРасширеннаяПодсказка" id="596"/>
+										</LabelDecoration>
+										<LabelDecoration name="СсылкаПолучитьНастройкиАккаунта" id="597">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить настройки аккаунта</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СсылкаПолучитьНастройкиАккаунтаКонтекстноеМеню" id="598"/>
+											<ExtendedTooltip name="СсылкаПолучитьНастройкиАккаунтаРасширеннаяПодсказка" id="599"/>
+											<Events>
+												<Event name="Click">СсылкаПолучитьНастройкиАккаунтаНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="СсылкаПолучитьСостояниеАккаунта" id="606">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить состояние аккаунта</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СсылкаПолучитьСостояниеАккаунтаКонтекстноеМеню" id="607"/>
+											<ExtendedTooltip name="СсылкаПолучитьСостояниеАккаунтаРасширеннаяПодсказка" id="608"/>
+											<Events>
+												<Event name="Click">СсылкаПолучитьСостояниеАккаунтаНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="СсылкаПерезапуститьАккаунт" id="603">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перезапустить аккаунт</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СсылкаПерезапуститьАккаунтКонтекстноеМеню" id="604"/>
+											<ExtendedTooltip name="СсылкаПерезапуститьАккаунтРасширеннаяПодсказка" id="605"/>
+											<Events>
+												<Event name="Click">СсылкаПерезапуститьАккаунтНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="СсылкаРазлогинитьАккаунт" id="600">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Разлогинить аккаунт</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СсылкаРазлогинитьАккаунтКонтекстноеМеню" id="601"/>
+											<ExtendedTooltip name="СсылкаРазлогинитьАккаунтРасширеннаяПодсказка" id="602"/>
+											<Events>
+												<Event name="Click">СсылкаРазлогинитьАккаунтНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="СсылкаУстановитьФотоПрофиля" id="609">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Установить фото профиля</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СсылкаУстановитьФотоПрофиляКонтекстноеМеню" id="610"/>
+											<ExtendedTooltip name="СсылкаУстановитьФотоПрофиляРасширеннаяПодсказка" id="611"/>
+											<Events>
+												<Event name="Click">СсылкаУстановитьФотоПрофиляНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="СсылкаПолучитьQRКод" id="612">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить QR код</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СсылкаПолучитьQRКодКонтекстноеМеню" id="613"/>
+											<ExtendedTooltip name="СсылкаПолучитьQRКодРасширеннаяПодсказка" id="614"/>
+											<Events>
+												<Event name="Click">СсылкаПолучитьQRКодНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="СсылкаПолучитьРегистрационныйКод" id="1051">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить регистрационный код</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СсылкаПолучитьРегистрационныйКодКонтекстноеМеню" id="1052"/>
+											<ExtendedTooltip name="СсылкаПолучитьРегистрационныйКодРасширеннаяПодсказка" id="1053"/>
+											<Events>
+												<Event name="Click">СсылкаПолучитьНомерТелефонаНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="СсылкаПолучитьИнформациюАккаунта" id="1063">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получить информацию о аккаунте</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СсылкаПолучитьИнформациюАккаунтаКонтекстноеМеню" id="1064"/>
+											<ExtendedTooltip name="СсылкаПолучитьИнформациюАккаунтаРасширеннаяПодсказка" id="1065"/>
+											<Events>
+												<Event name="Click">СсылкаПолучитьИнформациюАккаунтаНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</Page>
 						<Page name="ОтправкаСообщений" id="5">
@@ -727,19 +1169,25 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																			<Title formatted="false">
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>ID чата:</v8:content>
+																					<v8:content>ID группы:</v8:content>
 																				</v8:item>
 																			</Title>
 																			<ContextMenu name="Декорация6КонтекстноеМеню" id="903"/>
 																			<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="904"/>
 																		</LabelDecoration>
-																		<InputField name="ПараметрИдЧата2" id="551">
-																			<DataPath>ПараметрИдЧата</DataPath>
+																		<InputField name="ОтправкаПараметрИдГруппы" id="551">
+																			<DataPath>ПараметрИдГруппы</DataPath>
 																			<TitleLocation>None</TitleLocation>
 																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<HorizontalStretch>true</HorizontalStretch>
-																			<ContextMenu name="ПараметрИдЧата2КонтекстноеМеню" id="552"/>
-																			<ExtendedTooltip name="ПараметрИдЧата2РасширеннаяПодсказка" id="553"/>
+																			<InputHint>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Заполняется в ручную или автоматически после создания группы</v8:content>
+																				</v8:item>
+																			</InputHint>
+																			<ContextMenu name="ОтправкаПараметрИдГруппыКонтекстноеМеню" id="552"/>
+																			<ExtendedTooltip name="ОтправкаПараметрИдГруппыРасширеннаяПодсказка" id="553"/>
 																		</InputField>
 																	</ChildItems>
 																</Page>
@@ -778,7 +1226,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																	<TitleLocation>None</TitleLocation>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<HorizontalStretch>true</HorizontalStretch>
-																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 																	<ContextMenu name="ОтправкаТекстСообщенияКонтекстноеМеню" id="900"/>
 																	<ExtendedTooltip name="ОтправкаТекстСообщенияРасширеннаяПодсказка" id="901"/>
 																</InputField>
@@ -1503,296 +1950,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 								</UsualGroup>
 							</ChildItems>
 						</Page>
-						<Page name="Аккаунт" id="242">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Аккаунт</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Аккаунт</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>AlwaysHorizontal</Group>
-							<ExtendedTooltip name="АккаунтРасширеннаяПодсказка" id="243"/>
-							<ChildItems>
-								<UsualGroup name="ГруппаЗапросы" id="251">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа запросы</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа запросы</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Width>30</Width>
-									<Group>Vertical</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаЗапросыРасширеннаяПодсказка" id="252"/>
-									<ChildItems>
-										<UsualGroup name="ГруппаАккаунтКоманды" id="939">
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа аккаунт команды</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа аккаунт команды</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Group>Vertical</Group>
-											<Representation>StrongSeparation</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаАккаунтКомандыРасширеннаяПодсказка" id="940"/>
-											<ChildItems>
-												<Button name="ПолучитьНастройкиАккаунта" id="249">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПолучитьНастройкиАккаунта</CommandName>
-													<TextColor>#FFFFFF</TextColor>
-													<BackColor>#49B349</BackColor>
-													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-													<ExtendedTooltip name="ПолучитьНастройкиАккаунтаРасширеннаяПодсказка" id="250"/>
-												</Button>
-												<Button name="ПолучитьСостояниеАккаунта" id="267">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПолучитьСостояниеАккаунта</CommandName>
-													<TextColor>#FFFFFF</TextColor>
-													<BackColor>#49B349</BackColor>
-													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-													<ExtendedTooltip name="ПолучитьСостояниеАккаунтаРасширеннаяПодсказка" id="268"/>
-												</Button>
-												<Button name="ПерезапуститьАккаунт" id="271">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПерезапуститьАккаунт</CommandName>
-													<TextColor>#FFFFFF</TextColor>
-													<BackColor>#49B349</BackColor>
-													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-													<ExtendedTooltip name="ПерезапуститьАккаунтРасширеннаяПодсказка" id="272"/>
-												</Button>
-												<Button name="РазлогинитьАккаунт" id="275">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.РазлогинитьАккаунт</CommandName>
-													<TextColor>#FFFFFF</TextColor>
-													<BackColor>#49B349</BackColor>
-													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-													<ExtendedTooltip name="РазлогинитьАккаунтРасширеннаяПодсказка" id="276"/>
-												</Button>
-												<Button name="УстановитьАватар" id="497">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.УстановитьФотоПрофиля</CommandName>
-													<TextColor>#FFFFFF</TextColor>
-													<BackColor>#49B349</BackColor>
-													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-													<ExtendedTooltip name="УстановитьАватарРасширеннаяПодсказка" id="498"/>
-												</Button>
-											</ChildItems>
-										</UsualGroup>
-										<UsualGroup name="ГруппаПолучитьQRКод" id="277">
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Получить QR Код</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа получить QRКод</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Group>Vertical</Group>
-											<Representation>StrongSeparation</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаПолучитьQRКодРасширеннаяПодсказка" id="278"/>
-											<ChildItems>
-												<Button name="ПолучитьQRКод" id="279">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПолучитьQRКод</CommandName>
-													<TextColor>#FFFFFF</TextColor>
-													<BackColor>#49B349</BackColor>
-													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Получить QR код</v8:content>
-														</v8:item>
-													</Title>
-													<ExtendedTooltip name="ПолучитьQRКодРасширеннаяПодсказка" id="280"/>
-												</Button>
-												<HTMLDocumentField name="QRКод" id="281">
-													<DataPath>QRКод</DataPath>
-													<TitleLocation>None</TitleLocation>
-													<Width>36</Width>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<Height>12</Height>
-													<AutoMaxHeight>false</AutoMaxHeight>
-													<ContextMenu name="QRКодКонтекстноеМеню" id="282"/>
-													<ExtendedTooltip name="QRКодРасширеннаяПодсказка" id="283"/>
-												</HTMLDocumentField>
-											</ChildItems>
-										</UsualGroup>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ГруппаАккаунтОтвет" id="937">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ответ</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа аккаунт ответ</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ExtendedTooltip name="ГруппаАккаунтОтветРасширеннаяПодсказка" id="938"/>
-									<ChildItems>
-										<InputField name="КонсольАккаунт" id="290">
-											<DataPath>Консоль</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Ответ</v8:content>
-												</v8:item>
-											</Title>
-											<TitleLocation>None</TitleLocation>
-											<HorizontalStretch>true</HorizontalStretch>
-											<VerticalStretch>true</VerticalStretch>
-											<MultiLine>true</MultiLine>
-											<ContextMenu name="КонсольАккаунтКонтекстноеМеню" id="291"/>
-											<ExtendedTooltip name="КонсольАккаунтРасширеннаяПодсказка" id="292"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ГруппаАккаунтДокументация" id="666">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа аккаунт документация</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа аккаунт документация</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Width>30</Width>
-									<Representation>StrongSeparation</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаАккаунтДокументацияРасширеннаяПодсказка" id="667"/>
-									<ChildItems>
-										<LabelDecoration name="НадписьДокументацияАккаунт" id="594">
-											<Font ref="style:LargeTextFont" kind="StyleItem"/>
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Документация</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="НадписьДокументацияАккаунтКонтекстноеМеню" id="595"/>
-											<ExtendedTooltip name="НадписьДокументацияАккаунтРасширеннаяПодсказка" id="596"/>
-										</LabelDecoration>
-										<LabelDecoration name="СсылкаПолучитьНастройкиАккаунта" id="597">
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Получить настройки аккаунта</v8:content>
-												</v8:item>
-											</Title>
-											<Hyperlink>true</Hyperlink>
-											<ContextMenu name="СсылкаПолучитьНастройкиАккаунтаКонтекстноеМеню" id="598"/>
-											<ExtendedTooltip name="СсылкаПолучитьНастройкиАккаунтаРасширеннаяПодсказка" id="599"/>
-											<Events>
-												<Event name="Click">СсылкаПолучитьНастройкиАккаунтаНажатие</Event>
-											</Events>
-										</LabelDecoration>
-										<LabelDecoration name="СсылкаПолучитьСостояниеАккаунта" id="606">
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Получить состояние аккаунта</v8:content>
-												</v8:item>
-											</Title>
-											<Hyperlink>true</Hyperlink>
-											<ContextMenu name="СсылкаПолучитьСостояниеАккаунтаКонтекстноеМеню" id="607"/>
-											<ExtendedTooltip name="СсылкаПолучитьСостояниеАккаунтаРасширеннаяПодсказка" id="608"/>
-											<Events>
-												<Event name="Click">СсылкаПолучитьСостояниеАккаунтаНажатие</Event>
-											</Events>
-										</LabelDecoration>
-										<LabelDecoration name="СсылкаПерезапуститьАккаунт" id="603">
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Перезапустить аккаунт</v8:content>
-												</v8:item>
-											</Title>
-											<Hyperlink>true</Hyperlink>
-											<ContextMenu name="СсылкаПерезапуститьАккаунтКонтекстноеМеню" id="604"/>
-											<ExtendedTooltip name="СсылкаПерезапуститьАккаунтРасширеннаяПодсказка" id="605"/>
-											<Events>
-												<Event name="Click">СсылкаПерезапуститьАккаунтНажатие</Event>
-											</Events>
-										</LabelDecoration>
-										<LabelDecoration name="СсылкаРазлогинитьАккаунт" id="600">
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Разлогинить аккаунт</v8:content>
-												</v8:item>
-											</Title>
-											<Hyperlink>true</Hyperlink>
-											<ContextMenu name="СсылкаРазлогинитьАккаунтКонтекстноеМеню" id="601"/>
-											<ExtendedTooltip name="СсылкаРазлогинитьАккаунтРасширеннаяПодсказка" id="602"/>
-											<Events>
-												<Event name="Click">СсылкаРазлогинитьАккаунтНажатие</Event>
-											</Events>
-										</LabelDecoration>
-										<LabelDecoration name="СсылкаУстановитьФотоПрофиля" id="609">
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Установить фото профиля</v8:content>
-												</v8:item>
-											</Title>
-											<Hyperlink>true</Hyperlink>
-											<ContextMenu name="СсылкаУстановитьФотоПрофиляКонтекстноеМеню" id="610"/>
-											<ExtendedTooltip name="СсылкаУстановитьФотоПрофиляРасширеннаяПодсказка" id="611"/>
-											<Events>
-												<Event name="Click">СсылкаУстановитьФотоПрофиляНажатие</Event>
-											</Events>
-										</LabelDecoration>
-										<LabelDecoration name="СсылкаПолучитьQRКод" id="612">
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Получить QR код</v8:content>
-												</v8:item>
-											</Title>
-											<Hyperlink>true</Hyperlink>
-											<ContextMenu name="СсылкаПолучитьQRКодКонтекстноеМеню" id="613"/>
-											<ExtendedTooltip name="СсылкаПолучитьQRКодРасширеннаяПодсказка" id="614"/>
-											<Events>
-												<Event name="Click">СсылкаПолучитьQRКодНажатие</Event>
-											</Events>
-										</LabelDecoration>
-									</ChildItems>
-								</UsualGroup>
-							</ChildItems>
-						</Page>
 						<Page name="Журналы" id="284">
 							<Title>
 								<v8:item>
@@ -1949,7 +2106,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<DataPath>ПараметрИдЧата</DataPath>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
-													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 													<ContextMenu name="ПараметрИдЧатаПолучитьСообщениеЧатаКонтекстноеМеню" id="948"/>
 													<ExtendedTooltip name="ПараметрИдЧатаПолучитьСообщениеЧатаРасширеннаяПодсказка" id="949"/>
 												</InputField>
@@ -2336,6 +2492,12 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заполняется в ручную или автоматически после создания группы</v8:content>
+														</v8:item>
+													</InputHint>
 													<ContextMenu name="ПараметрИдГруппыКонтекстноеМеню" id="336"/>
 													<ExtendedTooltip name="ПараметрИдГруппыРасширеннаяПодсказка" id="337"/>
 												</InputField>
@@ -2406,6 +2568,12 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заполняется в ручную или автоматически после создания группы</v8:content>
+														</v8:item>
+													</InputHint>
 													<ContextMenu name="ПараметрИдГруппы1КонтекстноеМеню" id="348"/>
 													<ExtendedTooltip name="ПараметрИдГруппы1РасширеннаяПодсказка" id="349"/>
 												</InputField>
@@ -2435,6 +2603,12 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заполняется в ручную или автоматически после создания группы</v8:content>
+														</v8:item>
+													</InputHint>
 													<ContextMenu name="ПараметрИдГруппы2КонтекстноеМеню" id="363"/>
 													<ExtendedTooltip name="ПараметрИдГруппы2РасширеннаяПодсказка" id="364"/>
 												</InputField>
@@ -2540,6 +2714,12 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<DataPath>ПараметрИдГруппы</DataPath>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заполняется в ручную или автоматически после создания группы</v8:content>
+														</v8:item>
+													</InputHint>
 													<ContextMenu name="ПараметрИдГруппы6КонтекстноеМеню" id="406"/>
 													<ExtendedTooltip name="ПараметрИдГруппы6РасширеннаяПодсказка" id="407"/>
 												</InputField>
@@ -2769,7 +2949,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 										</v8:item>
 									</ToolTip>
 									<Width>30</Width>
-									<PagesRepresentation>TabsOnTop</PagesRepresentation>
 									<ExtendedTooltip name="ГруппаСтатусыСтраницыРасширеннаяПодсказка" id="828"/>
 									<ChildItems>
 										<Page name="ГруппаСтатусыСтраницаТекстовый" id="829">
@@ -2803,7 +2982,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>СтатусыТекстСообщения</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="СтатусыТекстСообщенияКонтекстноеМеню" id="815"/>
 															<ExtendedTooltip name="СтатусыТекстСообщенияРасширеннаяПодсказка" id="816"/>
 														</InputField>
@@ -2811,7 +2989,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>СтатусыЦветФонаСообщения</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="СтатусыЦветФонаСообщенияТекстовыйКонтекстноеМеню" id="820"/>
 															<ExtendedTooltip name="СтатусыЦветФонаСообщенияТекстовыйРасширеннаяПодсказка" id="821"/>
 														</InputField>
@@ -2819,7 +2996,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>СтатусыКонтакты</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="СтатусыКонтактыКонтекстноеМеню" id="823"/>
 															<ExtendedTooltip name="СтатусыКонтактыРасширеннаяПодсказка" id="824"/>
 														</InputField>
@@ -2849,7 +3025,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>СтатусыСсылкаАудиоФайл</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="СтатусыСсылкаАудиоФайлКонтекстноеМеню" id="840"/>
 															<ExtendedTooltip name="СтатусыСсылкаАудиоФайлРасширеннаяПодсказка" id="841"/>
 														</InputField>
@@ -2857,7 +3032,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>СтатусыЦветФонаСообщения</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="СтатусыЦветФонаСообщенияГолосовойКонтекстноеМеню" id="834"/>
 															<ExtendedTooltip name="СтатусыЦветФонаСообщенияГолосовойРасширеннаяПодсказка" id="835"/>
 														</InputField>
@@ -2865,7 +3039,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>СтатусыКонтакты</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="СтатусыКонтактыГолосовойКонтекстноеМеню" id="837"/>
 															<ExtendedTooltip name="СтатусыКонтактыГолосовойРасширеннаяПодсказка" id="838"/>
 														</InputField>
@@ -2895,7 +3068,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>СтатусыТекстСообщения</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="СтатусыТекстСообщенияМедиаКонтекстноеМеню" id="850"/>
 															<ExtendedTooltip name="СтатусыТекстСообщенияМедиаРасширеннаяПодсказка" id="851"/>
 														</InputField>
@@ -2903,7 +3075,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>СтатусыСсылкаМедиаФайл</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="СтатусыСсылкаМедиаФайлКонтекстноеМеню" id="847"/>
 															<ExtendedTooltip name="СтатусыСсылкаМедиаФайлРасширеннаяПодсказка" id="848"/>
 														</InputField>
@@ -2911,7 +3082,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>СтатусыКонтакты</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="СтатусыКонтактыМедиаКонтекстноеМеню" id="853"/>
 															<ExtendedTooltip name="СтатусыКонтактыМедиаРасширеннаяПодсказка" id="854"/>
 														</InputField>
@@ -2964,7 +3134,12 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																	<TitleLocation>None</TitleLocation>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<HorizontalStretch>true</HorizontalStretch>
-																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Заполняется в ручную или автоматически при отправке статуса</v8:content>
+																		</v8:item>
+																	</InputHint>
 																	<ContextMenu name="ПараметрИдСтатусаКонтекстноеМеню" id="860"/>
 																	<ExtendedTooltip name="ПараметрИдСтатусаРасширеннаяПодсказка" id="861"/>
 																</InputField>
@@ -3013,7 +3188,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<DataPath>ПараметрИдСтатуса</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="ПараметрИдСтатусаСтатистикаКонтекстноеМеню" id="869"/>
 															<ExtendedTooltip name="ПараметрИдСтатусаСтатистикаРасширеннаяПодсказка" id="870"/>
 														</InputField>
@@ -3061,7 +3235,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<HorizontalAlign>Left</HorizontalAlign>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="ПараметрКоличествоМинутКонтекстноеМеню" id="878"/>
 															<ExtendedTooltip name="ПараметрКоличествоМинутРасширеннаяПодсказка" id="879"/>
 														</InputField>
@@ -3092,7 +3265,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<HorizontalAlign>Left</HorizontalAlign>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>true</HorizontalStretch>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 															<ContextMenu name="ПараметрКоличествоМинутИсходящиеКонтекстноеМеню" id="885"/>
 															<ExtendedTooltip name="ПараметрКоличествоМинутИсходящиеРасширеннаяПодсказка" id="886"/>
 														</InputField>
@@ -4004,6 +4176,339 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 								</UsualGroup>
 							</ChildItems>
 						</Page>
+						<Page name="Партнер" id="980">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Партнер</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Партнер</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="981"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПоянениеПартнер" id="1017">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа поянение партнер</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>StrongSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоянениеПартнерРасширеннаяПодсказка" id="1018"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияПартнерПояснение" id="1014">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Партнерская схема работы предполагает более глубокую интеграцию с сервисом GREEN API и работу с большим числом инстансов на Вашей стороне:
+* Управление инстансами по API
+* Постоплатная система работы (со второго месяца работы)
+* Посуточная тарификация (за созданные и не удаленные инстансы)
+* Выделенная линия поддержки
+
+По вопросам подключения к партнёрской схеме и дополнительных условиях просим Вас писать на почту support@green-api.com или &lt;link https://green-api.com/docs/partners/&gt;в чат на сайте&lt;/&gt;.</v8:content>
+												</v8:item>
+											</Title>
+											<BackColor>style:ToolTipBackColor</BackColor>
+											<ContextMenu name="ДекорацияПартнерПояснениеКонтекстноеМеню" id="1015"/>
+											<ExtendedTooltip name="ДекорацияПартнерПояснениеРасширеннаяПодсказка" id="1016"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПартнер" id="1012">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа партнер</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа партнер</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПартнерРасширеннаяПодсказка" id="1013"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПартнерЗапросы" id="982">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа сервисные методы запросы</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа очереди запросы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>30</Width>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПартнерЗапросыРасширеннаяПодсказка" id="983"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаPartnerToken" id="1031">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа partner token</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа partner token</v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ExtendedTooltip name="ГруппаPartnerTokenРасширеннаяПодсказка" id="1032"/>
+													<ChildItems>
+														<InputField name="PartnerToken" id="1028">
+															<DataPath>Объект.PartnerToken</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ContextMenu name="PartnerTokenКонтекстноеМеню" id="1029"/>
+															<ExtendedTooltip name="PartnerTokenРасширеннаяПодсказка" id="1030"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПартнерКоманды" id="1033">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа партнер команды</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа партнер команды</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Representation>StrongSeparation</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПартнерКомандыРасширеннаяПодсказка" id="1034"/>
+													<ChildItems>
+														<Button name="ПолучитьВсеИнстансы" id="1035">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ПолучитьВсеИнстансы</CommandName>
+															<TextColor>#FFFFFF</TextColor>
+															<BackColor>#49B349</BackColor>
+															<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+															<ExtendedTooltip name="ПолучитьВсеИнстансыРасширеннаяПодсказка" id="1036"/>
+														</Button>
+														<Button name="СоздатьИнстанс" id="1037">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.СоздатьИнстанс</CommandName>
+															<TextColor>#FFFFFF</TextColor>
+															<BackColor>#49B349</BackColor>
+															<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+															<ExtendedTooltip name="СоздатьИнстансРасширеннаяПодсказка" id="1038"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПартнерУдалитьКоманды" id="1044">
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа партнер удалить команды</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Representation>StrongSeparation</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПартнерУдалитьКомандыРасширеннаяПодсказка" id="1045"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияПояснениеПодключение1" id="1066">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<TextColor>style:FieldSelectionBackColor</TextColor>
+															<Title formatted="true">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>При получении ответа статус кода 200 необходимо смотреть на тело ответа</v8:content>
+																</v8:item>
+															</Title>
+															<BackColor>style:ToolTipBackColor</BackColor>
+															<ContextMenu name="ДекорацияПояснениеПодключение1КонтекстноеМеню" id="1067"/>
+															<ExtendedTooltip name="ДекорацияПояснениеПодключение1РасширеннаяПодсказка" id="1068"/>
+														</LabelDecoration>
+														<LabelDecoration name="Декорация10" id="1046">
+															<Width>14</Width>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ID инстанса:</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Декорация10КонтекстноеМеню" id="1047"/>
+															<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="1048"/>
+														</LabelDecoration>
+														<InputField name="ПараметрИдИнстанса" id="1041">
+															<DataPath>ПараметрИдИнстанса</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<EditFormat>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧГ=0</v8:content>
+																</v8:item>
+															</EditFormat>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Заполняется в ручную или автоматически при создании инстанса</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="ПараметрИдИнстансаКонтекстноеМеню" id="1042"/>
+															<ExtendedTooltip name="ПараметрИдИнстансаРасширеннаяПодсказка" id="1043"/>
+														</InputField>
+														<Button name="УдалитьИнстанс" id="1039">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.УдалитьИнстанс</CommandName>
+															<TextColor>#FFFFFF</TextColor>
+															<BackColor>#49B349</BackColor>
+															<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+															<ExtendedTooltip name="УдалитьИнстансРасширеннаяПодсказка" id="1040"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПартнерМетоды" id="984">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ответ</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа консоль сервисные методы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаПартнерМетодыРасширеннаяПодсказка" id="985"/>
+											<ChildItems>
+												<InputField name="КонсольПартнер" id="986">
+													<DataPath>КонсольПартнер</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<MultiLine>true</MultiLine>
+													<ContextMenu name="КонсольПартнерКонтекстноеМеню" id="987"/>
+													<ExtendedTooltip name="КонсольПартнерРасширеннаяПодсказка" id="988"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПартнерДокументация" id="989">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сервисные методы документация</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сервисные методы документация</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>30</Width>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПартнерДокументацияРасширеннаяПодсказка" id="990"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьДокументацияПартнер" id="991">
+													<Font ref="style:LargeTextFont" kind="StyleItem"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Документация</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьДокументацияПартнерКонтекстноеМеню" id="992"/>
+													<ExtendedTooltip name="НадписьДокументацияПартнерРасширеннаяПодсказка" id="993"/>
+												</LabelDecoration>
+												<LabelDecoration name="СсылкаКакСтатьПартнером" id="1006">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Как стать партнером</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="СсылкаКакСтатьПартнеромКонтекстноеМеню" id="1007"/>
+													<ExtendedTooltip name="СсылкаКакСтатьПартнеромРасширеннаяПодсказка" id="1008"/>
+													<Events>
+														<Event name="Click">СсылкаКакСтатьПартнеромНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="СсылкаПолучениеИнстансов" id="1019">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Получить все инстансы</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="СсылкаПолучениеИнстансовКонтекстноеМеню" id="1020"/>
+													<ExtendedTooltip name="СсылкаПолучениеИнстансовРасширеннаяПодсказка" id="1021"/>
+													<Events>
+														<Event name="Click">СсылкаПолучениеИнстансовНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="СсылкаСоздатьИнстанс" id="1022">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Создать инстанс</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="СсылкаСоздатьИнстансКонтекстноеМеню" id="1023"/>
+													<ExtendedTooltip name="СсылкаСоздатьИнстансРасширеннаяПодсказка" id="1024"/>
+													<Events>
+														<Event name="Click">СсылкаСоздатьИнстансНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="СсылкаУдалитьИнстатнс" id="1025">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Удалить инстанс</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="СсылкаУдалитьИнстатнсКонтекстноеМеню" id="1026"/>
+													<ExtendedTooltip name="СсылкаУдалитьИнстатнсРасширеннаяПодсказка" id="1027"/>
+													<Events>
+														<Event name="Click">СсылкаУдалитьИнстатнсНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
 					</ChildItems>
 				</Pages>
 				<UsualGroup name="ГруппаСтатус" id="757">
@@ -4079,6 +4584,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<Save>
 				<Field>Объект.ApiToken</Field>
 				<Field>Объект.IdInstance</Field>
+				<Field>Объект.PartnerToken</Field>
 				<Field>Объект.apiUrl</Field>
 				<Field>Объект.mediaUrl</Field>
 			</Save>
@@ -4618,6 +5124,37 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="КонсольПартнер" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Консоль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрИдИнстанса" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID инстанса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -4629,7 +5166,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
 						<dcsset:left xsi:type="dcscor:Field">СтатусСервиса</dcsset:left>
 						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:string">Авторизирован</dcsset:right>
+						<dcsset:right xsi:type="xs:string">Авторизован</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
@@ -4654,7 +5191,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
 						<dcsset:left xsi:type="dcscor:Field">СтатусСервиса</dcsset:left>
 						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:string">Авторизирован</dcsset:right>
+						<dcsset:right xsi:type="xs:string">Авторизован</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
@@ -5385,13 +5922,13 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить стандартные настройки</v8:content>
+					<v8:content>Установить универсальные значения</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить стандартные настройки параметры хостов</v8:content>
+					<v8:content>Установливает универсальные значения для "apiUrl" и "mediaUrl"</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьСтандартныеНастройкиПараметрыХостов</Action>
@@ -5515,6 +6052,81 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьВсеСообщенияЧерезВебхук</Action>
+		</Command>
+		<Command name="ПолучитьВсеИнстансы" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить все инстансы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить все инстансы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьВсеИнстансы</Action>
+		</Command>
+		<Command name="СоздатьИнстанс" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать инстанс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать инстанс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьИнстанс</Action>
+		</Command>
+		<Command name="УдалитьИнстанс" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить инстанс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить инстанс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьИнстанс</Action>
+		</Command>
+		<Command name="ПолучитьРегистрационныйКод" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить регистрационный код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить регистрационный код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьРегистрационныйКод</Action>
+		</Command>
+		<Command name="ПолучитьИнформациюАккаунт" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию о аккаунте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию о аккаунте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьИнформациюАккаунт</Action>
 		</Command>
 	</Commands>
 </Form>
