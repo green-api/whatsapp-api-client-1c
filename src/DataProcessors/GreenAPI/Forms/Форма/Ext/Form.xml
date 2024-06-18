@@ -4848,6 +4848,9 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<Save>
+				<Field>ПараметрИдГруппы</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="ПараметрИдУчастника" id="22">
 			<Title>
