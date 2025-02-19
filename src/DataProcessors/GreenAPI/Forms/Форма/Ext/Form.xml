@@ -3770,6 +3770,252 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаСервисныеМетодыЗапросыРасширеннаяПодсказка" id="455"/>
 									<ChildItems>
+										<UsualGroup name="ГруппаТипЧатаСервисные" id="1087">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа тип чата сервисные</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа тип чата сервисные</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<ChildrenAlign>None</ChildrenAlign>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>style:ToolTipBackColor</BackColor>
+											<ExtendedTooltip name="ГруппаТипЧатаСервисныеРасширеннаяПодсказка" id="1088"/>
+											<ChildItems>
+												<RadioButtonField name="ПереключательТипаЧатаСервисные" id="1089">
+													<DataPath>ПереключательТипаЧата</DataPath>
+													<RadioButtonType>Tumbler</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Личный</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Групповой</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ПереключательТипаЧатаСервисныеКонтекстноеМеню" id="1090"/>
+													<ExtendedTooltip name="ПереключательТипаЧатаСервисныеРасширеннаяПодсказка" id="1091"/>
+													<Events>
+														<Event name="OnChange">ПереключательТипаЧатаПриИзменении</Event>
+													</Events>
+												</RadioButtonField>
+												<Pages name="СтраницыНомерИИдЧатаСервисные" id="1092">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Страницы номер и ид чата сервисные</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Страницы номер и ид чата сервисные</v8:content>
+														</v8:item>
+													</ToolTip>
+													<PagesRepresentation>None</PagesRepresentation>
+													<ExtendedTooltip name="СтраницыНомерИИдЧатаСервисныеРасширеннаяПодсказка" id="1093"/>
+													<ChildItems>
+														<Page name="СтраницаНомерТелефонаЧатаСервисные" id="1094">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница номер телефона чата сервисные</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница номер телефона чата</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="СтраницаНомерТелефонаЧатаСервисныеРасширеннаяПодсказка" id="1095"/>
+															<ChildItems>
+																<LabelDecoration name="ДекорацияНомерТелефонаСервисные" id="1096">
+																	<Width>11</Width>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Номер телефона:</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="ДекорацияНомерТелефонаСервисныеКонтекстноеМеню" id="1097"/>
+																	<ExtendedTooltip name="ДекорацияНомерТелефонаСервисныеРасширеннаяПодсказка" id="1098"/>
+																</LabelDecoration>
+																<InputField name="НомерТелефонаСервисные" id="1099">
+																	<DataPath>НомерТелефона</DataPath>
+																	<TitleLocation>None</TitleLocation>
+																	<HorizontalAlign>Left</HorizontalAlign>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<EditFormat>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>ЧДЦ=; ЧГ=</v8:content>
+																		</v8:item>
+																	</EditFormat>
+																	<EditTextUpdate>OnValueChange</EditTextUpdate>
+																	<ContextMenu name="НомерТелефонаСервисныеКонтекстноеМеню" id="1100"/>
+																	<ExtendedTooltip name="НомерТелефонаСервисныеРасширеннаяПодсказка" id="1101"/>
+																</InputField>
+															</ChildItems>
+														</Page>
+														<Page name="СтраницаИдЧатаСервисные" id="1102">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница ид чата сервисные</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница ид чата</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="СтраницаИдЧатаСервисныеРасширеннаяПодсказка" id="1103"/>
+															<ChildItems>
+																<LabelDecoration name="ДекорацияИДГруппыСервисные" id="1104">
+																	<Width>11</Width>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>ID группы:</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="ДекорацияИДГруппыСервисныеКонтекстноеМеню" id="1105"/>
+																	<ExtendedTooltip name="ДекорацияИДГруппыСервисныеРасширеннаяПодсказка" id="1106"/>
+																</LabelDecoration>
+																<InputField name="ОтправкаПараметрИдГруппыСервисные" id="1107">
+																	<DataPath>ПараметрИдГруппы</DataPath>
+																	<TitleLocation>None</TitleLocation>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Заполняется в ручную или автоматически после создания группы</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="ОтправкаПараметрИдГруппыСервисныеКонтекстноеМеню" id="1108"/>
+																	<ExtendedTooltip name="ОтправкаПараметрИдГруппыСервисныеРасширеннаяПодсказка" id="1109"/>
+																</InputField>
+															</ChildItems>
+														</Page>
+													</ChildItems>
+												</Pages>
+												<UsualGroup name="ГруппаIDСообщенияСервисные" id="1121">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа IDСообщения</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа IDСообщения сервисные</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаIDСообщенияСервисныеРасширеннаяПодсказка" id="1122"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияНомерТелефонаСервисные1" id="1123">
+															<Width>11</Width>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ID сообщения:</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияНомерТелефонаСервисные1КонтекстноеМеню" id="1124"/>
+															<ExtendedTooltip name="ДекорацияНомерТелефонаСервисные1РасширеннаяПодсказка" id="1125"/>
+														</LabelDecoration>
+														<InputField name="ПараметрИдСообщения1" id="559">
+															<DataPath>ПараметрИдСообщения</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ContextMenu name="ПараметрИдСообщения1КонтекстноеМеню" id="560"/>
+															<ExtendedTooltip name="ПараметрИдСообщения1РасширеннаяПодсказка" id="561"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаОтправкаТекстСообщенияСервисные" id="1110">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа отправка текст сообщения</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа отправка текст сообщения</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаОтправкаТекстСообщенияСервисныеРасширеннаяПодсказка" id="1111"/>
+													<ChildItems>
+														<LabelDecoration name="Декорация13" id="1112">
+															<Width>11</Width>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Текст сообщения:</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Декорация13КонтекстноеМеню" id="1113"/>
+															<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="1114"/>
+														</LabelDecoration>
+														<InputField name="ОтправкаТекстСообщения1" id="1115">
+															<DataPath>ОтправкаТекстСообщения</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ContextMenu name="ОтправкаТекстСообщения1КонтекстноеМеню" id="1116"/>
+															<ExtendedTooltip name="ОтправкаТекстСообщения1РасширеннаяПодсказка" id="1117"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
 										<UsualGroup name="ГруппаПроверитьНаличиеВатсап" id="456">
 											<ToolTip>
 												<v8:item>
@@ -3782,13 +4028,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПроверитьНаличиеВатсапРасширеннаяПодсказка" id="457"/>
 											<ChildItems>
-												<InputField name="ПараметрНомерТелефона1" id="471">
-													<DataPath>ПараметрНомерТелефона</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>true</HorizontalStretch>
-													<ContextMenu name="ПараметрНомерТелефона1КонтекстноеМеню" id="472"/>
-													<ExtendedTooltip name="ПараметрНомерТелефона1РасширеннаяПодсказка" id="473"/>
-												</InputField>
 												<Button name="ПроверитьНаличиеWhatsApp" id="469">
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.ПроверитьНаличиеWhatsApp</CommandName>
@@ -3797,33 +4036,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
 													<ExtendedTooltip name="ПроверитьНаличиеWhatsAppРасширеннаяПодсказка" id="470"/>
 												</Button>
-											</ChildItems>
-										</UsualGroup>
-										<UsualGroup name="ГруппаПолучитьАватарКонтакта" id="474">
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа получить аватар контакта</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа создать группу</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Group>Vertical</Group>
-											<Representation>StrongSeparation</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаПолучитьАватарКонтактаРасширеннаяПодсказка" id="475"/>
-											<ChildItems>
-												<InputField name="ПараметрИдЧата1" id="483">
-													<DataPath>ПараметрИдЧата</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>true</HorizontalStretch>
-													<ContextMenu name="ПараметрИдЧата1КонтекстноеМеню" id="484"/>
-													<ExtendedTooltip name="ПараметрИдЧата1РасширеннаяПодсказка" id="485"/>
-												</InputField>
 												<Button name="ПолучитьИнфоКонтакта" id="628">
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.ПолучитьИнфоКонтакта</CommandName>
@@ -3840,26 +4052,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
 													<ExtendedTooltip name="ПолучитьАватарКонтактаРасширеннаяПодсказка" id="482"/>
 												</Button>
-											</ChildItems>
-										</UsualGroup>
-										<UsualGroup name="ГруппаПолучитьКонтакты" id="486">
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа получить контакты</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа создать группу</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Group>Vertical</Group>
-											<Representation>StrongSeparation</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаПолучитьКонтактыРасширеннаяПодсказка" id="487"/>
-											<ChildItems>
 												<Button name="ПолучитьКонтакты" id="488">
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.ПолучитьКонтакты</CommandName>
@@ -3888,20 +4080,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаУдалитьСообщениеРасширеннаяПодсказка" id="555"/>
 											<ChildItems>
-												<InputField name="ПараметрИдЧата3" id="556">
-													<DataPath>ПараметрИдЧата</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>true</HorizontalStretch>
-													<ContextMenu name="ПараметрИдЧата3КонтекстноеМеню" id="557"/>
-													<ExtendedTooltip name="ПараметрИдЧата3РасширеннаяПодсказка" id="558"/>
-												</InputField>
-												<InputField name="ПараметрИдСообщения1" id="559">
-													<DataPath>ПараметрИдСообщения</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>true</HorizontalStretch>
-													<ContextMenu name="ПараметрИдСообщения1КонтекстноеМеню" id="560"/>
-													<ExtendedTooltip name="ПараметрИдСообщения1РасширеннаяПодсказка" id="561"/>
-												</InputField>
 												<Button name="УдалитьСообщение" id="562">
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.УдалитьСообщение</CommandName>
@@ -3909,6 +4087,14 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<BackColor>#49B349</BackColor>
 													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
 													<ExtendedTooltip name="УдалитьСообщениеРасширеннаяПодсказка" id="563"/>
+												</Button>
+												<Button name="ИзменитьСообщение" id="1076">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ИзменитьСообщение</CommandName>
+													<TextColor>#FFFFFF</TextColor>
+													<BackColor>#49B349</BackColor>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<ExtendedTooltip name="ИзменитьСообщениеРасширеннаяПодсказка" id="1077"/>
 												</Button>
 											</ChildItems>
 										</UsualGroup>
@@ -3930,13 +4116,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаАрхивированиеЧатаРасширеннаяПодсказка" id="565"/>
 											<ChildItems>
-												<InputField name="ПараметрИдЧата4" id="566">
-													<DataPath>ПараметрИдЧата</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>true</HorizontalStretch>
-													<ContextMenu name="ПараметрИдЧата4КонтекстноеМеню" id="567"/>
-													<ExtendedTooltip name="ПараметрИдЧата4РасширеннаяПодсказка" id="568"/>
-												</InputField>
 												<Button name="АрхивироватьЧат" id="571">
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.АрхивироватьЧат</CommandName>
@@ -3973,13 +4152,6 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаИсчезающиеИхображенияРасширеннаяПодсказка" id="616"/>
 											<ChildItems>
-												<InputField name="ПараметрИдЧата5" id="622">
-													<DataPath>ПараметрИдЧата</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>true</HorizontalStretch>
-													<ContextMenu name="ПараметрИдЧата5КонтекстноеМеню" id="623"/>
-													<ExtendedTooltip name="ПараметрИдЧата5РасширеннаяПодсказка" id="624"/>
-												</InputField>
 												<InputField name="ПараметрВремяЖизни" id="617">
 													<DataPath>ПараметрВремяЖизни</DataPath>
 													<Title>
@@ -4114,6 +4286,20 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<ExtendedTooltip name="СсылкаПолучитьКонтактыРасширеннаяПодсказка" id="584"/>
 											<Events>
 												<Event name="Click">СсылкаПолучитьКонтактыНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="СсылкаИзменитьСообщение" id="1126">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Изменить сообщение</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СсылкаИзменитьСообщениеКонтекстноеМеню" id="1127"/>
+											<ExtendedTooltip name="СсылкаИзменитьСообщениеРасширеннаяПодсказка" id="1128"/>
+											<Events>
+												<Event name="Click">СсылкаИзменитьСообщениеНажатие</Event>
 											</Events>
 										</LabelDecoration>
 										<LabelDecoration name="СсылкаУдалитьСообщение" id="585">
@@ -4614,7 +4800,7 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
-					<v8:Digits>11</v8:Digits>
+					<v8:Digits>12</v8:Digits>
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
@@ -6130,6 +6316,21 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьИнформациюАккаунт</Action>
+		</Command>
+		<Command name="ИзменитьСообщение" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить сообщение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьСообщение</Action>
 		</Command>
 	</Commands>
 </Form>
