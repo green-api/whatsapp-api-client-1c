@@ -5,6 +5,10 @@
 			<v8:lang>ru</v8:lang>
 			<v8:content>Отправить файл по ссылке</v8:content>
 		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Send file by URL</v8:content>
+		</v8:item>
 	</Title>
 	<Width>48</Width>
 	<Height>11</Height>
@@ -105,11 +109,19 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Отправить</Action>

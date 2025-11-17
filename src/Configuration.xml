@@ -185,7 +185,7 @@
 			<MainClientApplicationWindowMode>Normal</MainClientApplicationWindowMode>
 			<DefaultInterface/>
 			<DefaultStyle/>
-			<DefaultLanguage>Language.Русский</DefaultLanguage>
+			<DefaultLanguage>Language.Английский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
 			<Copyright/>
@@ -201,6 +201,7 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<Language>Английский</Language>
 			<DataProcessor>GreenAPI</DataProcessor>
 		</ChildObjects>
 	</Configuration>

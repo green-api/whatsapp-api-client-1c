@@ -18,6 +18,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Green API</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Green API</v8:content>
+				</v8:item>
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
@@ -74,6 +78,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>ID Instance</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ID Instance</v8:content>
+						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
@@ -110,6 +118,10 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
+							<v8:content>API Token</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
 							<v8:content>API Token</v8:content>
 						</v8:item>
 					</Synonym>
@@ -149,6 +161,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Partner token</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Partner Token</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -224,7 +240,11 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Api url</v8:content>
+							<v8:content>API URL</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>API URL</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -262,7 +282,11 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Media url</v8:content>
+							<v8:content>mediaUrl</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>MediaURL</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -299,6 +323,7 @@
 			<Form>ВыборСсылкиНаФайл</Form>
 			<Form>ВыборКонтакта</Form>
 			<Form>ВыборГеолокации</Form>
+			<Form>ВыборКнопок</Form>
 			<Form>СоздатьОпрос</Form>
 			<Template>QRМакет</Template>
 			<Template>ИконкаWhatsApp</Template>

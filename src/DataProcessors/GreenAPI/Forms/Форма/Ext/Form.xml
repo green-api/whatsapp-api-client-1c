@@ -58,6 +58,10 @@
 									<v8:lang>ru</v8:lang>
 									<v8:content>GREEN API</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>GREEN API</v8:content>
+								</v8:item>
 							</Title>
 							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 							<HorizontalAlign>Center</HorizontalAlign>
@@ -89,6 +93,10 @@
 									<v8:lang>ru</v8:lang>
 									<v8:content>Настройки</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Setup</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
@@ -119,6 +127,10 @@
 													<v8:lang>ru</v8:lang>
 													<v8:content>Подключение</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Connection</v8:content>
+												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
@@ -140,6 +152,14 @@
 Выберите бесплатный тариф "Разработчик"
 Подключите телефон к сервису. Для этого сканируйте QR-код в личном кабинете.</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>&lt;fontsize 12&gt;1. Sign up and link your number&lt;/&gt;
+
+Sign up in &lt;link https://console.green-api.com/&gt;GREEN-API&lt;/&gt; console
+Choose a free tariff "DEVELOPER"
+Link your number to services. Scan QR-code from instance's console.</v8:content>
+														</v8:item>
 													</Title>
 													<ContextMenu name="ОписаниеНачалоКонтекстноеМеню" id="156"/>
 													<ExtendedTooltip name="ОписаниеНачалоРасширеннаяПодсказка" id="157"/>
@@ -155,6 +175,10 @@
 															<v8:lang>ru</v8:lang>
 															<v8:content>Помощник подключения...</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Setup wizard...</v8:content>
+														</v8:item>
 													</Title>
 													<ExtendedTooltip name="КнопкаПомощникРасширеннаяПодсказка" id="235"/>
 												</Button>
@@ -165,6 +189,10 @@
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>&lt;fontsize 12&gt;2. Укажите параметры "ID Instance" и "API Token"&lt;/&gt;</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>&lt;fontsize 12&gt;2. Set up "ID Instance" and "API Token"&lt;/&gt;</v8:content>
 														</v8:item>
 													</Title>
 													<ContextMenu name="ОписаниеПродолжениеКонтекстноеМеню" id="232"/>
@@ -178,6 +206,10 @@
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Поля apiUrl и mediaUrl заполнены универсальными значениями. Для уменьшения времени ответа API и исключения проблем с доступностью хостов рекомендуется использовать значения из &lt;link https://console.green-api.com/instanceList&gt;личного кабинета&lt;/&gt; Вашего инстанса. Значения хостов для Вашего инстанса могут отличаться от значений по умолчанию.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>The apiUrl and mediaUrl fields are pre-filled with universal values. To reduce API response time and avoid potential host availability issues, it is recommended to use the values from your instance's &lt;link https://console.green-api.com/instanceList&gt;dashboard&lt;/&gt;. Please note that the host values for your specific instance may differ from the default ones.</v8:content>
 														</v8:item>
 													</Title>
 													<BackColor>style:ToolTipBackColor</BackColor>
@@ -228,6 +260,10 @@
 																			<v8:lang>ru</v8:lang>
 																			<v8:content>apiUrl</v8:content>
 																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>apiUrl</v8:content>
+																		</v8:item>
 																	</Title>
 																	<ContextMenu name="apiUrl_ПодключениеКонтекстноеМеню" id="963"/>
 																	<ExtendedTooltip name="apiUrl_ПодключениеРасширеннаяПодсказка" id="964"/>
@@ -241,6 +277,12 @@
 																	<TextColor>#FFFFFF</TextColor>
 																	<BackColor>#49B349</BackColor>
 																	<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Set default values</v8:content>
+																		</v8:item>
+																	</Title>
 																	<ExtendedTooltip name="УстановитьСтандартныеНастройкиПараметрыХостовРасширеннаяПодсказка" id="770"/>
 																</Button>
 															</ChildItems>
@@ -250,6 +292,10 @@
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
+																	<v8:content>mediaUrl</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
 																	<v8:content>mediaUrl</v8:content>
 																</v8:item>
 															</Title>
@@ -264,6 +310,10 @@
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
+																	<v8:content>idInstance</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
 																	<v8:content>idInstance</v8:content>
 																</v8:item>
 															</Title>
@@ -287,6 +337,10 @@
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
+																	<v8:content>apiTokenInstance</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
 																	<v8:content>apiTokenInstance</v8:content>
 																</v8:item>
 															</Title>
@@ -314,6 +368,10 @@
 															<v8:lang>ru</v8:lang>
 															<v8:content>&lt;fontsize 12&gt;3. Проверьте подключение аккаунта&lt;/&gt;</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>&lt;fontsize 12&gt;3. Check account status&lt;/&gt;</v8:content>
+														</v8:item>
 													</Title>
 													<ContextMenu name="ОписаниеНачалоКонецКонтекстноеМеню" id="159"/>
 													<ExtendedTooltip name="ОписаниеНачалоКонецРасширеннаяПодсказка" id="160"/>
@@ -329,6 +387,10 @@
 															<v8:lang>ru</v8:lang>
 															<v8:content>Выполнить авторизацию</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Check connection</v8:content>
+														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="162"/>
 												</Button>
@@ -339,6 +401,10 @@
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получение данных</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Incoming setting</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -460,6 +526,12 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 уведомления нажмите кнопку "Установить стандартные
 настройки"</v8:content>
 																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Non-standard settings for receiving incoming notifications are configured. Notification processing is currently disabled.
+
+To enable incoming notifications, click the "Restore Default Settings" button.</v8:content>
+																		</v8:item>
 																	</Title>
 																	<ContextMenu name="Декорация2КонтекстноеМеню" id="106"/>
 																	<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="107"/>
@@ -555,6 +627,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Прочие</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Other</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -653,6 +729,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Аккаунт</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Account</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
@@ -746,7 +826,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Получить QR Код</v8:content>
+													<v8:content>Получить QR-код</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get QR code</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -769,7 +853,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Получить QR код</v8:content>
+															<v8:content>Получить QR-код</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Get QR code</v8:content>
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ПолучитьQRКодРасширеннаяПодсказка" id="280"/>
@@ -897,6 +985,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Документация</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Docs</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="НадписьДокументацияАккаунтКонтекстноеМеню" id="595"/>
 											<ExtendedTooltip name="НадписьДокументацияАккаунтРасширеннаяПодсказка" id="596"/>
@@ -906,6 +998,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получить настройки аккаунта</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get settings</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -921,6 +1017,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получить состояние аккаунта</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get state instance</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаПолучитьСостояниеАккаунтаКонтекстноеМеню" id="607"/>
@@ -934,6 +1034,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Перезапустить аккаунт</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Reboot instance</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -949,6 +1053,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Разлогинить аккаунт</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Logout instance</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаРазлогинитьАккаунтКонтекстноеМеню" id="601"/>
@@ -963,6 +1071,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Установить фото профиля</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set profile picture</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаУстановитьФотоПрофиляКонтекстноеМеню" id="610"/>
@@ -975,7 +1087,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Получить QR код</v8:content>
+													<v8:content>Получить QR-код</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get QR code</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -1022,6 +1138,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Отправка</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Sending</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -1083,6 +1203,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Личный</v8:content>
 																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Chat</v8:content>
+																			</v8:item>
 																		</Presentation>
 																		<Value xsi:type="xs:decimal">0</Value>
 																	</xr:Value>
@@ -1095,6 +1219,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Групповой</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Group</v8:content>
 																			</v8:item>
 																		</Presentation>
 																		<Value xsi:type="xs:decimal">1</Value>
@@ -1129,6 +1257,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
 																					<v8:content>Номер телефона:</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Phone number:</v8:content>
 																				</v8:item>
 																			</Title>
 																			<ContextMenu name="Декорация7КонтекстноеМеню" id="906"/>
@@ -1170,6 +1302,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
 																					<v8:content>ID группы:</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>ID Group:</v8:content>
 																				</v8:item>
 																			</Title>
 																			<ContextMenu name="Декорация6КонтекстноеМеню" id="903"/>
@@ -1216,6 +1352,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
 																			<v8:content>Текст сообщения:</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Message text:</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ContextMenu name="Декорация9КонтекстноеМеню" id="916"/>
@@ -1284,6 +1424,14 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
 															<ExtendedTooltip name="ОтправитьОпросРасширеннаяПодсказка" id="753"/>
 														</Button>
+														<Button name="ОтправитьКнопки" id="1129">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ОтправитьКнопки</CommandName>
+															<TextColor>#FFFFFF</TextColor>
+															<BackColor>#49B349</BackColor>
+															<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+															<ExtendedTooltip name="ОтправитьКнопкиРасширеннаяПодсказка" id="1130"/>
+														</Button>
 														<Button name="ОтправитьФайл" id="179">
 															<Type>UsualButton</Type>
 															<CommandName>Form.Command.ОтправитьФайл</CommandName>
@@ -1310,6 +1458,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
 																	<v8:content>Загрузить файл (в хранилище)</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Upload file (to storage)</v8:content>
 																</v8:item>
 															</Title>
 															<ExtendedTooltip name="ЗагрузитьФайлРасширеннаяПодсказка" id="512"/>
@@ -1434,6 +1586,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Документация</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Docs</v8:content>
+														</v8:item>
 													</Title>
 													<ContextMenu name="НадписьДокументацияКонтекстноеМеню" id="191"/>
 													<ExtendedTooltip name="НадписьДокументацияРасширеннаяПодсказка" id="192"/>
@@ -1443,6 +1599,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Отправить текст</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send message</v8:content>
 														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
@@ -1458,6 +1618,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Отправить контакт</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send contact</v8:content>
+														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="СсылкаОтправитьКонтактКонтекстноеМеню" id="536"/>
@@ -1471,6 +1635,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Отправить геолокацию</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send location</v8:content>
 														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
@@ -1486,6 +1654,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Отправить опрос</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send poll</v8:content>
+														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="СсылкаОтправитьОпросКонтекстноеМеню" id="755"/>
@@ -1494,11 +1666,33 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<Event name="Click">СсылкаОтправитьОпросНажатие</Event>
 													</Events>
 												</LabelDecoration>
+												<LabelDecoration name="СсылкаОтправитьКнопки" id="1131">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отправить кнопки</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send interactive buttons</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="СсылкаОтправитьКнопкиКонтекстноеМеню" id="1132"/>
+													<ExtendedTooltip name="СсылкаОтправитьКнопкиРасширеннаяПодсказка" id="1133"/>
+													<Events>
+														<Event name="Click">СсылкаОтправитьКнопкиНажатие</Event>
+													</Events>
+												</LabelDecoration>
 												<LabelDecoration name="СсылкаОтправитьФайл" id="198">
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Отправить файл</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send file by upload</v8:content>
 														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
@@ -1514,6 +1708,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Отправить файл по ссылке</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send file by URL</v8:content>
+														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="СсылкаОтправитьФайлПоСсылкеКонтекстноеМеню" id="202"/>
@@ -1528,6 +1726,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Загрузить файл</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Upload file</v8:content>
+														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="СсылкаЗагрузитьФайлКонтекстноеМеню" id="529"/>
@@ -1541,6 +1743,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Переслать сообщения</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Forward messages</v8:content>
 														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
@@ -1561,6 +1767,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Получение</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Receiving</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -1870,6 +2080,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Документация</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Docs</v8:content>
+														</v8:item>
 													</Title>
 													<ContextMenu name="ДекорацияДокументацияПолучениеКонтекстноеМеню" id="217"/>
 													<ExtendedTooltip name="ДекорацияДокументацияПолучениеРасширеннаяПодсказка" id="218"/>
@@ -1956,11 +2170,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Журналы</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Journals</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Журналы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Journals</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
@@ -2009,6 +2231,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Интервал (в минутах)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Period (minutes)</v8:content>
 														</v8:item>
 													</Title>
 													<HorizontalAlign>Left</HorizontalAlign>
@@ -2067,6 +2293,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Количество сообщений</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Limit messages</v8:content>
+														</v8:item>
 													</Title>
 													<HorizontalAlign>Left</HorizontalAlign>
 													<AutoMaxWidth>false</AutoMaxWidth>
@@ -2115,6 +2345,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>ID сообщения</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>ID Message</v8:content>
 														</v8:item>
 													</Title>
 													<AutoMaxWidth>false</AutoMaxWidth>
@@ -2190,6 +2424,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Документация</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Docs</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="НадписьДокументацияЖурналыКонтекстноеМеню" id="686"/>
 											<ExtendedTooltip name="НадписьДокументацияЖурналыРасширеннаяПодсказка" id="687"/>
@@ -2199,6 +2437,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получить журнал входящих сообщений</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Last incoming messages</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -2214,6 +2456,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получить журнал исходящих сообщений</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Last outgoing messages</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаПолучитьЖурналИсходящихСообщенийКонтекстноеМеню" id="692"/>
@@ -2226,7 +2472,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Получить историй сообщений чата</v8:content>
+													<v8:content>Получить историю сообщений чата</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get chat history</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -2241,6 +2491,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получить сообщение чата</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get message</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -2260,11 +2514,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Очереди</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Queues</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Очереди</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Queues</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
@@ -2357,6 +2619,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Документация</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Docs</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="НадписьДокументацияОчередиКонтекстноеМеню" id="675"/>
 											<ExtendedTooltip name="НадписьДокументацияОчередиРасширеннаяПодсказка" id="676"/>
@@ -2399,11 +2665,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Группы</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Groups</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Группы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Groups</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
@@ -2785,6 +3059,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Документация</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Docs</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="НадписьДокументацияГруппыКонтекстноеМеню" id="641"/>
 											<ExtendedTooltip name="НадписьДокументацияГруппыРасширеннаяПодсказка" id="642"/>
@@ -2794,6 +3072,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Создать группу</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Create group</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -2809,6 +3091,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Изменить имя группы</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Update group name</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаИзменитьИмяГруппыКонтекстноеМеню" id="644"/>
@@ -2822,6 +3108,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Установить фото группы</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set group pictire</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -2837,6 +3127,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получить информацию о группе</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get group data</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаПолучитьИнформациюОГруппеКонтекстноеМеню" id="647"/>
@@ -2850,6 +3144,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Добавить участника в группу</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Add group participant</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -2865,6 +3163,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Удалить участника из группы</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Remove group participant</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаУдалитьУчастникаИзГруппыКонтекстноеМеню" id="653"/>
@@ -2878,6 +3180,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Назначить права администратора группы</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set group admin</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -2893,6 +3199,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Отозвать права администратора группы</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Remove group admin</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаОтозватьПраваАдминистратораГруппыКонтекстноеМеню" id="659"/>
@@ -2906,6 +3216,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Выйти из группы</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Leave group</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -2925,11 +3239,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Статусы</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Statuses</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Статусы</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Statuses</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
@@ -2955,7 +3277,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Статусы</v8:content>
+													<v8:content>Отправка</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Sending</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -3125,6 +3451,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																			<v8:lang>ru</v8:lang>
 																			<v8:content>ID статуса:</v8:content>
 																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>ID Status:</v8:content>
+																		</v8:item>
 																	</Title>
 																	<ContextMenu name="Декорация8КонтекстноеМеню" id="909"/>
 																	<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="910"/>
@@ -3145,13 +3475,13 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																</InputField>
 															</ChildItems>
 														</UsualGroup>
-														<Button name="УдатьСтатус" id="862">
+														<Button name="УдалитьСтатус" id="862">
 															<Type>UsualButton</Type>
-															<CommandName>Form.Command.УдатьСтатус</CommandName>
+															<CommandName>Form.Command.УдалитьСтатус</CommandName>
 															<TextColor>#FFFFFF</TextColor>
 															<BackColor>#49B349</BackColor>
 															<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-															<ExtendedTooltip name="УдатьСтатусРасширеннаяПодсказка" id="863"/>
+															<ExtendedTooltip name="УдалитьСтатусРасширеннаяПодсказка" id="863"/>
 														</Button>
 													</ChildItems>
 												</UsualGroup>
@@ -3162,6 +3492,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Статистика</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Statistics</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -3208,6 +3542,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>История</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>History</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -3332,6 +3670,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Документация</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Docs</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="НадписьДокументацияСтатусыКонтекстноеМеню" id="778"/>
 											<ExtendedTooltip name="НадписьДокументацияСтатусыРасширеннаяПодсказка" id="779"/>
@@ -3342,6 +3684,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Статусы</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Statuses</v8:content>
+												</v8:item>
 											</Title>
 											<Group>Vertical</Group>
 											<ExtendedTooltip name="ГруппаСтатусыСтатусыРасширеннаяПодсказка" id="793"/>
@@ -3351,6 +3697,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Отправить текстовый статус</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send text status</v8:content>
 														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
@@ -3366,6 +3716,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Отправить голосовой статус</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send voice status</v8:content>
+														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="СсылкаОтправитьГолосовойСтатусКонтекстноеМеню" id="784"/>
@@ -3380,6 +3734,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Отправить медиа статус</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Send media status</v8:content>
+														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="СсылкаОтправитьМедиаСтатусКонтекстноеМеню" id="787"/>
@@ -3393,6 +3751,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Удалить статус</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Delete status</v8:content>
 														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
@@ -3410,6 +3772,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Статистика</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Statistics</v8:content>
+												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
@@ -3424,6 +3790,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Получить статистику статуса</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Get status statistics</v8:content>
 														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
@@ -3441,6 +3811,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>История</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>History</v8:content>
+												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
@@ -3457,6 +3831,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Получить входящие статусы</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Get incoming statuses</v8:content>
+														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="СсылкаПолучитьВходящиеСтатусыКонтекстноеМеню" id="802"/>
@@ -3470,6 +3848,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Получить исходящие статусы</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Get outgoing statuses</v8:content>
 														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
@@ -3491,11 +3873,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Отметка прочтения</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Marks</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Очереди</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Queues</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
@@ -3602,6 +3992,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Документация</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Docs</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="НадписьДокументацияОтметкаПрочтенияКонтекстноеМеню" id="703"/>
 											<ExtendedTooltip name="НадписьДокументацияОтметкаПрочтенияРасширеннаяПодсказка" id="704"/>
@@ -3630,11 +4024,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Устройство</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Device</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Очереди</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Queues</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
@@ -3713,6 +4115,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Документация</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Docs</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="НадписьДокументацияУстройствоКонтекстноеМеню" id="718"/>
 											<ExtendedTooltip name="НадписьДокументацияУстройствоРасширеннаяПодсказка" id="719"/>
@@ -3741,11 +4147,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Сервисные методы</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Service</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Очереди</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Queues</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
@@ -3803,6 +4217,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Личный</v8:content>
 																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Chat</v8:content>
+																	</v8:item>
 																</Presentation>
 																<Value xsi:type="xs:decimal">0</Value>
 															</xr:Value>
@@ -3815,6 +4233,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Групповой</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Group</v8:content>
 																	</v8:item>
 																</Presentation>
 																<Value xsi:type="xs:decimal">1</Value>
@@ -3915,6 +4337,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																			<v8:lang>ru</v8:lang>
 																			<v8:content>ID группы:</v8:content>
 																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>ID Group:</v8:content>
+																		</v8:item>
 																	</Title>
 																	<ContextMenu name="ДекорацияИДГруппыСервисныеКонтекстноеМеню" id="1105"/>
 																	<ExtendedTooltip name="ДекорацияИДГруппыСервисныеРасширеннаяПодсказка" id="1106"/>
@@ -3962,6 +4388,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																	<v8:lang>ru</v8:lang>
 																	<v8:content>ID сообщения:</v8:content>
 																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>ID Message:</v8:content>
+																</v8:item>
 															</Title>
 															<ContextMenu name="ДекорацияНомерТелефонаСервисные1КонтекстноеМеню" id="1124"/>
 															<ExtendedTooltip name="ДекорацияНомерТелефонаСервисные1РасширеннаяПодсказка" id="1125"/>
@@ -3999,6 +4429,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
 																	<v8:content>Текст сообщения:</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Message text:</v8:content>
 																</v8:item>
 															</Title>
 															<ContextMenu name="Декорация13КонтекстноеМеню" id="1113"/>
@@ -4228,6 +4662,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Документация</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Docs</v8:content>
+												</v8:item>
 											</Title>
 											<ContextMenu name="НадписьДокументацияСервисКонтекстноеМеню" id="574"/>
 											<ExtendedTooltip name="НадписьДокументацияСервисРасширеннаяПодсказка" id="575"/>
@@ -4237,6 +4675,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Проверить наличие WhatsApp</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Check WhatsApp</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -4252,6 +4694,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получить инфо контакта</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get contact info</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаПолучитьИнфоКонтактаКонтекстноеМеню" id="631"/>
@@ -4265,6 +4711,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получить аватар контакта</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get contact avatar</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -4280,6 +4730,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Получить контакты</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Get contacts</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаПолучитьКонтактыКонтекстноеМеню" id="583"/>
@@ -4293,6 +4747,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Изменить сообщение</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Edit message</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -4308,6 +4766,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Удалить сообщение</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Delete message</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаУдалитьСообщениеКонтекстноеМеню" id="586"/>
@@ -4321,6 +4783,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Архивировать чат</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Archive chat</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -4336,6 +4802,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Разархивировать чат</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Unarchive chat</v8:content>
+												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
 											<ContextMenu name="СсылкаРазархивироватьЧатКонтекстноеМеню" id="592"/>
@@ -4349,6 +4819,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Установить исчезающие сообщения</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Set disappearing chat</v8:content>
 												</v8:item>
 											</Title>
 											<Hyperlink>true</Hyperlink>
@@ -4368,11 +4842,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Партнер</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Partner</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Партнер</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Partner</v8:content>
 								</v8:item>
 							</ToolTip>
 							<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="981"/>
@@ -4542,6 +5024,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 																	<v8:lang>ru</v8:lang>
 																	<v8:content>ID инстанса:</v8:content>
 																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>ID Instance:</v8:content>
+																</v8:item>
 															</Title>
 															<ContextMenu name="Декорация10КонтекстноеМеню" id="1047"/>
 															<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="1048"/>
@@ -4629,6 +5115,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Документация</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Docs</v8:content>
+														</v8:item>
 													</Title>
 													<ContextMenu name="НадписьДокументацияПартнерКонтекстноеМеню" id="992"/>
 													<ExtendedTooltip name="НадписьДокументацияПартнерРасширеннаяПодсказка" id="993"/>
@@ -4680,6 +5170,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Удалить инстанс</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Delete instance</v8:content>
 														</v8:item>
 													</Title>
 													<Hyperlink>true</Hyperlink>
@@ -4796,6 +5290,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Номер телефона</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Phone number</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
@@ -4814,6 +5312,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Текст сообщения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Message text</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -4996,6 +5498,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Имя группы</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ID Group</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -5011,6 +5517,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Номер телефона</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Phone number</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -5025,6 +5535,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>ID группы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ID Group</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -5044,6 +5558,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>ID участника</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ID Participant</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -5058,6 +5576,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>ID чата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ID Chat</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -5074,6 +5596,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>ID сообщения</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ID Message</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -5088,6 +5614,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Тип чата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Chat type</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -5137,6 +5667,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Время жизни сообщения</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Expiration</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
@@ -5153,6 +5687,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>ID чата-источника</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ID Chat from</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -5167,6 +5705,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Текст статуса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Status text</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -5183,6 +5725,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Цвет фона сообщения</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Background color</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -5197,6 +5743,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Кто будет видеть статус</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Recievers</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -5228,6 +5778,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Ссылка на файл</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>File URL</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -5243,6 +5797,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Ссылка на файл</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>File URL</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -5257,6 +5815,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>ID статуса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ID Status</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -5333,6 +5895,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>ID инстанса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>ID Instance</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -5420,11 +5986,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить текст</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send message</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить текст</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send message</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьСообщение</Action>
@@ -5451,6 +6025,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Установить стандартные настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Restore Default Settings</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -5483,11 +6061,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить файл...</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send file by upload</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send file by upload</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьФайл</Action>
@@ -5498,11 +6084,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить файл по ссылке...</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send file by URL</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить файл по ссылке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send file by URL</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьФайлПоСсылке</Action>
@@ -5528,11 +6122,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить настройки аккаунта</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get settings</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить настройки аккаунта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get settings</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьНастройкиАккаунта</Action>
@@ -5558,11 +6160,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить состояние аккаунта</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get state instance</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить состояние аккаунта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get state instance</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСостояниеАккаунта</Action>
@@ -5573,11 +6183,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перезапустить аккаунт</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reboot instance</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перезапустить аккаунт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reboot instance</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПерезапуститьАккаунт</Action>
@@ -5588,11 +6206,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Разлогинить аккаунт</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Logout instance</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Разлогинить аккаунт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Logout instance</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>РазлогинитьАккаунт</Action>
@@ -5601,13 +6227,21 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить QRКод</v8:content>
+					<v8:content>Получить QR-код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get QR code</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить QRКод</v8:content>
+					<v8:content>Получить QR-код</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get QR code</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьQRКод</Action>
@@ -5618,11 +6252,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить журнал входящих сообщений</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Last incoming messages</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить журнал входящих сообщений</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Last incoming messages</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьЖурналВходящихСообщений</Action>
@@ -5633,11 +6275,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить журнал отправленных сообщений</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Last outgoing messages</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить журнал отправленных сообщений</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Last outgoing messages</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьЖурналОтправленныхСообщений</Action>
@@ -5678,11 +6328,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Создать группу</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create group</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Создать группу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create group</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьГруппу</Action>
@@ -5693,11 +6351,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Изменить имя группы</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update group name</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Изменить имя группы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update group name</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ИзменитьИмяГруппы</Action>
@@ -5708,11 +6374,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить информацию о группе</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get group data</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить информацию о группе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get group data</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьИнформациюОГруппе</Action>
@@ -5723,11 +6397,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Добавить участника в группу</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add group participant</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Добавить участника в группу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add group participant</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьУчастникаВГруппу</Action>
@@ -5738,11 +6420,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить участника из группы</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove group participant</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить участника из группы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove group participant</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УдалитьУчастникаИзГруппы</Action>
@@ -5752,6 +6442,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Назначить права администратора группы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set group admin</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -5768,6 +6462,10 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отозвать права администратора группы</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove group admin</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -5783,11 +6481,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Выйти из группы</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Leave group</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Выйти из группы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Leave group</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ВыйтиИзГруппы</Action>
@@ -5826,13 +6532,21 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Проверить наличие Whats App</v8:content>
+					<v8:content>Проверить наличие WhatsApp</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check WhatsApp</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Проверить наличие whats app</v8:content>
+					<v8:content>Проверить наличие WhatsApp</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Check WhatsApp</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьНаличиеWhatsApp</Action>
@@ -5843,11 +6557,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить аватар контакта</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get contact avatar</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить аватар контакта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get contact avatar</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьАватарКонтакта</Action>
@@ -5858,11 +6580,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить контакты</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get contacts</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить контакты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get contacts</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьКонтакты</Action>
@@ -5873,11 +6603,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Установить фото профиля</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set profile picture</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Установить фото профиля</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set profile picture</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьФотоПрофиля</Action>
@@ -5888,11 +6626,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить историю сообщений чата</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get chat history</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить историю сообщений чата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get chat history</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьИсториюСообщенийЧата</Action>
@@ -5903,11 +6649,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Загрузить файл</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload file</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Загрузить файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload file</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьФайл</Action>
@@ -5918,11 +6672,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Загрузить файл и отправить ссылку</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload file and send URL</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Загрузить файл и отправить ссылку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload file and send URL</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьФайлИОтправитьСсылку</Action>
@@ -5933,11 +6695,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить контакт</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send contact</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить контакт</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send contact</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьКонтакт</Action>
@@ -5948,11 +6718,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить геолокацию</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send location</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить геолокацию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send location</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьГеолокацию</Action>
@@ -5963,11 +6741,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить сообщение чата</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get message</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить сообщение чата</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get message</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСообщениеЧата</Action>
@@ -5978,11 +6764,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить сообщение</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete message</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить сообщение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete message</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УдалитьСообщение</Action>
@@ -5993,11 +6787,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Архивировать чат</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Archive chat</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Архивировать чат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Archive chat</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>АрхивироватьЧат</Action>
@@ -6008,11 +6810,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Разархивировать чат</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Unarchive chat</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Разархивировать чат</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Unarchive chat</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>РазархивироватьЧат</Action>
@@ -6023,11 +6833,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Установить исчезающие сообщения</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set disappearing chat</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Установить исчезающие сообщения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set disappearing chat</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьИсчезающиеСообщения</Action>
@@ -6038,11 +6856,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить инфо контакта</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get contact info</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить инфо контакта</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get contact info</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьИнфоКонтакта</Action>
@@ -6053,11 +6879,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Установить фото группы</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set group pictire</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Установить фото группы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set group pictire</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьФотоГруппы</Action>
@@ -6068,11 +6902,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Переслать сообщение</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Forward message</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Переслать сообщение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Forward message</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПереслатьСообщение</Action>
@@ -6098,11 +6940,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить опрос</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send poll</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить опрос</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send poll</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьОпрос</Action>
@@ -6128,11 +6978,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить текстовый статус</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send text status</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить текстовый статус</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send text status</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьТекстовыйСтатус</Action>
@@ -6143,11 +7001,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить голосовой статус</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send voice status</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить голосовой статус</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send voice status</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьГолосовойСтатус</Action>
@@ -6156,7 +7022,11 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить</v8:content>
+					<v8:content>Отправить медиа статус</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send media status</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -6164,20 +7034,32 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отправить медиа статус</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send media status</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>ОтправитьМедиаСтатус</Action>
 		</Command>
-		<Command name="УдатьСтатус" id="52">
+		<Command name="УдалитьСтатус" id="52">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить статус</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete status</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить статус</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete status</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УдалитьСтатус</Action>
@@ -6188,11 +7070,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить статистику статуса</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get status statistics</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить статистику статуса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get status statistics</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСтатистикуСтатуса</Action>
@@ -6203,11 +7093,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить входящие статусы</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get incoming statuses</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить входящие статусы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get incoming statuses</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьВходящиеСтатусы</Action>
@@ -6218,11 +7116,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить исходящие статусы</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get outgoing statuses</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить исходящие статусы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get outgoing statuses</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьИсходящиеСтатусы</Action>
@@ -6278,11 +7184,19 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить инстанс</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete instance</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить инстанс</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete instance</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УдалитьИнстанс</Action>
@@ -6323,14 +7237,56 @@ api.com/docs/api/receiving/technology-htt</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Изменить сообщение</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Edit message</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Изменить сообщение</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Edit message</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>ИзменитьСообщение</Action>
+		</Command>
+		<Command name="УдатьСтатус" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить статус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить статус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьСтатус</Action>
+		</Command>
+		<Command name="ОтправитьКнопки" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить кнопки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Send interactive buttons</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьКнопки</Action>
 		</Command>
 	</Commands>
 </Form>

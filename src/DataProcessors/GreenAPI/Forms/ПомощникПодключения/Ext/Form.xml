@@ -64,6 +64,10 @@
 													<v8:lang>ru</v8:lang>
 													<v8:content>GREEN API</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>GREEN API</v8:content>
+												</v8:item>
 											</Title>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<HorizontalAlign>Center</HorizontalAlign>
@@ -92,6 +96,10 @@
 													<v8:lang>ru</v8:lang>
 													<v8:content>GREEN API</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>GREEN API</v8:content>
+												</v8:item>
 											</Title>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<HorizontalAlign>Center</HorizontalAlign>
@@ -118,6 +126,10 @@
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
+													<v8:content>GREEN API</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
 													<v8:content>GREEN API</v8:content>
 												</v8:item>
 											</Title>
