@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
-	<DataProcessor uuid="c7a0c435-ff2f-4f23-b5f8-12c0a0031561">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<ExternalDataProcessor uuid="228b1394-4763-497c-a4af-101abe5be69a">
 		<InternalInfo>
-			<xr:GeneratedType name="DataProcessorObject.GreenAPI" category="Object">
-				<xr:TypeId>9f1cf8d5-2000-4162-8bb2-686a751f89fa</xr:TypeId>
-				<xr:ValueId>633dd1a8-a3b2-4130-b67e-667133a06f3f</xr:ValueId>
-			</xr:GeneratedType>
-			<xr:GeneratedType name="DataProcessorManager.GreenAPI" category="Manager">
-				<xr:TypeId>d1e436cf-4921-4623-82af-448a7833ba8b</xr:TypeId>
-				<xr:ValueId>a3ee83ab-7625-465f-b2ac-a7472404d08d</xr:ValueId>
+			<xr:ContainedObject>
+				<xr:ClassId>c3831ec8-d8d5-4f93-8a22-f9bfae07327f</xr:ClassId>
+				<xr:ObjectId>50fe7010-dedd-42bf-9195-5e4c46c990a7</xr:ObjectId>
+			</xr:ContainedObject>
+			<xr:GeneratedType name="ExternalDataProcessorObject.GreenAPI" category="Object">
+				<xr:TypeId>035289c3-7aaa-4201-b682-19f13e96e5a9</xr:TypeId>
+				<xr:ValueId>50e3b0fd-5eca-4d6e-9547-bafca3245f4e</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -24,15 +24,11 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm>DataProcessor.GreenAPI.Form.Форма</DefaultForm>
+			<DefaultForm>ExternalDataProcessor.GreenAPI.Form.Форма</DefaultForm>
 			<AuxiliaryForm/>
-			<IncludeHelpInContents>false</IncludeHelpInContents>
-			<ExtendedPresentation/>
-			<Explanation/>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="260d31c6-e4f2-4778-bd5a-fd2d1bbfba7f">
+			<Attribute uuid="55a1dba7-da81-4256-b580-a18537ac2bd7">
 				<Properties>
 					<Name>ТекстПолученноеСообщение</Name>
 					<Synonym>
@@ -70,7 +66,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="41db95e2-482b-4e81-93af-a82b704ccc02">
+			<Attribute uuid="13d6466e-efbb-4152-a730-7c727bd11fc3">
 				<Properties>
 					<Name>IdInstance</Name>
 					<Synonym>
@@ -112,7 +108,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="40c96af2-b161-4acc-a444-6eacfde9aaad">
+			<Attribute uuid="846f19b6-1dff-4973-806b-f60884218356">
 				<Properties>
 					<Name>ApiToken</Name>
 					<Synonym>
@@ -154,7 +150,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="696cf025-20dc-460b-8322-c126bd2072a3">
+			<Attribute uuid="b9425190-c36d-45cd-b8bf-df522a645300">
 				<Properties>
 					<Name>PartnerToken</Name>
 					<Synonym>
@@ -196,7 +192,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="860dfc21-c910-4bf6-95ff-ca71dd975667">
+			<Attribute uuid="1fe21d4f-55b1-4043-9d11-29d027d11248">
 				<Properties>
 					<Name>ПолученФайл</Name>
 					<Synonym>
@@ -234,7 +230,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="6012310e-c1cf-4c1d-bc5b-05811ca2a404">
+			<Attribute uuid="080a5a64-2180-46c9-a728-72f2115f6a3e">
 				<Properties>
 					<Name>apiUrl</Name>
 					<Synonym>
@@ -276,7 +272,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="50f84bf4-d8c8-45e6-8573-5a84b2201097">
+			<Attribute uuid="29c5e861-97cc-4744-b92d-cb244e07c52f">
 				<Properties>
 					<Name>mediaUrl</Name>
 					<Synonym>
@@ -332,5 +328,5 @@
 			<Template>ДанныеАккаунта</Template>
 			<Template>ИконкаФиниш</Template>
 		</ChildObjects>
-	</DataProcessor>
+	</ExternalDataProcessor>
 </MetaDataObject>
